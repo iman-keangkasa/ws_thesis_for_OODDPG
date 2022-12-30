@@ -1,0 +1,50 @@
+\providecommand{\setflag}{\newif \ifwhole \wholefalse}
+
+\setflag %create new if variable name ifwhole(whole)  
+
+\ifwhole\else %if whole flag is set to true do nothing else do codes below
+
+  \documentclass[12pt,a4paper,oneside,hidelinks]{book}
+
+    %\input{extra_package.tex}
+    %\input{tweak.tex}
+    %\input{commando.tex}
+    %\input{font}
+  \usepackage{import}
+  \usepackage{natbib}
+	\usepackage{soul,color}
+  \usepackage{pdflscape} %for changing page orientation
+  \usepackage{enumitem, amssymb} %for checklist
+  \usepackage{graphicx} %for inserting photo
+  \usepackage{amsmath} % for equations
+  \usepackage{mathtools} % for equations
+  
+  \usepackage{float}  %deactivate this if hyperref does not work with algo
+  \usepackage{hyperref}
+  
+  %if I call setAlgo2 before this tex will use algorihtm2e package
+%  \ifAlgo2
+%    \usepackage{algorithm2e}
+%  \else
+  \usepackage{algorithm}
+  \usepackage{algpseudocode}
+%  \fi
+
+  % numbering equations
+  \ifwhole
+    \numberwithin{equation}{chapter} %equation number based on chapter
+  \else
+%    \numberwithin{equation}{section} % equation number based on section
+  \fi
+  \usepackage{xfrac} % for fraction in the for n/d
+  \usepackage{esint} % for easy integral symbols
+
+
+  %for footnote
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+  \begin{document}
+
+\fi
+

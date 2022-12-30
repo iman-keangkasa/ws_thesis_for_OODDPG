@@ -1,0 +1,23 @@
+\begin{table}
+  \captionsetup{justification=centering}
+  \caption{The Newton-Raphson algorithm for \rimini's inverse kinematic solver}
+  \label{tab:newton_raphson_table}
+  \begin{algorithm}[H]
+  \caption{getInverseKinematics}
+  \label{algo:newton_raphson} 
+  \DontPrintSemicolon
+    \KwInput{$c_{goal}$, $c^{current}$,$\epsilon$}
+    \KwOutput{$\hat{c}_{ee}$}
+  $e\gets$ getForwardKinematic($c^{current}$)\;
+  \While{$\Vert e \Vert \neq \epsilon$}
+  {
+    $\hat{c}^{estimate} \gets c^{current}+$ getInverseJacobian($c^{current}$)$e$\;\label{ln:newton_raphson_inverse_jacobian}
+    $e \gets C_{goal}-$ getForwardKinematic({$c^{estimate}$})\;
+    $c^{current} \gets c^{estimate}$\;
+  }
+    $\hat{c}^{ee}=c^{current}$\;
+    \KwRet $\hat{c}$\;
+
+  \end{algorithm}
+%\input{end.tex}
+\end{table}

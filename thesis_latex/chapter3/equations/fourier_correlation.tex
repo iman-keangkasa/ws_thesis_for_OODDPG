@@ -1,0 +1,37 @@
+\begin{equation}\label{eq:fourier_correlation_red}
+  \gls{Correlation} = \sum_{l > 0} \sum_{m \leqq l} \sum_{m' \leqq l}
+  \tilde{F}^l_{m} \overline{\tilde{G}^l_{m'} D^l_{m'}}
+\end{equation}
+
+\begin{equation}\label{eq:fourier_correlation_red}
+  \tilde{C}_r = \sum_{l > 0} \sum_{m \leqq l} \sum_{m' \leqq l}
+  \tilde{F}^l_{m,r} \overline{\tilde{G}^l_{m',r} D^l_{m'}}
+\end{equation}
+
+\begin{equation}\label{eq:fourier_correlation_green}
+  \tilde{C}_g = \sum_{l > 0} \sum_{m \leqq l} \sum_{m' \leqq l}
+  \tilde{F}^l_{m,g} \overline{\tilde{G}^l_{m',g} D^l_{m'}}
+\end{equation}
+
+\begin{equation}\label{eq:fourier_correlation_blue}
+  \tilde{C}_b = \sum_{l > 0} \sum_{m \leqq l} \sum_{m' \leqq l}
+  \tilde{F}^l_{m,b} \overline{\tilde{G}^l_{m',b} D^l_{m'}}
+\end{equation}
+
+where $\tilde{C}$ represent the correlation for the range encoding,
+and $\tilde{C}_r$, $\tilde{C}_g$, and, $\tilde{C}_b$ represent the correlation
+for the
+red, blue, green, band images. The function $\gls{WeignerD}$, the Weigner-D 
+matrix, helps to rotate the spherical harmonics in the Hilbert space. 
+The function is parameterized by the $\mathsf{Z-Y-Z}$ Euler-angles rotation. 
+Since, the end effector are parameterized with the same orientation, 
+the orientation estimate of the robot's end effector are given by 
+the argument max of the resultant correlation,
+
+\begin{equation}
+  \vb*{r}(\theta_4,\theta_5,\theta_6) = \argmax\limits_{\vb*{r} \in \vb*{SO(3)}} 
+   ( \tilde{C} \boxplus \tilde{C}_r \boxplus \tilde{C}_g \boxplus \tilde{C}_b )
+\end{equation}
+
+
+where $\gls{GaussianFusion}$ represent Gaussian data fusion technique. 

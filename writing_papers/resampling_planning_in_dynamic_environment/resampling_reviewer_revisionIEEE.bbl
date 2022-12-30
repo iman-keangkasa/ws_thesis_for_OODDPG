@@ -1,0 +1,81 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Hagele2016}{incollection}{}
+      \name{author}{4}{}{%
+        {{hash=8cb8d00438891daee06979b28e5653e7}{%
+           family={H{ä}gele},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c34a5092013ac7ed690625f215699309}{%
+           family={Nilsson},
+           familyi={N\bibinitperiod},
+           given={Klas},
+           giveni={K\bibinitperiod}}}%
+        {{hash=cf39e5d1228989e52433069447892927}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi Norberto},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=2f914bbe64bd82c123d0ef61b9e00bac}{%
+           family={Bischoff},
+           familyi={B\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{fb83f3ba6b809e6f255dcc2c816e43b7}
+      \strng{fullhash}{ea0add2efdd317b0499da88d01300dbd}
+      \strng{bibnamehash}{ea0add2efdd317b0499da88d01300dbd}
+      \strng{authorbibnamehash}{ea0add2efdd317b0499da88d01300dbd}
+      \strng{authornamehash}{fb83f3ba6b809e6f255dcc2c816e43b7}
+      \strng{authorfullhash}{ea0add2efdd317b0499da88d01300dbd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Much of the technology that makes robots reliable, human friendly, and adaptable for numerous applications has emerged from manufacturers of industrial robots. With an estimated installation base in 2014 of about 1.5 million units, some 171000 new installations in that year and an annual turnover of the robotics industry estimated to be US$ 32 billion, industrial robots are by far the largest commercial application of robotics technology today. The foundations for robot motion planning and control were initially developed with industrial applications in mind. These applications deserve special attention in order to understand the origin of robotics science and to appreciate the many unsolved problems that still prevent the wider use of robots in today's agile manufacturing environments. In this chapter, we present a brief history and descriptions of typical industrial robotics applications and at the same time we address current critical state-of-the-art technological developments. We show how robots with different mechanisms fit different applications and how applications are further enabled by latest technologies, often adopted from technological fields outside manufacturing automation. We will first present a brief historical introduction to industrial robotics with a selection of contemporary application examples which at the same time refer to a critical key technology. Then, the basic principles that are used in industrial robotics and a review of programming methods will be outlined. We will also introduce the topic of system integration particularly from a data integration point of view. The chapter will be closed with an outlook based on a presentation of some unsolved problems that currently inhibit wider use of industrial robots.}
+      \field{booktitle}{Springer Handbook of Robotics}
+      \field{isbn}{9783319325521}
+      \field{issn}{25228706}
+      \field{month}{1}
+      \field{title}{{Industrial robotics}}
+      \field{year}{2016}
+      \field{pages}{1385\bibrangedash 1421}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1007/978-3-319-32552-1_54
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-32552-1_54
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-32552-1_54
+      \endverb
+      \keyw{Automate guide vehicle,Industrial robot,Parallel robot,Programmable logic controller,Robot system}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

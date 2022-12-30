@@ -1,0 +1,20 @@
+%\input{header2.tex}
+  \begin{algorithm}
+  \caption{generateRRT}
+  \label{algo:RRT} 
+  \DontPrintSemicolon
+  \KwInput{$C_{initial}$,$C_{goal}$,$\Delta t$,$k$,$\mathcal{M}$}
+  \KwOutput{$\mathcal{T}$}
+  $\mathcal{T}$.initialize($C_{initial}$,$C_{goal}$,$\mathcal{M}$)\;\label{ln:initialize_tree}
+  \While{$c_{new}\neq  C_{goal}$}
+  {
+    $c_{random}\gets$ randomState()\;\label{ln:random_generator}
+    $c_{near} \gets$ kNearestNeighbor($k$,$c_{random}$,$\mathcal{T}$)\;\label{ln:knn}
+    $\vb*{u} \gets$ selectInput($c_{random}$,$c_{near}$)\;\label{ln:direction}
+    $c_{new} \gets$ newConfiguration($c_{near}$,$\Delta t$)\;\label{ln:assign_new}
+    $\mathcal{T}$.append($c_{new}$,$c_{near}$,$\vb*{u}$)\;
+  }
+    \KwRet $\mathcal{T}$\;
+
+  \end{algorithm}
+%\input{end.tex}

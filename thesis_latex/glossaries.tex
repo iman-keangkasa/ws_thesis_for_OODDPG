@@ -1,0 +1,315 @@
+\usepackage[acronym,symbols,nogroupskip,nonumberlist]{glossaries-extra}
+%\usepackage[toc,acronym]{glossaries}
+%list of abbreviation
+% in the main change the title of the abbreviation using 
+% \printglossary[type=\acronymtype,title={LIST OF ABBREVIATIONS},titletoc={List Of Abbreviations]
+% use \acrlong{SLAM} to print Simultaneous Loc. And Mapping
+% use \acrshort{SLAM} to print SLAM
+% use \acrfull{SLAM} to print Simulataneous Localization and Mapping (SLAM) 
+% to add entry: \newacronym{label}{the_acronym}{acro description}
+%to add entry \newacronym{slam}{SLAM}{simultaneous localization and mapping}
+\makeglossaries
+
+\newacronym{SME}{SME}{Small and Medium-Sized Enterprise}
+\newacronym{RRT}{RRT}{Rapidly-Exploring Random Tree}
+\newacronym{RTAB-Map}{RTAB-Map}{Real-Time Appearance-Based Mapping}
+\newacronym{3D}{3D}{three-dimensional}
+\newacronym{FAS}{FAS}{Flexible Automation System}
+\newacronym{SLAM}{SLAM}{Simultaneous Localization and Mapping}
+\newacronym{RGB-D}{RGB-D}{Red-Green-Blue-Depth sensor or visual-depth camera/sensor}
+\newacronym{RLFJ}{RLFJ}{Rigid Link Flexible Joint}
+\newacronym{EKF}{EKF}{Extended Kalman Filter}
+\newacronym{EKF-RLFJ}{EKF-RLFJ}{Extended Kalman Filter and Rigid Link Flexible Joint coupling}
+\newacronym{AIEKF}{AIEKF}{Adaptive Iterative Extended Kalman Filter}
+\newacronym{UKF}{UKF}{Unscented Kalman Filter}
+\newacronym{srUKF}{srUKF}{Square Root Unscented Kalman Filter}
+\newacronym{IMU}{IMU}{Inertial Measurement Unit}
+\newacronym{LM}{LM}{Levenberg-Marquardt}
+\newacronym{IDM}{IDM}{Inverse Dynamic Model}
+\newacronym{IPA}{IPA}{Infrared Proximity Array}
+\newacronym{GAF}{GAF}{Group Average Feature}
+\newacronym{BNM}{BNM}{Best Next Move}
+\newacronym{AXBAM}{AXBAM}{Autonomous eXploration to Build A Map}
+\newacronym{ICP}{ICP}{Iterative Closes Point}
+\newacronym{DOF}{DOF}{degree-of-freedom}
+\newacronym{ARA*}{ARA*}{Anytime Repairing A*}
+\newacronym{SSPF}{SSPF}{Scaling Series Particle Filter}
+\newacronym{MPF}{MPF}{Manifold Particle Filter}
+\newacronym{CPF}{CPF}{Conventional Particle Filter}
+\newacronym{UWB}{UWB}{Ultra-wideband}
+\newacronym{RANSAC}{RANSAC}{Random Consensus}
+\newacronym{ARM-SLAM}{ARM-SLAM}{Articulated Robot Motion for Simultaneous Localization and Mapping}
+\newacronym{TSDF}{TSDF}{Truncated Signed Distance Field}
+\newacronym{LSD-SLAM}{LSD-SLAM}{Large-scale Direct mono-SLAM}
+\newacronym{GMM}{GMM}{Gaussian Mixture Model}
+\newacronym{GMR}{GMR}{Gaussian Mixture Regression}
+\newacronym{SURF}{SURF}{Speed Up Robust Feature}
+\newacronym{PBVS}{PBVS}{Position-based Visual Servoing}
+\newacronym{HAMP-U}{HAMP-U}{Hierarchical and Adaptive Mobile Manipulator Planner Uncertainty}
+\newacronym{RAMP}{RAMP}{Real-time Adaptive Motion Planning}
+\newacronym{PRM}{PRM}{The Probabilistic Roadmap}
+\newacronym{LiDAR}{LiDAR}{Laser Imaging, Detection and Ranging}
+\newacronym{rimini}{r\_mini}{Richard Mini, a compliant six-axis manipulator}
+\newacronym{PHASER}{PHASER}{Phase Spherical Harmonics approach to map registration}
+
+\glsxtrnewsymbol[sort={0_p},description={Bayes' posterior}]
+{p}
+{\ensuremath{p}} 
+
+\glsxtrnewsymbol[sort={0_mi},description={Global or local map}]
+{mi}
+{ \ensuremath{m_{i}} }
+
+\glsxtrnewsymbol[sort={0_SO3},description={Special orthogonal group in 3D space representing rotation and rotational algebra}]
+{SO3}
+{ \ensuremath{\vb*{SO(3)}} }
+
+\glsxtrnewsymbol[sort={0_xi},description={State in 3D space}]
+{xi}
+{ \ensuremath{x_{i}} }
+
+\glsxtrnewsymbol[sort={0_xihat},description={State estimation in 3D space}]
+{xestimate}
+{ \ensuremath{ \hat{x}_{i} } }
+
+\glsxtrnewsymbol[sort={0_Rnsuper},description={Real n-vector}]
+{Rn}
+{ \ensuremath{ \mathbb{R}^{n}  } }
+
+
+\glsxtrnewsymbol[sort={0_R3},description={3D space specifically refering to the Euclidean space}]
+{R3}
+{ \ensuremath{ \mathbb{R}^3 } }
+
+
+\glsxtrnewsymbol[sort={0_SE3},description={Special Euclidean space in 3D space}]
+{SE3}
+{ \ensuremath{ \vb*{SE(3)}  } }
+
+\glsxtrnewsymbol[sort={0_zi},description={Observation model}]
+{zi}
+{ \ensuremath{ z_{i}  } }
+
+\glsxtrnewsymbol[sort={0_ui},description={State transition model}]
+{ui}
+{ \ensuremath{ u_{i}  } }
+
+\glsxtrnewsymbol[sort={0_Cn},description={Set of configuration space on 3D, homeomorphic to the open set of constricted 6-sphere space}]
+{ConfigurationSpace}
+{ \ensuremath{ C_n  } }
+
+\glsxtrnewsymbol[sort={0_Cee},description={Set of configuration space for the end-effector on $\mathbb{R}^3 \times \vb*{SO(3)}$}]
+{Configurationee}
+{ \ensuremath{ C_{ee}  } }
+
+\glsxtrnewsymbol[sort={0_Cnsuper},description={Control space, specifically the n-joint robot manipulator}]
+{ControlSpace}
+{ \ensuremath{ C^{n} } }
+
+\glsxtrnewsymbol[sort={0_Ceesuper},description={Control space at the end-effector or the task space}]
+{Controlee}
+{ \ensuremath{ C^{ee} } }
+
+\glsxtrnewsymbol[sort={0_ceesuper},description={Element in control space at the end-effector or the task space}]
+{controlee}
+{ \ensuremath{ c^{ee} } }
+
+\glsxtrnewsymbol[sort={0_cee},description={Element in configuration space at the end-effector or the task space}]
+{configurationee}
+{ \ensuremath{ c_{ee} } }
+
+\glsxtrnewsymbol[sort={0_ceesuperhat},description={Estimated element in control space at the end-effector or the task space}]
+{estimatecontrolee}
+{ \ensuremath{ \hat{c}^{ee} } }
+
+\glsxtrnewsymbol[sort={0_cnsuper},description={Element in the control space, $C^{n}$}]
+{controlspace}
+{ \ensuremath{ c^{n} } }
+
+\glsxtrnewsymbol[sort={0_cn},description={Element in the configuration space, $C_{n}$}]
+{configurationspace}
+{ \ensuremath{ c_{n} } }
+
+\glsxtrnewsymbol[sort={0_tvector},description={Translation 3-vector}]
+{translationVector}
+{ \ensuremath{\vb*{t}} }
+
+\glsxtrnewsymbol[sort={0_Rvector},description={Rotation matrix}]
+{rotationMatrix}
+{ \ensuremath{ \vb*{R} } }
+
+\glsxtrnewsymbol[sort={1_mui},description={Instruction vector from path and motion planner pipeline}]
+{mui}
+{ \ensuremath{ \mu_{i} } }
+
+\glsxtrnewsymbol[sort={0_Ccycle},description={Subset of the configuration space defined by the cycle space generator, algorithm \ref{algo:cycle_space}}]
+{Ccycle}
+{ \ensuremath{ C_{cycle} } }
+
+%use \mathsf{} for cartesian-axis related notation
+
+\glsxtrnewsymbol[sort={0_axisz},description={The z axis on the Cartesian coordinate system}]
+{zAxis}
+{ \ensuremath{ \mathsf{z-axis}  } }
+
+\glsxtrnewsymbol[sort={0_axisZYZ},description={The Z-Y-Z Euler angles}]
+{zyzAngle}
+{ \ensuremath{ \mathsf{Z-Y-Z}  } }
+
+\glsxtrnewsymbol[sort={0_axisy},description={The y-component of the Cartesian coordinate system}]
+{yAxis}
+{ \ensuremath{ \mathsf{y-axis}  } }
+
+\glsxtrnewsymbol[sort={0_axisx},description={The x-component of the Cartesian coordinate system}]
+{xAxis}
+{ \ensuremath{ \mathsf{x-axis}  } }
+
+\glsxtrnewsymbol[sort={0_ai},description={Denavit-Hartenberg's $\mathsf{z-axis}$ offset parameter}]
+{ai}
+{ \ensuremath{a_i} }
+
+\glsxtrnewsymbol[sort={0_di},description={Denavit-Hartenberg's $\mathsf{x-axis}$  offset parameter}]
+{di}
+{ \ensuremath{ d_i  } }
+
+\glsxtrnewsymbol[sort={1_alphai},description={Denavit-Hartenberg's $frame_i$'s x-rotational offset parameter}]
+{alphai}
+{ \ensuremath{ \alpha_i  } }
+
+\glsxtrnewsymbol[sort={0_Ai},description={Homogenous transformation of rigid body in 3D}]
+{homogenousTransformation}
+{ \ensuremath{ A_i  } }
+
+\glsxtrnewsymbol[sort={0_T},description={A 4$\times$4 matrix encoded with $\vb*{t}$ translation along an axis, at an angle}]
+{homogenousTranslation}
+{ \ensuremath{ T_{axis,angle} } }
+
+\glsxtrnewsymbol[sort={0_Rot},description={A 4$\times$4 matrix encoded with $\vb*{R}$ rotation along an axis, at an angle}]
+{homogenousRotation}
+{ \ensuremath{ Rot_{axis,angle} } }
+
+\glsxtrnewsymbol[sort={1_deltat},description={Distance between two points in 3D}]
+{deltaTranslation}
+{ \ensuremath{ \Delta t } }
+
+\glsxtrnewsymbol[sort={0_Mz},description={Collision map in \gls{mi}}]
+{collisionMap}
+{ \ensuremath{ \mathcal{M} } }
+
+\glsxtrnewsymbol[sort={0_Tz},description={Tree node structure in \gls{mi}}]
+{treeNode}
+{ \ensuremath{ \mathcal{T} } }
+
+\glsxtrnewsymbol[sort={0_crandom},description={Random sampling in the configuration space}]
+{configurationRandom}
+{ \ensuremath{ c_{random} } }
+
+\glsxtrnewsymbol[sort={0_Climit},description={Constrained imposed on the configuration space}]
+{ControlLimit}
+{ \ensuremath{ C_{limit}  } }
+
+\glsxtrnewsymbol[sort={0_q},description={The 4-vector parameterization of the quaternions in the Hamiltonian space}]
+{quaternion}
+{ \ensuremath{ \vb*{q} } }
+
+\glsxtrnewsymbol[sort={0_H},description={The Hamiltonian space}]
+{Hamiltonian}
+{ \ensuremath{ \mathbb{H} } }
+
+\glsxtrnewsymbol[sort={1_tau},description={Trajectory in control space, \gls{ControlSpace}}]
+{trajectory}
+{ \ensuremath{ \tau } }
+
+\glsxtrnewsymbol[sort={0_Cfree},description={Non-colliding configuration space}]
+{ConfigurationFree}
+{ \ensuremath{ C_{free} } }
+
+\glsxtrnewsymbol[sort={0_Cworkspace},description={Valid reachable pose constrained by the joint angles}]
+{ConfigurationWorkspace}
+{ \ensuremath{ C_{workspace} } }
+
+\glsxtrnewsymbol[sort={0_Cobstacle},description={Occupied space, i.e. obstacles in the worksapce and the robot arm itself}]
+{ConfigurationObstacle}
+{ \ensuremath{ C_{obstacle} } }
+
+\glsxtrnewsymbol[sort={0_ftilde},description={A target 3D pointcloud treated as a function}]
+{fPointcloud}
+{ \ensuremath{ \tilde{f} } }
+
+\glsxtrnewsymbol[sort={0_gtilde},description={A 3D pointcloud treated as a function}]
+{gPointcloud}
+{ \ensuremath{ \tilde{g} } }
+
+\glsxtrnewsymbol[sort={0_L2S2},description={Hilbert space and algebra on 2-sphere}]
+{hilbertSpace}
+{ \ensuremath{ L^2(S^2) } }
+
+\glsxtrnewsymbol[sort={0_S2},description={The topology of a 2-sphere}]
+{2Sphere}
+{ \ensuremath{ S^2 } }
+
+\glsxtrnewsymbol[sort={0_l},description={The spherical harmonics degree}]
+{sphericalHarmonicsDegree}
+{ \ensuremath{ l } }
+
+\glsxtrnewsymbol[sort={0_m},description={The spherical harmonics order}]
+{sphericalHarmonicsOrder}
+{ \ensuremath{ m } }
+
+\glsxtrnewsymbol[sort={0_Pml},description={The Legendre Polynomial}]
+{LegendrePolynomial}
+{ \ensuremath{ P_m^l } }
+
+\glsxtrnewsymbol[sort={1_theta},description={The longitude of the 2-sphere}]
+{longitudeTheta}
+{ \ensuremath{ \theta } }
+
+\glsxtrnewsymbol[sort={1_psi},description={The latitude of the 2-sphere}]
+{latitudePsi}
+{ \ensuremath{ \psi } }
+
+\glsxtrnewsymbol[sort={0_Yml},description={The spherical harmonics component of the spatial Fourier transform}]
+{sphericalHarmonics}
+{ \ensuremath{ Y_m^l } }
+
+\glsxtrnewsymbol[sort={0_Btilde},description={The spherical bandwidth used to discretize the surface of the 2-sphere}]
+{sphericalBandwidth}
+{ \ensuremath{ \tilde{B} } }
+
+\glsxtrnewsymbol[sort={0_Ln},description={The logit function}]
+{logitFunction}
+{ \ensuremath{ L(n) } }
+
+\glsxtrnewsymbol[sort={0_Pn},description={Posterior probability function for the occupancy of a voxel}]
+{occupancyProbability}
+{ \ensuremath{ P(n) } }
+
+\glsxtrnewsymbol[sort={0_n},description={Node representing the discretization of 3D space called voxel}]
+{voxel}
+{ \ensuremath{ n } }
+
+\glsxtrnewsymbol[sort={0_Ctilde},description={Correlation on 2-sphere}]
+{Correlation}
+{ \ensuremath{ \tilde{C} } }
+
+\glsxtrnewsymbol[sort={0_D},description={The Weigner-D matrix or function}]
+{WeignerD}
+{ \ensuremath{ D } }
+
+\glsxtrnewsymbol[sort={0_zzzboxplus},description={A Gaussian fusion technique}]
+{GaussianFusion}
+{ \ensuremath{ \boxplus } }
+
+\glsxtrnewsymbol[sort={0_J},description={The kinematic Jacobian}]
+{Jacobian}
+{ \ensuremath{ J } }
+
+\glsxtrnewsymbol[sort={1_phi},description={Map represented by the Octomap-harmonics posterior from the spherical harmonics state estimation pipeline}]
+{OctomapWorkspace}
+{ \ensuremath{ \Phi  } }
+
+\glsxtrnewsymbol[sort={0_t},description={Time}]
+{time}
+{ \ensuremath{ t } }
+
+

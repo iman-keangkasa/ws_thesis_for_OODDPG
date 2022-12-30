@@ -1,0 +1,41 @@
+\begin{equation}\label{eq:hilbert_product}
+  \langle \tilde{g} , \tilde{f} \rangle= 
+  \int_{\vb*{\omega} \in S^2} 
+  \tilde{g}({\vb*{\omega}})\overline{\tilde{f}(\vb*{\omega}) \mathrm{d}\vb*{\omega})}
+\end{equation}
+
+where $\mathrm{d}\vb*{\omega} = sin(\gls{longitudeTheta})d\theta d\gls{latitudePsi}$ and $\tilde{g}$, $\tilde{f}$ are the arbitrary 
+integral functions on $\gls{2Sphere}$ and $\overline{\tilde{f}}$ is the complex conjugate. 
+
+The spherical Fourier transform of any function $\tilde{f} \in \gls{2Sphere}$ is defined
+in $\tilde{F_m^l}= \langle \tilde{f}, Y_m^l \rangle $, where $\gls{sphericalHarmonics}$ are the spherical
+harmonics of degree $l \in \mathbb{N}_0$, and of order $m \in [0,l] \in \mathbb{N}_0$.
+This forms the orthonormal basis over $L^2(S^2)$,
+
+\begin{equation}\label{eq:spherical_coefficient}
+  Y^l_m(\vb*{\omega} = (-1)^m
+  \sqrt{ \frac{(2l+1)(l-m)!}{4\pi(l+m)}} 
+  P^l_m(cos(\theta))exp(-jm\psi)
+\end{equation}
+
+where $\gls{LegendrePolynomial}$ are the associated Legendre polynomials implemented by \textcite{Healy2003}.
+
+The integral over the sphere are evaluated using the sampling theorem formulated by
+\textcite{Driscoll1994}:
+\begin{equation}\label{eq:fourier_coefficient}
+  F_m^l = \frac{\sqrt{2\pi}}{2\tilde{B}} \sum_{j=0}^{2\tilde{B}-1}
+    w_j \tilde{f}(\theta_j,\psi_k) \overline{Y}_m^l(\theta_j,\psi_k)
+\end{equation},
+
+where $\tilde{B}$ is the spherical bandwidth, $\theta$ and $\psi$ are the samples
+with the corresponding weight $w$. Equations \ref{eq:fourier_coefficient} gives
+us a way o transform the function $\tilde{f}$ and $\tilde{g}$ which belongs
+in $\mathbb{R}^3$ into the Hilbert space, i.e. the
+frequency domain, via this relationship:
+
+\begin{equation}\label{fourier_transform}
+  \tilde{f}(\vb*{\omega}) = 
+  \sum_{l \geqq 0} \sum_{m\leqq \pm l} \tilde{F}^l_m Y^l_m(\vb*{\omega})
+\end{equation}.
+
+

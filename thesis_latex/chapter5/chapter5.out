@@ -1,0 +1,8 @@
+\BOOKMARK [0][-]{chapter.1}{Experimentation, Result and Discussion}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Benchmarking Experiment Design and Result on the Sampling-Based Planner in Static Environment}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Experiment Design for Unpredictable Obstacles using RRT and PRM}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Experiment Design for Moving Planning in Dynamic Environment}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Result on RRT Planning}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.4.1}{Result on Path Planning Under Dynamic Environment}{section.1.4}% 6
+\BOOKMARK [2][-]{subsection.1.4.2}{Result on Obstacle-less Planning with SLAM}{section.1.4}% 7
+\BOOKMARK [1][-]{section.1.5}{Summary}{chapter.1}% 8

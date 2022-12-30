@@ -1,0 +1,59 @@
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter*.1}{Abstract in Arabic}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Approval Page}{}% 3
+\BOOKMARK [0][-]{chapter*.4}{Declaration}{}% 4
+\BOOKMARK [0][-]{chapter*.4}{Copyright}{}% 5
+\BOOKMARK [0][-]{chapter*.6}{Acknowledgements}{}% 6
+\BOOKMARK [0][-]{chapter*.8}{List of Tables}{}% 7
+\BOOKMARK [0][-]{chapter*.9}{List of Figures}{}% 8
+\BOOKMARK [0][-]{section*.10}{List of Abbreviations}{}% 9
+\BOOKMARK [0][-]{section*.12}{List of Symbols and Notations}{}% 10
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 11
+\BOOKMARK [1][-]{section.1.1}{The Motivation of Eye-in-Hand Robot Configuration}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.2}{The Devoid of Unified Solution for Uncertainty Management in State and Workspace of an Industrial Robot}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.3}{Problem Statement and its Significance}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.4}{Research Philosphy}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.5}{Objectives}{chapter.1}% 16
+\BOOKMARK [1][-]{section.1.6}{Research Scope}{chapter.1}% 17
+\BOOKMARK [1][-]{section.1.7}{Methodology}{chapter.1}% 18
+\BOOKMARK [1][-]{section.1.8}{The Outline of the Thesis}{chapter.1}% 19
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 20
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.2}{Uncertainty Management Through State Estimation}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.1}{Extended Kalman Filter for Manipulator's State Estimation}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.2}{Unscented Kalman Filter for Manipulator's State Estimation}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.3}{Particle Filter for Manipulator's State Estimation}{section.2.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.4}{Miscellaneous Estimation Problem in Manipulator Robot}{section.2.2}% 26
+\BOOKMARK [1][-]{section.2.3}{Map-Building Approach to Uncertainty Management}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.3.1}{Point Clouds Mapping}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.2}{Occupancy Grid Map: The Map of Uncertain Environment}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.3}{Octomap: The definitive Uncertainty Managament Dynamic Environment}{section.2.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.4}{Miscellaneous Mapping Techniques}{section.2.3}% 31
+\BOOKMARK [1][-]{section.2.4}{Simultaneous Localization and Map-Building as a Total Solution to Uncertainty in a Manipulator's State and Environment}{chapter.2}% 32
+\BOOKMARK [1][-]{section.2.5}{The Planning for 6R Robots in Dynamic Environment}{chapter.2}% 33
+\BOOKMARK [2][-]{subsection.2.5.1}{The Probabilistic Motion Planning}{section.2.5}% 34
+\BOOKMARK [1][-]{section.2.6}{Summary}{chapter.2}% 35
+\BOOKMARK [0][-]{chapter.3}{Mathematical Backgrounds}{}% 36
+\BOOKMARK [1][-]{section.3.1}{The Kinematics of Richard Mini}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.1.1}{The Mechanical Descriptions}{section.3.1}% 38
+\BOOKMARK [2][-]{subsection.3.1.2}{Forward Kinematics of r\137mini }{section.3.1}% 39
+\BOOKMARK [2][-]{subsection.3.1.3}{Inverse Kinematics of r\137mini}{section.3.1}% 40
+\BOOKMARK [1][-]{section.3.2}{r\137mini's Path Planner}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.2.1}{The Cycle Space}{section.3.2}% 42
+\BOOKMARK [1][-]{section.3.3}{The Spherical Harmonics}{chapter.3}% 43
+\BOOKMARK [1][-]{section.3.4}{The Use of Kinematics Jacobian and the Singularities of the Manipulator to Relax the Cost Function}{chapter.3}% 44
+\BOOKMARK [1][-]{section.3.5}{SLAM for r\137mini}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.6}{Summary}{chapter.3}% 46
+\BOOKMARK [0][-]{chapter.4}{Experimentation, Result and Discussion}{}% 47
+\BOOKMARK [1][-]{section.4.1}{Benchmarking Experiment Design and Result on the Sampling-Based Planner in Static Environment}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.2}{Experiment Design for Unpredictable Obstacles using RRT}{chapter.4}% 49
+\BOOKMARK [1][-]{section.4.3}{Experiment Design for Moving Planning in Dynamic Environment}{chapter.4}% 50
+\BOOKMARK [1][-]{section.4.4}{Results on Planning for Static and Dynamic Obstacle}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.4.1}{Result on Path Planning for Unpredictable Static Environment}{section.4.4}% 52
+\BOOKMARK [2][-]{subsection.4.4.2}{Result on Path Planning Under Dynamic Environment}{section.4.4}% 53
+\BOOKMARK [2][-]{subsection.4.4.3}{Result on Obstacle-less Planning with SLAM}{section.4.4}% 54
+\BOOKMARK [1][-]{section.4.5}{Summary}{chapter.4}% 55
+\BOOKMARK [0][-]{chapter.5}{Conclusion And Recommendation}{}% 56
+\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 57
+\BOOKMARK [1][-]{section.5.2}{Recommendation for Future Works}{chapter.5}% 58
+\BOOKMARK [0][-]{equation.5.2.1}{REFERENCES}{}% 59

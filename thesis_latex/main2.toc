@@ -1,0 +1,131 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\setlength {\cftbeforechapskip }{0pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{ii}{chapter*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract in Arabic}{iii}{chapter*.1}%
+\babel@toc {arabic}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Approval Page}{iv}{chapter*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Declaration}{v}{chapter*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Copyright}{vi}{chapter*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{viii}{chapter*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Tables}{xi}{chapter*.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Figures}{xii}{chapter*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Abbreviations}{xiv}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{List of Symbols and Notations}{xv}{section*.12}%
+\defcounter {refsection}{0}\relax 
+\renewcommand {\rmfamily }{\bfseries }
+\defcounter {refsection}{0}\relax 
+\renewcommand {\rmfamily }{\bfseries }
+\defcounter {refsection}{0}\relax 
+\setlength {\cftbeforechapskip }{12pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}The Motivation of Eye-in-Hand Robot Configuration}{3}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}The Devoid of Unified Solution for Uncertainty Management in State and Workspace of an Industrial Robot}{4}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Problem Statement and its Significance}{7}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Research Philosphy}{8}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Objectives}{8}{section.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.6}Research Scope}{9}{section.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.7}Methodology}{9}{section.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.8}The Outline of the Thesis}{11}{section.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Literature Review}{13}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Uncertainty Management Through State Estimation}{14}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Extended Kalman Filter for Manipulator's State Estimation}{15}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Unscented Kalman Filter for Manipulator's State Estimation}{17}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Particle Filter for Manipulator's State Estimation}{18}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Miscellaneous Estimation Problem in Manipulator Robot}{19}{subsection.2.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Map-Building Approach to Uncertainty Management}{22}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Point Clouds Mapping}{22}{subsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Occupancy Grid Map: The Map of Uncertain Environment}{24}{subsection.2.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Octomap: The definitive Uncertainty Managament Dynamic Environment}{26}{subsection.2.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Miscellaneous Mapping Techniques}{27}{subsection.2.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Simultaneous Localization and Map-Building as a Total Solution to Uncertainty in a Manipulator's State and Environment}{31}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}The Planning for 6R Robots in Dynamic Environment}{35}{section.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}The Probabilistic Motion Planning}{35}{subsection.2.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Summary}{37}{section.2.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Mathematical Backgrounds}{38}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}The Kinematics of Richard Mini}{38}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}The Mechanical Descriptions}{38}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Forward Kinematics of \textit {r\_mini}~}{40}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Inverse Kinematics of \textit {r\_mini}}{43}{subsection.3.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\textit {r\_mini}'s Path Planner}{43}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}The Cycle Space}{46}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}The Spherical Harmonics}{47}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}The Use of Kinematics Jacobian and the Singularities of the Manipulator to Relax the Cost Function}{49}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}SLAM for \textit {r\_mini}}{50}{section.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Summary}{53}{section.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Experimentation, Result and Discussion}{54}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Benchmarking Experiment Design and Result on the Sampling-Based Planner in Static Environment}{54}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Experiment Design for Unpredictable Obstacles using RRT}{55}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Experiment Design for Moving Planning in Dynamic Environment}{60}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Results on Planning for Static and Dynamic Obstacle}{60}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Result on Path Planning for Unpredictable Static Environment}{61}{subsection.4.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Result on Path Planning Under Dynamic Environment}{62}{subsection.4.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}Result on Obstacle-less Planning with SLAM}{66}{subsection.4.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Summary}{69}{section.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusion And Recommendation}{70}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Conclusion}{70}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Recommendation for Future Works}{71}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{REFERENCES}{71}{equation.5.2.1}%
+\contentsfinish 

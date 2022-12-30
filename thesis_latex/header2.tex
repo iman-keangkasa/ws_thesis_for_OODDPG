@@ -1,0 +1,109 @@
+\providecommand{\setflag}{\newif \ifwhole \wholefalse}
+\setflag %create new if variable name ifwhole(whole)  
+\ifwhole\else %if whole flag is set to true do nothing else do codes below
+
+  \documentclass[12pt,a4paper,oneside,hidelinks]{book}
+
+    %\input{extra_package.tex}
+    %\input{tweak.tex}
+    %\input{commando.tex}
+    %\input{font}
+
+%  \newcommand\thesisDir{/home/iman/version-control/ws_thesis/thesis_latex}
+%  \newcommand\thisPaperDir{/home/iman/version-control/ws_thesis/writing_papers/resampling_planning_in_dynamic_environment}
+
+  \newcommand\thesisDir{/home/asl/version-control/ws_thesis/thesis_latex}
+  \newcommand\thisPaperDir{/home/asl/version-control/ws_thesis/writing_papers/resampling_planning_in_dynamic_environment}
+  
+  %for arabic abstract
+  \usepackage[bidi=default, english]{babel}
+  \usepackage[LAE, T1]{fontenc}
+  \babelprovide{arabic}
+  \addto\extrasarabic{\fontencoding{LAE}\selectfont}
+  \addto\noextrasarabic{\fontencoding{T1}\selectfont}
+  %\usepackage[LAE]{fontenc} %Not needed due to [arabic] option of the babel package
+  %\usepackage[arabic]{babel}
+
+
+  \usepackage{tabularx}
+  \usepackage{import}
+  %\usepackage{natbib}
+  \usepackage[utf8]{inputenc}
+  \usepackage[backend=biber,bibencoding=utf8,style=apa]{biblatex}
+  \addbibresource{\thesisDir/bibtex/library.bib}
+	\usepackage{soul,color}
+  \usepackage{pdflscape} %for changing page orientation
+  \usepackage[shortlabels]{enumitem}
+  \usepackage{amssymb}
+  \usepackage{graphicx} %for inserting photo
+  \usepackage{subcaption}
+  \usepackage{amsmath} % for equations
+  \DeclareMathOperator*{\argmax}{argmax} % for underword argmax
+
+  \usepackage{mathtools} % for equations
+  \usepackage{physics}
+  \usepackage{arydshln} %adding dash line to matrix
+
+
+  \usepackage{float}  %deactivate this if hyperref does not work with algo
+  \usepackage{hyperref}
+
+  %to avoid self referencing TABLE OF CONTENTS 
+  %use nottoc option
+  \usepackage[nottoc]{tocbibind}  
+
+  \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+  \usepackage{multirow} %for merging row in cell
+  \usepackage{xfrac} % for fraction in the for n/d
+  \usepackage{esint} % for easy integral symbols
+%chapter/section style
+\usepackage[explicit]{titlesec} %for deeper subsections and changing chpt sec style
+\titleformat{\chapter}
+   [display] %possible values are hang, leftmargin, drop, etc.
+   {\fontsize{14}{16}\bfseries\centering} % format to be applied to the whole title
+   {\MakeUppercase{\chaptertitlename} \thechapter} %label setting
+   {24pt} %horizontal separation between label and title body
+   {\MakeUppercase{#1}} %code preceding the title body
+   \titlespacing{\chapter}{0pt}{0pt}{48pt} %4spacing after title
+
+%section style 
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{\MakeUppercase{#1}}
+
+%subsection style
+\titleformat{\subsection}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{#1}
+
+\setcounter{secnumdepth}{4} %setting subsection 4 section deep
+% numbering equations
+\ifwhole
+  \numberwithin{equation}{chapter} %equation number based on chapter
+\else
+%    \numberwithin{equation}{section} % equation number based on section
+\fi
+
+
+  %for listing algorithms from algorithm2e
+  \newcommand{\listofalgorithmes}{\tocfile{\listalgorithmcfname}{loa}}
+  %for footnote
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+  % for formattgin algorithm2e box [iman] I have to put after listofalgorithmes
+  \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+  \SetCommentSty{mycommfont}
+  \SetKwInput{KwInput}{Input}                % Set the Input
+  \SetKwInput{KwOutput}{Output}              % set the Output
+
+  
+  % This command is useful when importing subdirectory items
+  \input{\thesisDir/style.tex}
+  \input{\thesisDir/glossaries.tex}
+
+  \newcommand\rimini[0]{\textit{r\_mini}} %r_mini typesetting
+
+  %This is for group notation
+  
+\begin{document}
+
+\fi
+

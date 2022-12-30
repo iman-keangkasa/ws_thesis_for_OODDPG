@@ -1,0 +1,149 @@
+\documentclass[a4paper, 10pt]{article}
+\title{Repurposing a Sampling-Based Planner for a Six-Degree-of-Freedom Manipulator to Avoid Synthetic Moving Obstacles}
+
+\usepackage{authblk}
+
+%small text for affilliation
+\renewcommand\Affilfont{\itshape\small}
+
+\author[1]{Hafiz Iman}
+\author[1]{Raisuddin Khan}
+
+\affil[1]{Department of Mechatronics Engineering, Kulliyah of Engineering, International Islamic University Malaysia}
+  
+%formattingi
+  \newcommand\thisPaperDir{/home/asl/version-control/ws_thesis/writing_papers/resampling_planning_in_dynamic_environment}
+  \newcommand\thesisDir{/home/asl/version-control/ws_thesis/thesis_latex}
+  \usepackage{import}
+  %\usepackage{natbib}
+  \usepackage[backend=biber,bibencoding=utf8,style=ieee]{biblatex}
+  \addbibresource{\thesisDir/bibtex/library.bib}
+	\usepackage{soul,color}
+  \usepackage{pdflscape} %for changing page orientation
+  \usepackage[shortlabels]{enumitem}
+  \usepackage{amssymb}
+  \usepackage{graphicx} %for inserting photo
+  \usepackage{subcaption}
+  \usepackage{amsmath} % for equations
+  \DeclareMathOperator*{\argmax}{argmax} % for underword argmax
+
+  \usepackage{mathtools} % for equations
+  \usepackage{physics}
+  \usepackage{arydshln} %adding dash line to matrix
+
+  \usepackage{float}  %deactivate this if hyperref does not work with algo
+  \usepackage{hyperref}
+  \usepackage{tocbibind}  
+  \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+  \usepackage{titlesec} %for deeper subsections
+  \usepackage{multirow} %for merging row in cell
+  \setcounter{secnumdepth}{4} %setting subsection 4 section deep
+  % numbering equations
+  \numberwithin{equation}{section} %equation number based on chapter
+
+  \usepackage{xfrac} % for fraction in the for n/d
+  \usepackage{esint} % for easy integral symbols
+
+  %for listing algorithms from algorithm2e
+  \newcommand{\listofalgorithmes}{\tocfile{\listalgorithmcfname}{loa}}
+  %for footnote
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+  % for formattgin algorithm2e box [iman] I have to put after listofalgorithmes
+  \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+  \SetCommentSty{mycommfont}
+  \SetKwInput{KwInput}{Input}                % Set the Input
+  \SetKwInput{KwOutput}{Output}              % set the Output
+
+  % This command is useful when importing subdirectory items
+
+%  \input{\thesisDir/style.tex}
+%margin
+\usepackage{setspace}
+\usepackage[
+  a4paper,
+  left=3.8cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=3cm,
+  footskip=1.7cm
+]
+{geometry}
+
+%chapter section style
+\usepackage{titlesec} %for deeper subsections and changing chpt sec style
+\titleformat{\chapter}
+   [display] %possible values are hang, leftmargin, drop, etc.
+   {\fontsize{14}{16}\bfseries\centering} % format to be applied to the whole title
+   {\MakeUppercase{\chaptertitlename} \thechapter} %label setting
+   {24pt} %horizontal separation between label and title body
+   {\MakeUppercase} %code preceding the title body
+   \titlespacing{\chapter}{0pt}{0pt}{48pt} %4spacing after title
+
+
+\setcounter{secnumdepth}{4} %setting subsection 4 section deep
+%paragraph
+\parindent=12mm
+
+
+%header style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+
+%making sure table and figures caption is 1 single spacecaption is 
+%make sure that the tables are not in \center environment
+%it will add more space between caption and the table/figures
+\usepackage{caption}
+\captionsetup[table]{skip=12pt}
+  % This command is for keywords
+  \providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+
+  \date{} %setting date as empty string so no date shown in the article
+
+  \newcommand\rimini[0]{\textit{r\_mini}} %r_mini typesetting
+
+  %subfigure referecing
+
+\begin{document}
+{\let\newpage\relax\maketitle}
+\begin{abstract}
+  This paper presents the use of a sampling-based planner 
+  as a local planning scheme
+  to avoid obstacle between a robotic arm and a moving obstacle.
+  Based on a planner benchmark on a obstacle-ridden environment,
+  rapidly-exploring random tree (RRT) planner are used to 
+  populate the trajectories of the
+  task space and map them into a configuration space using
+  Newton-Raphson-based inverse kinematic solver.
+  Three robot poses are defined in a cycle of back-and-forth motion; 
+  the starting, the midpoint, 
+  and the end pose. The starting pose and the end pose are equal.
+  The robot repeatedly moves from the starting pose to the end pose via the 
+  midpoint pose. Poses between the three are a subset of a trajectory populated 
+  by the sampling-based planner. Each set of trajectory is unique. 
+  We impose
+  periodically occuring synthetic obstacle that moves in and out of 
+  the robot arm workspace defined in a simulated environment. 
+  Within the robot's workspace, 
+  the obstacle moves and cuts through the cyclical space to emulate a 
+  dynamic environment. Based on the performance of the local
+  planning strategy, the robot has a higher success in
+  avoiding the obstacles when the planning query starts during the presence of 
+  the obstacles in the cyclical space. However, a higher chance of collision
+  occurs when the planning query is invoked when the obstacle nearly 
+  approaches the cyclical space.
+\end{abstract}
+
+\keywords{mechatronics, robotics, planner, path-planning, sampling-based planner, robotic arm, manipulator, dynamic environment, moving obstacles, ROS, MoveIt}
+
+\section{Introduction}
+\cite{Hagele2016}
+
+
+\clearpage
+\printbibliography
+
+\end{document}
+
+

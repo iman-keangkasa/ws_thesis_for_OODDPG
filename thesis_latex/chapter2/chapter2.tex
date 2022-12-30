@@ -1,0 +1,809 @@
+\input{../header2.tex}
+
+\chapter{Literature Review}
+\label{chap:lit_review}
+
+\section{Introduction} 
+\label{sec:chapter2_introduction}
+In this chapter, the uncertainties in manipulators and the 
+state-of-the-art approach to model and manage 
+the uncertainty are elaborated and discussed.
+The following sections use the terms \textit{error} 
+and \textit{uncertainty} interchangeably. 
+
+In an industrial environment, the uncertainty of an industrial robot is managed 
+by isolating the manipulator into work cells. It lacks predictive behavior and 
+only function in a predefined setup \parencite{Miseikis2017}. Such a system is 
+fragile to unpredictable changes such as an accidental introduction to an object
+in its environment. The robot system often costs more because of constant reprogramming 
+if predefined changes are required. This review  explores solutions that enable the 
+manipulator system to react appropriately to changes in the environment while taking 
+account the uncertainty of its internal state. With these solutions
+robot manipulator can work in a more efficient setting, i.e., involves less reprogramming and 
+capable of working at close proximity with human operator safely.
+
+This research classifies the uncertainty into two categories; 
+uncertainty in the manipulator’s state and 
+uncertainty in the manipulator’s environment. 
+The uncertainty in a state is often caused by 
+indirect measurements of the manipulator’s joint 
+parameters because of the limitation of sensor choice 
+\parencite{Jassemi-Zargani2002,Hebert2012,Rigatos2009,Janabi-Sharifi2010,Du2014}
+and the characteristic of the manipulator’s joints and links 
+\parencite{Lertpiriyasuwat2000,Ulrich2011,Lightcap2010,Badamchizadeh2010,Sawada2012}
+The solutions to estimate a manipulator’s state involve filtering techniques. 
+The uncertainty in an environment is often related to a lack of information about the environment’s state. 
+The solutions to manage uncertainty in an environment are elaborate and non-trivial.
+
+The following discussion will outline the uncertainty management 
+of a manipulator by using an 
+extended Kalman filter, unscented Kalman filter, and particle filter. 
+The disucssion continues with the uncertainty management of the 
+environment using point clouds and 
+occupancy grid map and its variants. The uncertainty management
+of the state of a robot and its environment are discussed 
+based on the \acrlong{SLAM}. SLAM solutions are frameworks for more unified 
+uncertainty management in autonomous robot. However, this
+research will look into their application on robot manipulator.
+
+\iffalse
+The latter sections study the probabilistic approach 
+at managing motion planning and the publications
+that pioneered
+it. The discussion of random sampling are further explained
+as the probabilistic approach to planning algorithms
+by referencing current research on sampling-based planners.
+\fi
+\section{Uncertainty Management Through State Estimation}\label{sec:uncertainty_state_estimation}
+Filters are estimation tools used to observe the state of a system. 
+For a manipulator robot, the state of the robot’s end effector or its end 
+point is usually confirmed by direct measurement of the joint position. If this 
+direct measurement is unavailable, the state of the robot is measured or estimated 
+using observer or filters. 
+
+Filtering techniques uses probabilistic model or framework to handle and manage the 
+uncertainty of observing the state of the manipulator robot. It is often based on 
+Baye’s rule where a model of the state is conditioned based on incomplete or indirect measurement. 
+Here, the model of the state is often called a prior and the indirect or 
+incomplete measurement is often regard as the update of a filter. 
+If a prior of a filter is defined by another measurement, 
+we consider the application of the filter as a data fusion technique. 
+After conditioning the measurement update, the state estimation of 
+the robot is ascertained by applying Baye’s rule. 
+A filter often involves linearization like the case of an extended Kalman 
+filter. 
+They are also recursive such that the previous estimation 
+is used as the new prior during successive sampling.
+
+In this section, the use of extended Kalman filter, 
+unscented Kalman filter, particle filter and their role 
+at managing uncertainty for data fusion and state estimation 
+are reviewed.
+
+\subsection{Extended Kalman Filter for Manipulator's State Estimation}\label{sec:ekf_state_estimation}
+\textcite{Jassemi-Zargani2002} used extended Kalman filter to fuse data 
+from high resolution joint resolver. A joint resolver is a control unit 
+that performs calculation of the inverse transformation of a manipulator 
+from data obtained from the end effector. They use the data from two 
+accelerometers to estimate the position of each joints in their manipulator 
+and use these measurements in their extended kalman filter observer to 
+estimate the acceleration of the end effector that has jerking motion. 
+Their use of two sensors in extended Kalman filter 
+is an example of data fusion technique.
+
+\textcite{Lertpiriyasuwat2000} used extended kalman
+filter to estimate the position 
+of the end effector of two axis robotic arm together with the joint measurement 
+for highly flexible links in real time. The uncertainty in their system is caused 
+by the flexible links. They use a two-link manipulator. 
+Each joint has optical encoder and the end point has a reflective 
+infrared-light emitter. The deflection of each links is modeled using the deflection beam model. 
+The dynamic equations of the manipulator are derived from Kane's method. 
+They linearized the dynamic equation by eliminating the non-linear terms 
+that involve the generalized elastic coordinates and their derivatives in the 
+inertial matrix and the velocity vector. 
+They coined the linearization method as a 'ruthless linearization'. 
+The extended kalman filter is used to estimate the position of 
+the end effector using the differential equation solution of 
+the dynamic equation which was solved using Runge-Kutta method. 
+Their result shows that with ruthlessly linearized model, 
+the extended Kalman filter can estimate the position of 
+the end effector consistently during low-speed and 
+high-speed slew maneuvers compared to continuously linearized 
+model of the dynamic model. 
+From this research, linearization of model before the use of 
+extended Kalman filter affects the performance of the filtering technique.
+
+\textcite{Ulrich2011} proposed the use of extended Kalman filter to 
+estimate joint positions and velocities for flexible joint positions 
+and velocities for flexible joint space robotic manipulator. 
+The joint flexibility in manipulators for space robots are 
+obvious because they are lightweight which introduce uncertainty 
+in estimating joint position. 
+Thus, they extend the design of extended Kalman filters based on 
+nonlinear joint models for use with an adaptive controller.
+By using this combination, they increase the accuracy of 
+the closed-loop estimation and control
+of a flexible joint space robot.I observe that the uncertainty of 
+their joints also comes from
+the linearization of a nonlinear behavior of the flexible 
+joint of their space robots. Although
+nonlinear joints can be approximated by representing joint 
+flexibility by a linear spring model, the
+researchers argue that such assumption is inaccurate. 
+Accordingly, they add nonlinear stiffness,
+soft-windup, frictional loses, inertial cross-coupling 
+to their joint model. They presented a
+converging error for a non-linear based extended Kalman 
+filter technique used with linear and
+nonlinear joint model. However, the error diverges for 
+linear based extended Kalman filter
+techniques with the same model coupling.
+
+\textcite{Lightcap2010} attempted to estimate the configuration of a
+\acrfull{RLFJ} manipulator using discrete-time extended Kalman filter as 
+an observer for the robot
+model and control system. Because of the flexible joints, 
+direct measurement from the encoders
+cannot represent the position of the joint directly making the 
+position of the robot’s end effector
+nonlinear. The authors use extended Kalman filter to estimate the 
+pose of the end effector and
+manage the uncertainty of the flexible joint through linearization. 
+The uncertainties of the link
+and the motors' dynamics are modeled into the manipulator's dynamic 
+equations. The authors
+stress that extended Kalman filter has non-optimal estimation as is the 
+case of any algorithm
+that requires linearization. They performed a simulation and reiterate 
+their models and algorithm
+on a Mitsubishi PA10-6CE manipulator experimentally. 
+They observed improved tracking
+performance for highly flexible joints (joints under high torque) 
+and low tracking performance for
+rigid joints. 
+Thus, the authors introduce a mixed rigid-joint/flexible joint 
+model to an \acrfull{EKF-RLFJ}
+controller which improved the overall tracking performance.
+
+During visual servoing of a manipulator, the pose of the 
+end effector is determined from
+an intial estimate of its position. \textcite{Janabi-Sharifi2010} 
+demonstrate an \acrfull{AIEKF} in the absence of accurate 
+initial pose, noise matrix,
+and covariance matrix at variant sampling rate during robotic visual 
+servoing. Visual servoing is
+a process of estimating the configuration of a manipulator using images 
+or visual feedbacks.
+They experimented on a six degree of freedom cartesian manipulator, 
+AFMA-6, with eye-in-
+hand camera configuration. 
+The robot moves at a predefined trajectory under different condition.
+Each separate experimentation involves increasing the velocity of 
+the end effector, changing the
+covariance matrices, changing the sampling time for estimation, 
+and changing the initial
+positions of the end effector. 
+They compared three other Kalman filtering techniques (extended
+Kalman filter, adaptive extended Kalman filter, and iterative 
+extended Kalman filter) with the
+AIEKF. They conclude that AIEKF can improve pose estimation during 
+uncertain initial position,
+uncertain covariance matrix estimation, high motion and slow sampling rate.
+
+\subsection{Unscented Kalman Filter for Manipulator's State Estimation}\label{sec:ukf_state_estimation}
+\textcite{Haghighipanah2015} address nonlinearity problem of an elastic cable as power
+transmission between a motor and a joint for a surgical arm. The coupling between the motor
+and the robot joint reduce armature mass, inertia and size for expert surgery but the cableelasticity introduces uncertainty and nonlinearity to the kinematics and the dynamics of the
+surgical arm. They introduce an estimation method that uses an \acrfull{UKF} and a \acrfull{srUKF} to estimate cable coupling parameter and the
+position of the end effector (end point) in real-time. The authors implement their method using
+the Raven-II, a seven degree of freedom serial manipulator, as their surgical arm. The surgical
+arm is equipped with an optical encoder attached to the motors and position sensor on each
+joint for data validation. In their research, the authors only address the first three joint for state
+estimation of the Raven-II. They model the armature dynamics using forward and inverse
+dynamics with Newton-Euler equations. Their inverse dynamic solution is based on the
+recursive Newton-Euler algorithm. The Newton-Euler equations requires model parameters. The
+authors identify the initial inertial matrices, mass and the center of mass of the system using a
+computer aided design model and use srUKF to estimate the joint angle and joint position of the
+surgical arm online. Also, the authors apply the standard UKF to estimate the coupling
+parameter offline. They compute spring constant, damping constant, coulomb and viscous
+friction of the motor side and the joint side empirically. They validate their method
+experimentally using three different design. The first two experiments involve changing the
+cable tension and the third experiment involve picking an object of the mass 100 g under high
+cable tension. They compared the result of the three experiment between the dynamic model
+that uses their UKF estimation and the dynamic model that has no filtering technique. They
+improved the accuracy of the joints position to 1.433%, 36.76%, and 62.99% for joints 1, 2 and
+3 respectively. The authors also observe that whe the flexible joint are model as a rigid body,
+the performance of their unscented Kalman filter deteriorate. They repeat the same problem mix
+rigid-flexible cable model and replace the encoder with stereo camera \parencite{Haghighipanah2016}. 
+They improve the accuracy of the joint position to 43.14\%, 33.42\%, 72.05\% for joints 1,
+2, 3 respectively.
+
+\subsection{Particle Filter for Manipulator's State Estimation}\label{sec:particle_filter_state_estimation}
+
+\textcite{Badamchizadeh2010} present the design of two filtering techniques to estimate the
+acceleration and the jerk of five-bar linkage manipulator with flexible joints. These estimations
+help in designing a better control. Unlike a rigid joint, the flexible joints are time variant hence
+highly nonlinear. The nonlinearity introduce uncertainty to the dynamics of the manipulator
+making prediction of higher order dynamics such as accelerations and jerks uncertain. This is
+because a nonlinear system has no closed form solution and require linearization. The authors
+suggest the use of Euler-Langrange equations to represent the model of the manipulator
+dynamics given that each joint are model by torsional spring. To better estimate the acceleration
+and jerk of each link in the four-bar linkage, the linearization is manage using extended and
+unscented Kalman filters. The author validated their observer model by simulation and conclude
+that the accelaration and jerk of the manipulator's linkages are successfully estimated.
+
+\textcite{Rigatos2009} uses particle filter to fuse data from an \acrfull{IMU} and joint encoders to
+estimating pose of the end effector. The purpose of this paper is to estimate the state vector of a
+three degree of freedom industrial robot using accelerometer and an encoder for each joint. The
+estimated state vector is used to generate appropriate control signal for the manipulators.
+Accelerometer are notorious for being nonlinear. The authors
+use particle filter to perform data fusion between an accelerometer and an encoder to estimate
+the pose of the end effector. Readers should note that both accelerometers and encoders has
+non-gaussian behavior. This behavior is stronger for flexible joints because they introduce
+nonlinearity to the state (position of the end effector) of the manipulator. Particle filter is used
+simply because it is nonparametric. This mean that the parameter of a normal distribution are
+not assumed. Instead, particle filter performs the estimation based on the sampled data and
+generate the distribution from these samples. The method of sampling provide a general
+solution that has no presumption of sensor characteristics. This also means that with particle
+filter, more accessible sensors such as an accelerometer or an IMU can be used without scaling
+down accuracy. The state vector estimation was compared with extended kalman filtering
+technique. The authors observe higher accuracy in estimation of the state vector for the particle
+filtering technique compared to the extended Kalman filter technique. However, the author
+caution that the selection of particles numbers may improve accuracy with the expense of
+computational load.
+
+\subsection{Miscellaneous Estimation Problem in Manipulator Robot}\label{sec:misc_state_estimation}
+\textcite{Du2014} use particle filter to estimate pose for a visual servoing application.
+The motivation behind this paper is to introduce contactless and markerless control of a
+manipulator using computer vision. The researcher uses 3D camera (Kinect sensor) to translate
+a human arm motion into a motion of a manipulator and Camshift program library to track hand
+position. The particle filter is used to estimate the hand position and orientation. The particle
+filter handles the noise error from the Kinect sensor and the accumulated error introduced from
+the Camshift method of tracking. The robot inverse kinematics are solved numerically using the
+\acrfull{LM} algorithm. 
+
+\textcite{Du2014a} use extended Kalman filter to handle kinematic errors in
+manipulators. Kinematic errors occur because of imperfection in serial robot components, their
+wear, misalignment and other factors. The extended Kalman filter allows auto-calibration without
+strenuous technique and expensive sensors when the kinematic errors are considered. In their
+method, the IMU and the position sensors are attached at the end point of the six degree of
+freedom GOOGOL GRB3016 robot. The authors also explain data fusion algorithm for their IMU
+attached at the end point of their serial robot where a particle filter is used to estimate the
+orientation of the end point of the serial robot and a Kalman filter is used to estimate the position
+of the end point of the serial robot. A Kalman filter is the base of both extended and unscented
+Kalman filter which can only perform well for linear system. The extended Kalman filter is used
+to optimize the position and orientation estimation of the end point of the robot. By using the
+Jacobian matrices, the authors estimate the kinematic erros of the serial robot to manage the
+uncertainty of using IMU measurements. \textcite{Du2014} compare their extended Kalman
+filter approach to a linear least square technique for their estimation of each joints in the robot.
+The extended Kalman filter has lower error for all six joint parameters estimation. The author
+acclimate that their method of using IMU and position sensor, via position markers, reduce the
+complex steps of auto-calibrating a manipulator, increase better accuracy, convenience, and
+effectiveness.
+
+\textcite{Hebert2012} present data fusion algorithm using unscented kalman filter to
+estimate the manipulator tool and the manipulated object simultaneously. The fusion algorithm
+is used to manage the uncertainty of the end effector location as a result of uncertain actuation
+because of unknown weight of the manipulated object. Also, the authors use Barret WAM
+manipulator that introduces further uncertainty in actuation as a result of tendon actuation similar
+to flexible cable actuation. These uncertainties prompt the use of two type of sensors as
+feedbacks, visual and tactile sensing. They use unscented Kalman filter to fuse image features
+that covers dense range, visual appearance, silhouette of manipulator arm, multi-figered hand
+and grasped object. To fuse these measurement, the authors model three measurements: (1)
+the measurement model for manipulator’s hand tracking by using appearance, shape and
+silhouette, (2) the object tracking measurement using point cloud association like iterative
+closest points, and (3) the tactile measurement model to represent a binary state of contact
+between the fingers of the manipulator and the manipulated object. The DARPA ARM-S
+with Barret WAM manipulator were used to validate their methods experimentally. The experiment involves
+the tasks of grasping a hand-driller and drilling a red hole on a wooden block with the grasped
+drill. The authors report an average of $9.3 mm$ drilling deviation when the sensor measurements
+are incorporated into the tasks and an average of $47.5 mm$ drilling deviation without the aid of
+any sensor.
+
+\textcite{Hu2017} use a new apporach, a distubance Kalman filter, to estimate the
+force acting on the end effector for a compliant human-robot motion. In their approach, 
+\textcite{Hu2017} modified the Kalman filtering technique by using rigid body dynamic model and its
+disturbances as the update stage. The authors use \acrfull{IDM} as a prior to
+the force. The approach also models the sensor using rigid body dynamic. The only feedback
+data used as update state of their novel disturbance Kalman Filter are the joint positions and the
+torque measurement from the sensor. The Disturbance Kalman filter takes into account the
+uncertainty from the disturbance dynamics. The authors successfully implement the disturbance
+Kalman filter for the force estimation on a six degree of freedom Kinova Jaco2 arm robot.
+
+\textcite{Sawada2012} present a technique of collision avoidance using unscented
+Kalman filter for a two-link flexible manipulators. The researchers use sliding mode controller to
+control the motion of the manipulator. They also investigate the use of \acrshort{EKF} to
+manage the uncertainty introduced by the flexible beams of the manipulator which affects the
+motion trajectory of the manipulator's end effector. They introduce a collision input into the
+observation model of the UKF. The collision is detected by a piezoelectric sensor attach at the
+base of the links. An abnormal reading from the piezoelectric sensors would trigger the collision
+input and change the parameters of the UKF to suspend control of the manipulator. This
+approach, regrettably, expects collision rather than avoiding it. However, this is inevitable
+considering piezoelectric sensors require contact to detect changes. They confirmed that,
+through two numerical simulation, the algorithm for their collision detection via UKF successfully
+increase efficiency.
+
+
+\section{Map-Building Approach to Uncertainty Management}\label{sec:map_uncertainty}
+
+A robot in an industrial environment is isolated. The robot is barricaded because of its massive
+built which impose danger to human operator. But it is argued that with flexible workcell where a
+robot where a robot manipulator in the industry can manage the uncertainty of its environment
+through map-learning or map-building, this robot system can potentially reduce cost of
+operation.
+
+I discover that there are two methods to mapping an unknown environment of a
+manipulator. The first method is by using point clouds \textcite{Um2013, Wang2017}. and
+the other by using occupancy grid map together with its variants such as octomap.I must
+mention that most of the researches on manipulator’s mapping are not in immediate industrial
+setting. Yet,I are confident that these solutions can be used in industrial robot.
+
+\subsection{Point Clouds Mapping}\label{sec:pointclouds_map}
+Mapping with point clouds use direct data from sensor to model the environment. Often these
+metrical data are translated and combined from multiple scans by using iterative closest point to
+construct the global representation of the environment.
+
+\textcite{Um2013} uses point clouds to map the environment. The paper presents a
+simultaneous planning and mapping for a three degree of freedom manipulator in an unknown
+environment. The paper argue that their method handles the uncertainty of the unknown
+environment by using virtual skin concept. The manipulator explores the environment using a
+mono-vision \acrfull{IPA} sensor which replicate the characteristic of a tactile-
+sensitive skin. From this exploration, the robot would model its configuration space
+and use it as the input for their best-next-move algorithm to optimize path planning.The IPA
+sensors are attached on each links of the manipulator. Readers should note that an IPA sensor
+has limited range and noise bound output which add more uncertainty to the estimation of the
+manipulators configuration space. The researchers address the noise in the sensor using \acrfull{GAF}. The pointclouds generate from the IPA go through GAF algorithm to produce a
+more confident map of the configuration space. The generated map of the configuration space is used to provide
+motion planning for the robot manipulator. The RRT path
+planning algorithm use the map as an input to plan the motion of the manipulator. The authors
+optimized the RRT algorithm with their \acrfull{BNM} algorithm. BNM is reactive and
+does not use any inverse kinematic solution. They validate the method using and compare the
+RRT-BNM method with RRT method by simulation and showed that the RRT-BNM method has
+higher mapping efficiency. They defined mapping efficiency as percentage of map built
+compared to the actual map, over the number of point clouds in the c-space. Due to the GAF
+decompression method, the RTT-BNM produce map with less point clouds.
+The author, however, did not repeat the RRT experimentally. 
+Despite the higher efficiency of RRT-BNM path planning, the map produce does not represent an accurate geometric
+information of the unknown environment explored by the manipulator.I believe this is
+because there is a lack of pose estimation of the manipulators link since the research disregard
+the use of inverse kinematics, bayesian or non-bayesian filtering techniques to reconcile with
+the path planning.
+
+\textcite{Wang2017} present a method using point clouds to perform self-identification
+using k-means clustering method and obstacle detection and obstacle avoidance. The point
+cloud is used to generate the skeleton and the sphere along the skeleton. The point clouds are
+sparse and noisy which introduce uncertainty to the self-identification. However, the uncertainty
+is eliminated using a filter based on the density of the point cloud. The detection of the obstacles
+is based on the negation of point clouds that are not a part of the skeleton and the sphere that
+shape the manipulator. This segmentation is the base of their approach to obstacle avoidance.
+They tested their algorithm by performing three experiments sequentially using a Baxter
+manipulator robot with eye-in-hand configuration. These experiments involve the validation of
+their self-identification algorithm, obstacle detection algorithm, and obstacle avoidance
+algorithm.
+
+
+\subsection{Occupancy Grid Map: The Map of Uncertain Environment}\label{sec:occupancy_map}
+
+Direct use of point clouds to map an environment is inefficient and requires a considerable
+amount of computational expense. This is not the case of an occupancy grid cell where the
+point clouds are used to statistically parameterized the grid cell of the map. A grid cell or a voxel
+is a cubic primitive that represent the environment’s geometrical characteristic.
+Occupancy grid map consider the uncertainty of mapping sensor such as a sonar, a camera, or
+a laser range finder to represent the environment probabilistically \parencite{Moravec1988}.
+An example of the use of occupancy grid map is by \textcite{Matuszek2011} that
+uses occupancy grid map in presenting an environment of a chess playing robot manipulator.
+The construction of occupancy grid map often requires data fusion or sensor fusion where two
+or more sensors are fused together using Bayesian rules or any filtering techniques.
+\textcite{Rybski2012} use a variant occupancy grid map and handle uncertainty of the environment by
+fusing measurements from a Swissranger SR4000's ranger and two Tyzx G3 EVS stereo
+cameras to estimate the occupancy of a grid cell.
+
+I,
+accordingly, define this problem under the uncertainty managing the unpredictable environment
+unlike \textcite{Janabi-Sharifi2010} which uses the state of the robot’s joint position as the
+visual feedback of their visual servoing). Kalman filtering technique is used to help track an
+object on a flat surface. The use of extended Kalman filter aside from the trajectory control of
+the end point of the robot increase certainty of the pose estimation and the accuracy of thetracking. 
+A camera is mounted on the end point of CRS Plus SRS-M1A robot system. The robot
+is presented with a task to follow the object using the eye-in-hand camera. The visual feedback
+from the camera is use with their control strategy. The extended Kalman filter is used to predict
+the relative position of the object while it is moving. Since the researcher maintain a constant
+velocity to the object, the tracking can use a Kalman filtering technique without linearization.
+However, since the tracking of the object requires the movement of the camera, given the
+nonlinearity of an inverse kinematic solution of their robot system, the use of extended Kalman
+filter is justified. The filter maintains the estimation of the end effector's pose. Although the robot
+manages to follow the moving object in their experimentation, the authors did not compare and
+reiterate their experimentation with other estimation method.
+
+\textcite{Burns2007} present a method of sample-based motion planning on top of an
+occupancy grid map. The sampling-based planner take regard the uncertainty of sensor
+measurements and incorporate the uncertainty into the occupancy grid map. Their method is
+iterative; the planner considers and incomplete information about the world and constantly
+update changes in their map model and configuration space. The authors use the concept of
+utility and cost to weight the probability of an edge. A* algorithm is used to search the most
+optimal path from randomly sampled node in the configuration space. During edge validation of
+the roadmap is witheld before the A* algorithm complete its query. They validate their planner
+by simulating three separate experiments, two of which, involve manipulators with ten degrees
+of freedom and fourteen degrees of freedom respectively. The planner is specified to solve 50
+planning queries given a start and a goal configurations. They report that building a planner on
+top of a occupancy grid map increase the accuracy of completing the path from the start
+configuration to the goal configuration. They conclude that, compared to PRM, their method
+able to eliminate the possibility of invalid edges in their roadmap because they introduce error
+model of the sensor at hand.
+
+\textcite{Kruse1996} present a method for exploring an unknown environment using
+either a mobie robot or a manipulator robot. Their method uses a planning-sensing-updating
+cycle. This research uses an occupancy grid map to represent the unknown environment.
+Their rating approach is similar to \textcite{Burns2007} utility and cost concept. However, they
+relate their rating function with the manipulator's configuration space by introducing constraint
+for fast exploration.
+
+\textcite{Paul2011} present a path planning strategy to perform autonomous
+grit-blasting as a part of bridge maintenance process. They develop a framework called
+\acrfull{AXBAM}. AXBAM define the uncertainty in an
+unknown environment as the measurement of information that has not been discovered in the
+environment by using Shanon's entropy definition of information theory. This is an appropriate
+concept to use in modeling an unknown environment since the theory help in optimizing the
+exploration and path planning of a manipulator. The authors use Occupancy Grid map concept
+to handle uncertainty for path planning in the unknown environment based on the entropy
+definition. The authors implement ellipsoid force-field planner to plan collision free roadmap.
+Another problem addressed by the authors states that there are possibilities for multiple goal
+configuration and use their entropy model to arrive to a single goal configuration with the highest
+information gain prediction. Despite the use of occupancy map in managing the control of their
+manipulator under uncertain environment, 
+the mapping model in this paper uses direct pointclouds for detailed geometric representation 
+of the unknown environment. However, the author
+fails to show any optimization technique when registering local scans into a global scan. We
+believe without this optimization, if the pose of the end effector is uncertain, their map may have
+diverging misalignment. The authors use Hokuyo Laser Range Finder (Hokuyo URG-04LX) as a
+scanning sensor attached on a six degrees of freedom Denso VM-6093 manipulator arm with
+eye-in-hand configuration. The 5th joint rotates to facilitate the initial scanning of the
+environment before exploration commence. Based on this initial scan, the robot will start
+exploring. By using AXBAM, the authors claim to reduce computation in decision making during
+exploration.
+\subsection{Octomap: The definitive Uncertainty Managament Dynamic Environment}\label{sec:octomap}
+
+A number of researchers represent the environment using an Octree model to facilitate path
+planning strategy \parencite{Faverjon1984,Hamada1996}. Similar to Occupancy grid map,
+octree represent the environment with discrete cell that divides into smaller details. 
+\textcite{Payeur1997} use octree based representation of occupancy grid map to reduce computational load
+so that the grid map can be used efficiently to represent 3D scenes.
+
+\textcite{Hornung2013} improves the use of octree probabilistically by introducing relaxed
+logit function for uncertainty management in mobile robots.Octomap represents the uncertainty
+in the environment and the sensor that maps the environment. Although Octomap has been
+exhaustively used in mobile platform, researchers have introduce its use in robot manipulators.
+By using Statistical Outlier Removal algorithm, \textcite{Miseikis2017} use Point clouds from
+cameras to construct and environment based on octomap. They proceed by merging point cloud
+data from two 3D cameras (Kinect Sensor) using iterative closest point. \acrfull{ICP} is often used in mobile robot to combine two scans collected at different position together.
+They use forward kinematic to assist in replacing point clouds corresponding to the robot’s
+chassis with cylindrical shapes. The map of the environment is modeled using octomap and
+embedded with a decaying occupancy value. The decaying cost value are used to represent
+danger zone, a mediary zone, and a non-danger zone in the map for a reflexive and predictive
+behaviors. Building their path planning on top of these map provides a responsive motion even
+if the robot workspace is populated by moving objects. The authors use six \acrfull{DOF} UR5 robot with
+eye-to-hand configuration. They validate their method by simulating a predefined back and forth
+motion between a start configuration and a goal configuration. The first simulation act as the
+baseline or the benchmark of their path planning approach using only RRT. The second and the third experiments introduce a moving object into the
+robot's workspace. Experiment 2 and experiment 3 use the reactive path planning and the
+reflexive-predictive path planning approaches respectively. They conclude that although
+experiment 3 performs at the shortest time, the result was not significant.
+
+
+
+\subsection{Miscellaneous Mapping Techniques}\label{sec:misc_map}
+
+In this section, I present papers that has unconventional way to manage the uncertainty oftheir environment. 
+\textcite{Cohen2010} and \textcite{Meeussen2007} use graph theory to
+their mapping technique, while \textcite{Petrovskaya2006} and 
+\textcite{Koval2013} interact
+directly with the environment using force sensor to localize object in the robot’s configuration
+space. \textcite{Corrales2008} track a human operator in its environment. \textcite{Ruhr2012}
+introduce the element of learning to help manipulate dynamic object in the environment.
+\textcite{Cohen2010} present a search-based planning as an oppose to sampling-based
+motion planning. They use examples of motion planning in lower dimensionality problem or
+problems in low-dimensional manifold as a heuristic for motion planning in higher dimensional
+manifold. From this heuristic, they define motion primitives, a predefined motion of a single joint,
+and used them to minimize the cost function so that the most optimal path can be realized. This
+method eliminated the multiple solution to start-to-goal configuration by selecting the most
+feasible path that avoids collision which may not have the shortest path. Their searching-based
+planner follows \acrfull{ARA*} search algorithm. ARA* is different from A*
+algorithm because A* always aims at getting into a goal configuration at the shortest traversal.
+ARA* consider a factor of the most optimal path initially which can be rectified at further path
+sampling. They use occupancy grid map to decrease the intractability of their algorithm so that
+the ARA* motion planner produces the most optimum solution in path planning. They manage
+the uncertainty of multiple path solution by eliminating it using cost function as constraint to their
+path planning algorithm. They validate their approach by simulating manipulation in a cluttered
+tabletop and conclude that their approach are only optimal for three degree of freedom pose
+(translational) rather than a full six degree of freedom pose (translational in x,y, and z directions
+together with orientation about the x, y and z lines) They also perform the same experimentation
+on a PR2 robot with seven degree of freedom manipulator.
+
+\textcite{Meeussen2007} present an approach to generate a path planning by human
+demonstration for a sensor based manipulator. A tool containing optical markers are tracked
+during demonstration phase using a 3D vision sensor (a Krypton 6D Optical System). The tool is
+attached to a geometrically uncertain object in a controlled environment. The use of 3D vision
+sensor, and the estimation of the state of the tool and indirect estimation of force asserted by
+the tool based on the state of the tool introduce uncertainty. To compromise the uncertainty, the
+authors use particle filtering technique to estimate the pose and twist of the manipulated object
+via tracking of the manipulating tool the force between the contacting object. The researcher
+addresses their previous work on the same problem and optimize the particle filter with
+topological graph called contact-state graph to predict the next best configuration of the object
+being moved or contact formation. They observed that the contact-state graph reduces the
+number of particles used during sampling which decrease computational load and increase
+accuracy in their estimation. The paper however did not replicate their simulation in an
+experimentation with an actual manipulator
+
+\textcite{Petrovskaya2006} use particle filter to estimate the position of their end effector
+and at the same time ascertain the position of an object by using tactile sensor. The sensing by
+touching follows a heuristic where a person increases its confident of the shape and the position
+of an object by feeling it with his or her hand at different location. From this heuristic, the authors
+express their algorithm with the help of particle filtering technique. Particle filter depends on
+sampling approach where the prior or a believe is increased by each successive samplling.
+They modified the particle filtering technique to assist a highly sparse sparse measurement
+fromtactile sensor and called their technique as \acrfull{SSPF}. In SSPF, the initial
+filtering steps has the lowest resolution of accuracy and the highest uncertainty. Based on the
+initial sampling, the following sampling increase increase the certainty of the position of an
+object by sampling at a different position. The authors tested their algorithm by simulation and
+experimentation. In the experimentation, SSPF manage to help a manipulator localize and
+grasp a box at 70\% success rate, and identify and handle a door knob at 98\% success rate.
+
+\textcite{Koval2013} present a situation where constant contact and manipulation of an
+object, by pushing the object, can be used to estimate the state of the object; i. e. the position
+and the orientation of the object. They term the process as contact manipulation. They argue
+that with the absence of more conventional observation from sensors such as a laser range
+finder and a vision camera, tactile based sensor can perform state estimation using appropriate
+filtering technique. Since tactile sensor has non-gaussian characteristic and highly nonlinear,
+the authors used particle filter as their estimator. The use of tactile sensor, however, introduce
+uncertainty because the sensor has low spatial resolution or low manifold. This is regarded as a
+low-dimensional manifold problem where the state estimation has higher dimensionality (two for
+position on a plane and one for orientation). Although intuitively increasing the resolution of the
+tactile sensor may decrease the spatial uncertainty, it is not the case for tactile sensing with
+particle filtering technique. Thus, the authors introduce \acrfull{MPF}. An MPF
+reduce the dimensionality of the state estimation by marginalizing the probability distribution of
+the state of the object based on the observation from the tactile sensing and use it as a prior
+estimate. To implement the MPF, the state estimation follows three steps:
+
+\begin{enumerate}[(a)]
+  \item assumption of the state of the object by evenly weighting particles
+  \item action which involve pushing the object
+  \item observation where the MPF use the pressure profile during pushing to estimate the
+state of the object.
+\end{enumerate}
+
+They implement the algorithm using OpenRAVE simulation environment and evaluate it with a
+simulated BarrettHand. They then run an experiment using Andy, a robot module developed for
+Darpa ARM-S competition. They compared their result with a
+\acrfull{CPF}
+and improved estimation of the object state.
+
+\textcite{Corrales2008} uses kalman filter fusion algorithm to fuse \acrfull{UWB}
+technology and inertial motion capture system to estimate the motion of human operator in
+industrial environment. The algorithm improves the interaction between a robot and a human
+operator/user by localizing a human in a manipulator's workspace so that a cooperative
+interaction can be made. Since the authors use UWB sensor to estimate the location of the
+human, they use Kalman filtering technique to fuse the information coming from the UWB and
+the inertial sensors. The filtering technique compensate the low data rate of the UWB and the
+high error from inertial sensor. Their Kalman filter uses the global position of the UWB as the
+correction step and the inertial sensor as the prediction step. Their result shows that by fusing
+two measurements using kalman filter algorithm, the state estimation of the person's location is
+increased in accuracy.
+
+\textcite{Ruhr2012} This paper present solution to manipulation task which involve
+opening and closing doors and drawers in any kitchen environment. Their approach involves the
+management of uncertainty of door handling through learning. Within their learning model
+framework, the authors use 3D point clouds directly to identify door or cabinet handles. They use \acrfull{RANSAC} with the point clouds to segments the point clouds to help detect the handles
+based on identification of planes that parameterized a wall, ceiling, floor, and cabinets. They
+also implement real-time impedance control and kinematic model learning to estimate the
+kinematics of dynamic objects in the kitchen. They use a higher level of abstraction in
+representing the environment via semantic maps.
+They evaluated their approach using PR2 mobile articulated robot which has seven DOF manipulator.
+They report out of 104 trials of opening and closing cabinets and doors, the rate of success is
+51.9\%.
+
+\section{Simultaneous Localization and Map-Building as a Total Solution to Uncertainty in a Manipulator's State and Environment}\label{sec:slam_solution}
+
+I have discussed the uncertainty of a manipulators can be represented and manage using
+filters. I have also discerned the use of occupancy grid map, point clouds, and octomap to
+model the environment of a manipulator. Despite rich solution option to uncertainty of a robot
+state and its environment, the solutions are disjoint and performed separately.
+
+ 
+
+The closest solution for SLAM problem in a manipulator robot is reported by
+\textcite{Klingensmith2016}. The authors argue that encoders on each joints of a manipulator is
+not enough to estimate the endpoint of a manipulator due to gear trash, cable stretch non-rigid
+deformation and others. Their \acrfull{ARM-SLAM} uses 
+\acrfull{TSDF} as part of the scene
+reconstruction to help estimate the pose of the end effector. TSDF is a variant of Dense Fusion
+that performs 3D scene reconstruction using multiple depth images and camera poses. With
+TSDF, each voxel is encoded with a distance to the nearest surface. The voxels are weighted
+where positive weight means the voxel is outside the surface, negative weight means the voxel
+is inside the surface and zero distance is when the voxel is on the surface. Their ARM-SLAM
+adopt eye-in-hand configuration.They conducted three experiments to validate their SLAM
+solution. In the two-dimensional simulation, they compare pose error between forward
+kinematics, Dense Fusion algorithm and ARM-SLAM algorithm. The result shows significant
+error reduction for both of the two algorithms compared to the forward kinematics calculation.
+ARM-SLAM, however, has the lowest errors. In their 3D simulation experiment, the authors
+compare results for forward kinematics calculation with kinect fusion and ARM-SLAM. They
+observed that ARM-SLAM is more robust when loss of data occurs. They also conducted a real
+shelf scanning. In this experiment, the authors could not conclusively see better pose estimation
+compared to the forward kinematics calculation. However, they restate that during loss of data,
+the ARM-SLAM solution produces robust estimation.
+
+Based on \textcite{Klingensmith2016}, I conclude a SLAM approach represent the total uncertainty of a manipulator in an environment.
+ I characterize the SLAM problem as the methodology that involve the consideration of robot’s
+state uncertainty, its environment uncertainty, and a tractable solution that uses both the formerand the latter.
+In a manipulator, a SLAM problem can be considered as a model that has tractable solution
+given the uncertainty of its end effector’s pose and the uncertainty of its configuration space. We
+define that the SLAM solution to a manipulator should have an element of map-learning where
+statistical and probabilistic approach is considered when estimating the pose of an end effector.
+
+\textcite{Sun2016} use \acrfull{LSD-SLAM} technique to replicate
+the motion of a human operator. The technique resolves the noise from their measurements
+using dbscan, a density-based spatial clustering algorithm, to eliminate outlier. LSD-SLAM uses
+a visual camera to produce point clouds with the help of dbscan algorithm. The scenes
+generated from the camera are three dimensional. However, the movement of the manipulator
+is planar. The LSD-SLAM is used to replicate the movement of a human arm. The movement
+are learned and modeled using \acrfull{GMM} and the parameters of the
+model are estimated using \acrfull{GMR}. GMM is a probabilistic model
+that assume all the data points are generated from a mixture of finite number of Gaussian
+distribution with unknown parameters. GMR uses Expectation maximization iterative learning
+algorithm to help replicate an output data based on an input. I observe that, by using GMM
+and GMR, the authors manage to handle the movement uncertainty of the human operator and
+map the movement into a planar actuation of the manipulator. The authors perform an
+experiment by recording the movement of the human operator. The LSD-SLAM manage to
+generate a smooth path for the end effector of the manipulator as prescribed by the GMM and
+GMR based on the demonstration of the operator.
+
+\textcite{Nissler2016} solution to AprilTag tracking is similar to SLAM solution method
+where AprilTag is used as a feature observed by the measurement to optimize the pose
+estimation of the end effector and at the same time using the pose estimation to track the
+AprilTag on a work space. \textcite{Nissler2016} demonstrate the use of fully autonomous
+handling of CFRP material. The authors use RANSAC solution to fuse multiple scene from
+sensors, an eye-in-hand camera, that may contain outliers. The authors use KUKA KR 210 with
+a AVT GigE camera attached to the end point. The robot follows three different motion; a
+horizontal arc, a vertical arc, and an approach motion. A laser tracker is used to calibrate the
+position of the robot and the markers. A single AprilTag marker was tracked during the motion.
+The motions were repeated while tracking multiple AprilTag markers. RANSAC method was
+compared with a least square method. They observed that RANSAC method that they
+developed for the AprilTag tracking improves the estimation of the end effectors pose.
+
+I also noted that SLAM solution is used for mobile manipulators. \textcite{Song2013}. This
+paper present two problems and two solutions. One is on self-localization, a SLAM problem
+which they solved using EKF-SLAM and the other is on grasping problem. I will only regard
+the grasping problem since it directly involves manipulation under uncertainty. They use \acrfull{SURF} for object identification and visual servoing using Position-based
+Visual Servoing (PBVS) to grasp an object and return the object to a person. During object
+identification, the authors raised the concern of matching error during identification which may
+result in misleading object recognition. They mitigate the problem using random sample
+RANSAC to reject outliers and to find the homography matrix.
+Homography matrix transforms points in one image to the corresponding points in another
+image when a camera changes in position. The result of their investigation 
+suggests asuccessful object retrieval to a person. They did not, however, present any comparison of their
+result with other approach for the grasping problem.
+
+From these papers, I observe that the having to mount a manipulator to a mobile
+platform introduce localization uncertainty where there is uncertainty on the base location of the
+manipulator arm, hence propagating the uncertainty to the path planning of the manipulator.
+
+\textcite{Pilania2015} propose a method of base uncertainty 
+by using their novel \acrfull{HAMP-U} to account for
+the uncertainty of the base of a mobile robot
+
+I also observe manipulator attached to a mobile platform often regard their grasping
+solution using two different approach; i.e. a probabilisitic approach for the mobile platform
+localization and a deterministic approach at the manipulation stage of the robot movement such
+as grasping \parencite{Venator2013, Gasparri2006}. I also note that the total uncertainty
+solution presented by SLAM does not extend to path planning approach.
+
+\section{The Planning for 6R Robots in Dynamic Environment}
+
+This section delves into a small number of research papers 
+into motion planning in a dynamic environment for robot manipulators in three
+dimensional space, $\mathbb{R}^3$. We pay close attention to 
+algorithms derived from sampling-based planner which use stochastic
+approach to query the configuration space. 
+The planning algorithms for robot motion in a dynamics environment
+dated back to 1985, albeit mainly applied on
+mobile robot \parencite{Mohanan2018}. 
+
+Some planning algorithms that is non-probabilistic 
+for robotic arm 
+are also observed which are
+based on 
+representation space \parencite{Su2011,Liu2016a}, 
+sequential expanded Langrangian homotopy \parencite{Dharmawan2018a}, and
+\acrfull{RAMP} \parencite{Vannoy2008}. These 
+works provide a new method of planning and tackle
+the problem at the local planning and at lower level of control to 
+solve problems with the aid of a simulated environment. 
+Their simulated
+environment, or a map model of the environment, includes dynamic objects
+that are then filtered and disregarded in the map registration pipeline.
+Their experimentation approach will be adopted in this 
+research where, the map is informed
+with the presence of obstacles that are moving in the workspace without
+having another sub-module of the system tracking the object via 
+motion tracking.
+
+
+%cite Kunz2016
+%cite
+\subsection{The Probabilistic Motion Planning}
+\textcite{Kavraki1996} is the first group of researchers 
+that used probability model for sampling 
+the configuration space for holonomic robot motion 
+such as a manipulator robot. The planner are called 
+\acrfull{PRM} motion planning. The algorithm
+construct a graph structure 
+to find path between an initial pose to a goal pose in
+two-dimensional configuration space, $n=2$. \textcite{Kavraki1996} also
+proof a more general solution for higher dimensional configuration space,
+$n>2$. With graph structure,
+more than one path connect the initial pose to the goal pose. Therefore, PRM is a 
+multi-query type planner. 
+
+\textcite{Kunz2010a} improve PRM by redefining the distance metric 
+of a robot manipulator so that the robot can move
+around a moving obstacle in real-time.
+Their approach performs well in an uncluttered environment. 
+\textcite{Kunz2010a} also redefined 
+the distance function of the PRM to address dynamic objects, such as
+a walking person, into a two-dimensional map. Although the 
+configuration space of the manipulator is in $\mathbb{R}^3$, the map
+, constructed from a two-dimensional \acrfull{LiDAR} scan, is in $\mathbb{R}^2$.
+
+%RRT introduction here
+In retrospect, the RRT was formulated for 
+non-holonomic motion \parencite{LaValle1998} targeting
+problems addressed in diffential-constrained motion such
+as a car on a plane. However, given the model of its metric space
+and consequently the configuration space, RRT are tractable
+for higher dimensional problem such as manipulator motion in 
+3D space \parencite{Wei2018}. RRT assume as static
+environment but \textcite{Wei2018} successfully 
+change the way RRT samples a robot metric space so that
+it is fast enough to react with a changing environment. Also, unlike PRM,
+RRT works well in a cluttered environment because of 
+the randomized sampling on the robot configuration space in 
+the metric space. 
+
+Researchers have been modifying the PRM 
+\parencite{Klasing2007,Likhachev2005,Jaillet2004, Pomarlan2013a} 
+and the RRT
+\parencite{Otte2015,Ferguson2007,Ferguson2006,Bekris2007} to facilitate
+better performance. 
+Unlike \textcite{Kunz2010a} and \textcite{Wei2018}, so few have applied their planning
+algorihtms on a robot manipulator despite both algorithms
+provides mathematical framework for .
+
+
+We will use the method demonstrated by \textcite{Kunz2010a} and
+\textcite{Wei2018}
+to design our experiment of a moving obstacle collision avoidance with
+the implementation of the vanilla RRT to solve motion for robot
+manipulator in three-dimensional space, $\mathbb{R}^3$. Different
+from the implementation by \textcite{Wei2018} our method
+implement the vanilla
+RRT where we do not represent the obstacle configuration space.
+
+
+
+\section{Summary}
+
+It is  concluded that uncertainty management of a manipulator is imperative for a flexible
+system in an industrial environment. The uncertainty of the manipulator is best
+approached by considering the uncertainty motion of the robot and the uncertainty of its
+environment. This thesis has reviewed research and works that manage the uncertainty of 
+both categories separately. A number of researches that incorporate both uncertainties into one framework by
+using simultaneous localization and mapping applied on robot manipulator is small in number. 
+All of these uncertainties management involve
+the use of statistical and probabilistic approach. However, no definitive Planner-SLAM solution 
+has been discovered thus far in this review. Refering back to the problem statement of this 
+thesis, a tractable solution that incoporate the uncertainty of the robot's state, and the
+dynamic environment via a Planner-SLAM solution remains unreported. Accordingly, 
+this thesis will attempt
+to bridge the gap for a reconciled planner-SLAM solution into a pipeline in the following chapters.
+
+\input{../end.tex}

@@ -1,0 +1,43 @@
+\input{../header2.tex}
+
+\chapter*{ABSTRACT}
+\addcontentsline{toc}{chapter}{Abstract}
+\noindent
+An industrial robot is isolated into work cells 
+making the operation of industrial robots rigid and inflexible. The robot
+requires tremendous amount of time and resources should a new task or change is required in 
+the work-cell. 
+This stigma and the reality of owning an industrial robot hinder the confidence of \acrfull{SME}
+to adopt industrial robot technology. This thesis attempts to democratize robot 
+technology and automation to the SMEs by introducing an inexpensive, flexible, and safe
+robotic technology.
+This thesis intends to show the feasibility of
+constructing a robot manipulator with obstacle avoidance motion planning. 
+Therefore, 
+a six-axis 
+manipulator as a prototype is developed to investigate the planning and motion control of the manipulator 
+  in a dynamic environment.  
+  The prototype replicates the typical 6R industrial robot design. \acrfull{RRT} is chosen to plan and control 
+the motion of the manipulator in the dynamic environment. 
+A physic engine simulator simulates the manipulator and 
+the  obstacle avoidance planning.
+A \acrfull{3D} obstacle is introduced into the simulation environment
+and moves periodically from an initial
+point to a goal point in the form of 
+sinusoidal motion described by $A+B\sin{(2\pi tC)}$. 
+The motion planning
+is validated with the prototype hardware. However, the moving 
+  obstacle is augmented by the simulation environment to maintain safe experimentation 
+  and the preservation of the prototype. It is observed that
+  the global planner, RRT, behaves reactively when subjected to the cycle space
+  defined in this report.  
+  Consequently, \acrfull{RTAB-Map} is used to facilitate an encoder-less context 
+of the manipulator. 
+Although RTAB-Map provides the confident state estimation 
+  of the robot task space and, consequently, the joint-space configuration
+  of the manipulator, the estimation is intermittent.
+It is recommended that a new pipeline, 
+capable of splining between the state estimation and the planning trajectories, is
+  implemented for motion planning in the dynamic environment using \acrfull{SLAM} solutions under the encoderless context.
+\newpage
+\input{../end.tex}

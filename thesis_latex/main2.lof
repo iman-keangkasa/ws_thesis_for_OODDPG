@@ -1,0 +1,63 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {arabic}{}
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Three aspects of an FAS to maintain a safe and cost effective robotic system in a production line.\relax }}{2}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The second aspect of an FAS consist of two mathematical model that manage the uncertainty of the workspace of a robot and the uncertainty of the state of the robot.\relax }}{3}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Eye-in-hand configuration that uses visual feedback enables an articulated robotic arm to identify objects in its workspace for manipulation.\relax }}{4}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Eye-in-hand configuration where an RGB-D sensor (blue) is placed on the end-effector link to perform the robot's state estimation via auto-calibration \parencite {Klingensmith2016}\relax }}{5}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The gap (labeled as a question mark "?") of a solution to path-planning for uncertainty in the state of the robot and the uncertainty of the environment of the robot in a single framework hinder a functioning FAS in context of an industrial robot\relax }}{6}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.6}{\ignorespaces The variables parameterizing the SLAM solution \relax }}{7}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.7}{\ignorespaces The connection between an FAS to a SLAM solution\relax }}{8}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.8}{\ignorespaces The scope of this research and its considerations\relax }}{10}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Summary of the methodology to achieve the objectives of this research\relax }}{12}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textit {r\_mini}~ wrist conforms to Pieper condition where axis of rotation for joint4, joint5, and joint6 share points of intercept. The dash circle in the diagram a possible point of intercepts. Both point are valid for a Pieper condition\relax }}{39}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The location and orientation of \textit {r\_mini}~. The choice of the orientation for each frames are based on Denavit-Hartenberg. The joints are values represented by the angle between two $\mathsf {x-axes}$ around the $\mathsf {z-axis}$ or rotation axis of each actuators \relax }}{40}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {r\_mini}~and its links\relax }}{41}{figure.caption.25}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The top view of the simulation shown in ,(a) , and the isometric view of the benchmark setup in (b). In (c) \textit {r\_mini}\ attempts to move around the static obstacle placed in it's immediate configuration workspace.\relax }}{56}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The benchmark result when two configurations are defined and pass to the OMPL planner pipeline. All planners completed a 50-cycle query from an initial pose to a goal pose. RRT requires the least amount of processing time at finding the motion planning solution, followed by the PRM.\relax }}{57}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The experimentation setup for unpredictable static obstacles where the initial and the goal poses are defined in \textit {equation \ref {eq:rrt_prm_static_obs_pose_vector}}. The green marker shows the initial pose and the red marker shows the goal pose.\relax }}{58}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The Gazebo Kinect simulation scene is shown in the $gazebo\_simulation::/kinect/rgb/image\_color/compressed$ window and the feedback representation with octomap map model are shown in the backdrop of the figure. Voxelization coloring is based on the height value. Green voxel clustering shows the representation of the static obstacle in the planning scene. In this diagram, the manipulator is in the fifth cycle space.\relax }}{59}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The angular displacement and angular velocity for joint1, joint2, joint3, are shown with the planner process time represented by the stick plot. The inset pictures shows the snapshot of the experimentation. The timestamp are represented by the Unix Epoch time format.\relax }}{61}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces This sequence shows the manipulator follows an outdated trajectory and collides with the cylinder despite attempt to move away from the moving cyclinder.\relax }}{63}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The chronology of attempts at avoiding a moving obstacle when the obstacle approaches the robot. The planning algorithm fails at avoiding the cylinder before it passes the $x-location$ of the poses, $c_{intial}$ and $c_{goal}$. (c) shows the planner successfully provide a non-colliding solution when the cylinder is moving away from robot. (d) shows the Gazebo as the physic engine to replicate the robot hardware and encoders feedback and the cyclical space initialization.\relax }}{64}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces The sequence of motion when \textit {r\_mini}~ successfully avoid a moving obstacle when the obstacles at a turning point to move away from the hardware.\relax }}{65}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Reaction from joint1, joint2, and joint3 shows that the planner together with the cycle space behave reactively towards the moving object. No rapid movement or rate on the last three joints on \textit {r\_mini}\relax }}{66}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces The odometry estimate of the end-effector's frame visualize for the $\mathbb {R}^3$ part of the task space, $C_{ee}$.\relax }}{67}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The odometry and RTAB-Map state estimation output compared together.\relax }}{68}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces This screenshot shows the visual output of the RTAB-Map, where the state estimation and also the visual odometry together with the map of the environment are represented on the left pane of the snapshot. The right pane shows the initial and the goal pose for the $C_{cycle}$\relax }}{68}{figure.caption.42}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\contentsfinish 

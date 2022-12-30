@@ -1,0 +1,59 @@
+  \documentclass[12pt,a4paper,oneside,hidelinks]{book}
+
+    %\input{extra_package.tex}
+    %\input{tweak.tex}
+    %\input{commando.tex}
+    %\input{font}
+  \newcommand\thesisDir{/home/asl/version-control/ws_thesis/thesis_latex}
+  \usepackage{import}
+  \usepackage{caption}
+  \captionsetup[table]{skip=12pt}
+  %\usepackage{natbib}
+  \usepackage[backend=biber,bibencoding=utf8,style=authoryear]{biblatex}
+  \addbibresource{\thesisDir/bibtex/library.bib}
+	\usepackage{soul,color}
+  \usepackage{pdflscape} %for changing page orientation
+  \usepackage[shortlabels]{enumitem}
+  \usepackage{amssymb} \usepackage{graphicx} %for inserting photo
+  \usepackage{amsmath} % for equations
+  \DeclareMathOperator*{\argmax}{argmax} % for underword argmax
+  \usepackage{mathtools} % for equations
+  \usepackage{physics} 
+  \usepackage{float}  %deactivate this if hyperref does not work with algo
+  \usepackage{hyperref}
+  \usepackage{tocbibind}  
+  \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+  \usepackage{titlesec} %for deeper subsections
+  \setcounter{secnumdepth}{4} %setting subsection 4 section deep
+  \usepackage{arydshln}
+  \usepackage{multirow}
+  %\usepackage{slashbox}
+  % numbering equations
+  %\ifwhole
+  %  \numberwithin{equation}{chapter} %equation number based on chapter
+  %\else
+%    \numberwithin{equation}{section} % equation number based on section
+  %\fi
+
+  \usepackage{xfrac} % for fraction in the for n/d
+  \usepackage{esint} % for easy integral symbols
+
+  %for listing algorithms from algorithm2e
+  \newcommand{\listofalgorithmes}{\tocfile{\listalgorithmcfname}{loa}}
+  %for footnote
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+  % for formattgin algorithm2e box [iman] I have to put after list0falgorithmes
+  \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+  \SetCommentSty{mycommfont}
+  \SetKwInput{KwInput}{Input}                % Set the Input
+  \SetKwInput{KwOutput}{Output}              % set the Output
+
+  % This command is usefule when importing subdirectory items
+  
+
+  \input{\thesisDir/style.tex}
+
+\begin{document}
+
+

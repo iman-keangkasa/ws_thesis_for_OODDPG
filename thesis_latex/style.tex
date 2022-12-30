@@ -1,0 +1,119 @@
+%margin
+\usepackage{setspace}
+\usepackage[
+  a4paper,
+  left=3.8cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=3cm,
+  footskip=1.7cm
+]
+{geometry}
+
+%IIUM font size
+%syntax {\TITLEfontsize IIUM idiotize thesis formatting }
+\newcommand\TITLEfontsize{\fontsize{17pt}{20.4pt}\selectfont}
+\newcommand\CHAPTERfontsize{\fontsize{14pt}{16pt}\selectfont}
+%For line over line for signature
+\usepackage{calc}
+\newcommand{\sigline}[1]{\makebox[\widthof{#1~}]{.\dotfill}\\#1}
+%another over line signature command
+%syantax \sign{The signant name} 
+%syntax \Date but use it within minipage
+%\begin{minipage}[t]{0.4\linewidth}
+%    \raggedright
+%    \sign{Supervisor}
+%    \par
+%    Mr.\,L. L. Silva\par
+%    Department of Computing and Information Systems, \par
+%    Faculty of Applied Sciences, \par
+%    University of Moratuwa
+%  \end{minipage}%
+% \hfill
+%  \begin{minipage}[t]{0.4\linewidth}
+%    \sign{Signature of the supervisor}
+%    \Date
+%  \end{minipage}
+\newcommand{\sign}[1]{%      
+  \begin{tabular}[t]{@{}c@{}}
+  \makebox[1.5in]{\dotfill}\\
+  \strut#1\strut
+  \end{tabular}%
+}
+\newcommand{\Date}{%
+  \begin{tabular}[t]{@{}c@{}}
+    \makebox[0.85in]{\dotfill}\\
+    \strut Date \strut
+  \end{tabular}%
+}
+
+%paragraph
+\parindent=12mm
+
+
+%header style
+\usepackage{fancyhdr}
+%\cfoot{\thepage}
+\pagestyle{plain}
+%\fancyhead{}
+%\fancyhead[C]{\nouppercase{\textit{\leftmark}}} %puts chapter title on even page in lower-case italics
+%\fancyhead[CO]{\nouppercase{\textit{\rightmark}}} %puts section title on odd page in lower-case italics
+%\renewcommand{\headrulewidth}{0pt} %gets rid of line
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} %gets rid of chapter number
+\renewcommand{\sectionmark}[1]{\markright{#1}} %gets rid of section number
+
+%making sure table and figures caption is 1 single spacecaption is 
+%make sure that the tables are not in \center environment
+%it will add more space between caption and the table/figures
+\usepackage{caption}
+\captionsetup[table]{skip=12pt}
+
+%adding frames to a page for copygright
+\usepackage{mdframed}
+\usepackage{verbatim}
+
+%using font close to Times New Roman
+\usepackage{mathptmx}
+% since mathptmx changes \mathcal symbols 
+% use this patch to retained the default one
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
+
+\usepackage{titletoc}
+
+%provide control over the appearance of table of contents
+%figures and others
+\usepackage[titles]{tocloft}
+%adding dotted or dot leaders to chapter in table of content (toc)
+%\renewcommand{\cftchapfont}{\bfseries}
+%\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+% prepend CHAPTER on chapter number in toc
+\renewcommand{\cftchappresnum}{CHAPTER }
+% add ':' separator between chapter number and chapter title
+\renewcommand{\cftchapaftersnum}{:}
+\setlength{\cftchapnumwidth}{6.5em}
+% making section normal font instead of bold
+%adding "Table" keyword to the list
+%provide abit of space so that the 'Table X.XX'
+%keyword does not overlap with the table caption
+\renewcommand{\cfttabpresnum}{Table\ }
+\setlength{\cfttabnumwidth}{5.5em}
+
+%adding the "Figure" keyword to the list
+%provide abit of space so that the 'Figure X.XX'
+%keyword does not overlap with the figure caption
+\renewcommand{\cftfigpresnum}{Figure\ }
+\setlength{\cftfignumwidth}{5.5em}
+
+% Annotation is being displayed in bibliography/references
+% This will suppress it
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldset=annote,     null]
+      \step[fieldset=annotation, null]
+    }
+  }
+}
+

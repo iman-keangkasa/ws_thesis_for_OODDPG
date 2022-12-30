@@ -1,0 +1,246 @@
+\input{../header2.tex}
+\chapter{Experimentation, Result and Discussion}\label{chap:experimentation_result_discussion}
+
+\section{Benchmarking Experiment Design and Result on the Sampling-Based Planner in Static Environment}
+
+In this research, the planner for the dynamic obstacle
+avoidance are selected based on the performance of a benchmarking
+activity. Here, the procedure is explained.
+
+Two poses are set for the benchmark represented in the 
+form of \textit{equation \ref{eq:configuration_vector}}. 
+The following vectors explain the numerical
+value of these poses with respect to the frame attached to the base
+of \rimini.
+
+\import{\thisPaperDir/equations/}{benchmark_pose_vector.tex}
+
+A box, with dimension, 0.5 m $\times$ 0.05 m $\times$ 0.575 m, are place
+in front of the robot, it's pose is described by the vector,
+
+\import{\thisPaperDir/equations/}{box_pose.tex}
+
+{\textit{Figure \ref{fig:benchmark_simulation}} shows the simulation 
+setup and the planning motion in action. 
+\import{\thisPaperDir/figures/}{benchmark_simulation.tex}
+The simulation ran for 50 request from the initial pose to 
+the goal pose. Time processing is given a 10 s limit. The memory limit
+is set to 1 Mb. The time limit for a request, including the motion and the
+processing time is set to 3637 s. This thesis uses these configurations and
+the default configuration of each planners in the MoveIt to start the benchmarking. 
+%cite kunz here and explain 200ms that is used as the benchmark
+% for human reaction time against the time for a planner to complete
+% it's searching. 
+
+\import{\thisPaperDir/figures/}{benchmarking_process_time.tex}
+\textit{Figure \ref{fig:benchmarking_process_time}} shows the 
+compiled statistics of the time the solution were passed to the 
+controller (in this case a virtual controller for simulation of 
+\rimini \ in the simulated environment). RRT requires on average,
+0.031 planning time while PRM requires 0.035 planning time from
+the initial pose to the goal pose when subjected to an obstacle
+very close to the robot. 
+\textcite{Wei2018} explained the improved RRT algorithms, such as 
+the bi-RRT, and the RRT-connect, 
+solve a query faster. However, based on our benchmarking, 
+vanilla RRT, or base-RRT, and PRM outperform their improved variants when
+completing the path query between an initial pose and a goal pose. 
+To that end, this research uses vanilla RRT as the scheme for the 
+high-level local planner. 
+This result helps in selecting the
+motion planner for the dynamic obstacle avoidance. 
+
+
+\section{Experiment Design for Unpredictable Obstacles using RRT}
+
+The cyclical space is populated by the RRT-Newton-Raphson and the
+pipeline where the generated trajectories are
+then pass to the control pipeline where
+the controller will spline the sparse trajectory
+waypoints. Two poses are defined in this experimentation which are described by 
+the vectors in \textit{equation \ref{eq:rrt_prm_static_obs_pose_vector}}
+and the \textit{figure \ref{fig:initial_goal_pose_static_obstacle}}
+
+
+\import{\thesisDir/chapter5/equations/}{rrt_prm_static_obs_pose_vector.tex}
+\import{\thesisDir/chapter5/figures/}{initial_goal_pose_static_obstacle.tex}
+
+In this expermiment, the robot completes a set of ten cyclical space. 
+A static object is introduced between a straight line that connects
+the initial and the goal pose. 
+The obstacle is introduced in the fourth cycle space. It is then removed at
+the end of the seventh cycle. The obstacle can take any shape, size, and
+position in
+the workspace. However,
+for this experimentation, the obstacle for the simulation is a cyclinder with
+height 0.25 m and radius 0.1 m. The simulation physique engine frontend is
+the Gazebo software with the ODE library as the engine's backend. In 
+\textit{figure \ref{fig:gazebo_sim_rrt_obs_avoidance}}, the cylinder is
+shown via the simulated Kinect sensor feedback, and the representation
+of the cyclinder in the planning scene are represented by the green
+voxel clustering. 
+
+\import{\thesisDir/chapter5/figures/}{gazebo_sim_rrt_obs_avoidance.tex}
+
+A book with height 0.23 m, length 0.18 m, and 
+thickness 0.02 m was used for the hardware validation.
+
+The simulation was performed and replicated with hardware validation. Five
+iteration were repeated on both the simulation experimentation and
+the hardware experimentation.
+
+\section{Experiment Design for Moving Planning in Dynamic Environment}
+The cycliccal space is populated only by the RRT-Newton-Raphson pipline.
+Two poses are defined in this experimentation which
+has been described in \textit{equation \ref{eq:benchmark_pose_vector}}.
+A moving obstacle are placed in front-view of the robot. The obstacle
+is a cylinder with 0.1 m radius base at 1 m height. 
+The obstacle moves from 0.3 m to 1.7 m away from the robot
+in oscillation. The period of motion is harmonic, such that, 
+the robot follows a $x=1+0.7\sin(2\pi(0.0006)\Delta t)$. Two velocities 
+values were used: 50\% scale and 10\% scale of end-effector's maximum velocity.
+
+The planner is invoked 5 s before the obstacle is placed 
+into the planning scene. The cylinder
+is directly place into the planning scene such that no motion 
+tracking is necessary for this research. The planner are requested to
+provide solution for the motion described by the cycle space. 
+Five iterations are done with each given a five minutes runtime. The metric
+use for this experiment is the time on first collision where,
+when the prototype touches the cylinder, the iteration is terminated. 
+This experimentatation
+is done, both, in simulation, and with
+the real robot hardware. However, for both the simulation and the hardware
+validation, the obstacle are augmented in simulated environment.
+
+\section{Results on Planning for Static and Dynamic Obstacle}
+
+There are three hardware validations performed. One demonstrate planning
+when introduced with unpredictable static obstacle. Another regarding the 
+planning under dynamic environment where a synthetic obstacle, moving
+periodically, cuts through the line of planning
+in the cyclical space, $C_{cycle}$. The third experimentation
+involve the use of RTAB-Map impregnated with the \acrfull{PHASER} implementation
+where the state estimation pipeline was 
+swapped with the spherical harmonics approach.
+
+\subsection{Result on Path Planning for Unpredictable Static Environment}
+
+The RRT planners avoid the static obstacle reactively under the algorithm 
+\ref{algo:cycle_space}.
+Since replanning occurs at the initial and goal pose, collision between
+the static obstacle and the robot manipulator can only plan to avoid obstacle
+when the obstacles are placed before a half-cycle space is completed. The obstacle
+are placed in between the straight line that connects the two poses so that
+a reactive and successful collision checking, and collision avoidance 
+capability
+can be demonstrated. When the cycle space generator invoked, 
+\rimini~ avoids the obstacle successfully as depicted in 
+\textit{figure \ref{fig:joints_profiles_with_snapshots_prm}}.
+
+\import{\thesisDir/chapter5/figures/}{joints_profiles_with_snapshots_prm.tex}
+
+\subsection{Result on Path Planning Under Dynamic Environment}
+
+\import{\thisPaperDir/equations/}{experiment_table.tex}
+
+Table \ref{tab:experiment_table}, shows the recorded time-to-collision 
+of 20 iterations. The average time to collision is 40 s. 
+There are two iterations with no collision recorded. This 
+poor performance is subjected to the algorithm \ref{algo:cycle_space},
+specifically in line \ref{ln:cs_RRT1} and line \ref{ln:cs_RRT2}, RRT is called.
+Within this call (algorithm \ref{algo:RRT}, line \ref{ln:initialize_tree} consider
+an obstacle map that is outdated 
+given the cyclinder has moving further towards the manipulator when RRT: 
+line~\ref{ln:initialize_tree}. 
+Within the RRT algorithm, there are no mechanism for the robot to stop or move at 
+a lower rate to avoid the cylinder. \textit{Figure \ref{fig:obs_avoidance_fail}} shows
+the sequence when the end-effector collide with the cylinder. 
+
+\import{\thisPaperDir/figures/}{obs_avoidance_fail.tex}
+
+Despite the obstacle avoidance fails when the 
+moving cylinder approaches the robot specifically 
+when the centroid of the cylinder is nearing
+the $x-axes$ of the $c_{initial}$ and $c_{goal}$,
+the planner successfully avoid the obstacles when 
+the lines
+\ref{ln:cs_RRT1} and \ref{ln:cs_RRT2} in
+algorithm \ref{algo:cycle_space} is invoked. 
+
+\import{\thisPaperDir/figures/}{avoiding_moving_obs.tex}
+
+\import{\thisPaperDir/figures/}{obs_avoidance.tex}
+
+The planner shows reactive behavior when 
+the cyclical space is initialize, via algorithm \ref{algo:cycle_space}.
+.\textit{Figure \ref{fig:avoiding_moving_obs}} illustrates
+such behavior in the simulated environment, and \textit{figure \ref{fig:obs_avoidance}}
+shows the same behavior in the hardware reiteration of the experimentation. This is 
+illustrated in \textit{ figure \ref{fig:reaction_joint}}, where the $joint_2$ and $joint_3$
+changes the range of their movement while $joint_3$ changes the rate of its movement. 
+
+\import{\thesisDir/chapter5/figures/}{reaction_joint.tex}
+
+No significant changes are observed for $joint_4, joint_5$ and $joint_6$. 
+This is the implication of 
+the Pieper-condition manipulator design where, none of the $z-axis$ from the first three
+joints shares the same crossing point, which suggest the rotation acting by these joints 
+are not a linear transformation. Due to the offset (affine transformation) of the joints' 
+axis of rotation, these joints' there is a bijection mapping of these joints
+to the task-space. Also changes are also observed on the orientation
+of the frame attached to the end-effector, however, there are no bijection mapping of
+the three joints to the task-space's orientation.
+
+\subsection{Result on Obstacle-less Planning with SLAM}
+The result in \textit{figure \ref{fig:slam_odometry}} explains the
+output of the state odometry pipeline.  The $\mathbb{R}^3$ part of the 
+task space, $C_{ee}$, is normalized to the origin $(0,0,0)$.
+
+\import{\thesisDir/chapter5/figures/}{slam_odometry.tex}
+
+As the robot arm moves, changing the pose of the task space,
+velocity change in the movement together with the
+angular velocity from the rotation change in the end-effector
+collapses \acrshort{PHASER}'s state estimation despite the attempt to use the quaternion and the 
+Hilbert's space to discern the correspondence of two 3D point clouds 
+snapshots. In the figure, there are singularities on most of the process. However,
+estimations are successfully broadcast between
+4.3 s to 6.3 s, 16.1 s to 19.4 s, 32.8 s to 35.2 s, 44.2 s to 47.3 s, 56.2 
+to 64.5 s.
+
+
+The absence of odometry estimation output, where the pipeline is silence, populates 73.4\% of
+the process. The state estimation for the PHASER implementation is intermittent.
+
+The pose estimation from the SLAM pipeline and also the odometry, where the visual odometry are taken
+into consideration during data fusion, are only appear between 57.2 s and  61.3 s as 
+shown in \textit{figure \ref{fig:slam_odom_xy}}.
+
+\import{\thesisDir/chapter5/figures/}{slam_odom_xy.tex}
+
+In \textit{figure \ref{fig:slam_visualization}}, the outputs of the visual
+odometry and the SLAM estimation are
+presented by the light blue lines in the left pane of the screenshot. The right shows, 
+the initial and goal pose of the hardware. 
+
+\import{\thesisDir/chapter5/figures/}{slam_visualization.tex}
+
+The SLAM application on the path planning for this research would not be able to give
+a stream of pseudo-continuous data output from its pipeline. Since, an intermittent
+nature of these result were shown from the data, it is observed that, when the 
+state estimation is map into the joint-space configuration, and then feeded into 
+the controller's feedback pipeline, the motor could not abide to the 
+trajectory solution populated by the planner. Hence, currently, with 
+PHASER implementation of the state estimation, the SLAM solution and the planning 
+algorithm will not reconcile and will not work without having an intermediate 
+pipeline that can fill up the gap between the one estimation to the next from the 
+RTAB-Map. 
+
+\section{Summary}
+In this chapter, the result of four experimentations are presented. These results explain 
+the capability of
+\rimini \ working in a static environment (via the benchmarking) and in a dynamic 
+environment where this research consequently test on the prototype. The later result shows
+the feasibility of SLAM at estimating the task space of \rimini.
+\input{../end.tex}

@@ -1,0 +1,6 @@
+\begin{equation}\label{eq:octomap}
+  P(n|z_{1:t}) = \biggl[ 1 + \frac{1-P(n|z_t)}{P(n|z_{t})} 
+                              \frac{1-P(n|z_{1:t-1})}{P(n|z_{1:t-1})}
+                              \frac{\gls{occupancyProbability}}{1-P(\gls{voxel})}
+  \biggr]
+\end{equation}

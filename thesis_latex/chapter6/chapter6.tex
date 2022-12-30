@@ -1,0 +1,71 @@
+\input{../header2.tex}
+\chapter{Conclusion And Recommendation}
+\label{chap:conclusion_recommendation}
+
+\section{Conclusion}
+    In this research, a prototype of an industrial robot is 
+    developed to investigate the planning and motion control 
+    of the manipulator for compliant usage in an industrial 
+    setup.
+
+    The robot is as 6R manipulator, with six-degree-of-freedom. Each joints is actuated 
+    with Dynamixel servo and are back-drivable. The end-effector is equipped with 
+    an RGB-D sensor. The robot is named \rimini~. 
+    
+    Since the Dynamixel motors are not supplemented with a mathematical model, the joints
+    are controlled based on time-parameterized controller where, the set up of each of
+    the motor's velocity profile depends on the angular velocity limits and the angular
+    acceleration limit. The time-parameterized controller was successfully tuned with informed velocity-acceleration limit
+    parameterization. All of the \rimini~   controllers
+    parameters and system configuration, including it's driver, are package as 
+    a stack of ROS packages.
+
+A benchmark was done to ascertain the best sampling-based planner for the \rimini~'s 
+capability to avoid moving obstacles. The simulation for the benchmark considers a
+static object, placed in the manipulator's workspace. 
+RRT was selected given it's
+rapid processing time, 0.031 s, at solving a planning objective. 
+Two simulations were done; the first involved  
+introducing a static object with 
+unpredictable shape and placement 
+into the manipulators line of motion, and the second 
+simulation setup involve a moving object with the shape of a cylinder that was placed and moved in the robot's workspace.
+
+Both the simulations were validated with \rimini~ hardware. 
+The unpredictable static object invoked reactive motion 
+correction, where no collision were reported.  
+However, when moving obstacles were introduced, the replanning
+fail to provide collision-free solution. The robot capability to avoid the moving obstacle, although less successful,
+has not been consistent. The avoidance fails if
+the RRT is invoke when the obstacle nearly approaching the $C_{cycle}$.
+
+Although the performance of the RRT on a dynamic 
+obstacle imposed under the cyclical space prescribed in algorithm \ref{algo:cycle_space}, 
+is not satisfactory, the result shows that the robot
+is capable at reacting to an obstacles when the obstacle 
+is moving.
+    
+    This thesis's SLAM implementation, by repurposing
+RTAB-Map as the SLAM framework and PHASER repurposing as the state estimation pipeline of the RTAB-Map, 
+shows an intermittent and sparse estimation of the $C_{ee}$ which fails to 
+continuously estimate the joint-configuration of the manipulator. 
+
+
+\section{Recommendation for Future Works}
+This thesis recommends a future work on improved state estimations of the 
+RTAB-Map where the singularities reading during state estimation can be pass to
+a splining process. The splining would consider the last reading of the RTAB-Map 
+estimation pipeline at, $t_{last}$, and the output from the 
+\textit{equation \ref{eq:splining_traj_selection}},
+
+\import{\thesisDir/chapter6/equations/}{splining_traj_selection.tex}
+
+where $\hat{C}_{last}$ is the last state estimation of the RTAB-Map before data silence.
+This approach has the potential of providing pseudo-continuous streaming of feedback for
+joint controllers; follow-joint-trajectory controller in ROS
+being the immediate candidate for an encoder-less context. The implication
+is an encoder-less system that requires no encoders as feedback and, hence, reduces
+the cost, space of the robot design, and the market price for commercialization of
+affordable automation system to SME's. 
+
+\input{../end.tex}

@@ -1,0 +1,32 @@
+%call setAlgo2 if I want to use Algorihtm2e package
+%\providecommand{\setAlgo2}{\newif \ifAlgo2 \Algo2true}
+%\setAlgo2
+
+\input{header2.tex}
+
+\author{Hafiz bin Iman}
+\title{A Probabilistic Path Planning Solution for Industrial Robot in Dynamic Environment using A Simultaneous Localization and Mapping Solution}
+
+%this will set this document as a whole thesis
+\renewcommand{\setflag}{\newif \ifwhole \wholetrue}
+\frontmatter
+\import{abstract/}{abstract.tex}
+\import{abstract_arabic/}{abstract_arabic.tex}
+\maketitle
+\tableofcontents
+\listofalgorithmes
+\listoffigures
+\listoftables
+
+\doublespacing
+\mainmatter
+\import{chapter1/}{chapter1.tex}
+%\import{chapter2/}{chapter2.tex}
+%\import{chapter3/}{chapter3.tex}
+%\import{chapter4/}{chapter4.tex}
+%\import{chapter5/}{chapter5.tex}
+\import{chapter6/}{chapter6.tex}
+
+\printbibliography
+
+\end{document}

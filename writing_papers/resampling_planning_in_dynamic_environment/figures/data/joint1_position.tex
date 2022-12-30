@@ -1,0 +1,29 @@
+\documentclass[float=false, crop=true]{standalone}
+\usepackage{import}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+
+
+\begin{tikzpicture}
+\begin{axis}
+[name=plot,width=.5\textwidth, xmin=1664545410.3,xmax=1664545538.2, ymin=-1.1,ymax=0.72,
+  xlabel={Timestamp (s)}, ylabel={Angular position (rad)},
+ytick={-1,-0.5,0,0.5},
+yticklabels={-1,-0.5,0,0.5}]
+%
+\addplot[color=blue,line width=.06 cm,each nth point=100] table[x=__time, y=joint1_position, col sep=comma]{data.csv};\label{plot}
+
+\end{axis}
+\node[anchor=north east,draw=black] at ($(plot.north east)-(1 mm,1 mm)$) {\begin{tabular}{l l}
+joint_1 angular position & \ref{plot} \\
+\end{tabular}};
+\end{tikzpicture}
+
+\end{document}

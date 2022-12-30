@@ -1,0 +1,311 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{iso2021}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8f71f68e1f18dd47889c296f466b21bd}{%
+           family={ISO-8373:2},
+           familyi={I\bibinithyphendelim 8\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {International Organization of Standardization}%
+      }
+      \strng{namehash}{8f71f68e1f18dd47889c296f466b21bd}
+      \strng{fullhash}{8f71f68e1f18dd47889c296f466b21bd}
+      \strng{bibnamehash}{8f71f68e1f18dd47889c296f466b21bd}
+      \strng{authorbibnamehash}{8f71f68e1f18dd47889c296f466b21bd}
+      \strng{authornamehash}{8f71f68e1f18dd47889c296f466b21bd}
+      \strng{authorfullhash}{8f71f68e1f18dd47889c296f466b21bd}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Robotics-Vocabulary}}
+      \field{type}{techreport}
+      \field{volume}{ISO 8373:2}
+      \field{year}{2021}
+      \verb{file}
+      \verb :home/iman/version-control/ws_thesis/reading_papers/ISO-8373-2021.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Ito2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d22b28a330332c7e6f7e0d67962a223b}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Akitoshi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31189b9f0007e044548ccd38df160c68}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jinghui},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86e1216eaadc3ffbe7012bcc4899afed}{%
+           family={Maeda},
+           familyi={M\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \strng{fullhash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \strng{bibnamehash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \strng{authorbibnamehash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \strng{authornamehash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \strng{authorfullhash}{7a6ae8c26ea8d6e1123b4246193446cd}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781728166674}
+      \field{title}{{SLAM-Integrated Kinematic Calibration Using Checkerboard Patterns}}
+      \field{year}{2020}
+      \field{pages}{551\bibrangedash 556}
+      \range{pages}{6}
+      \verb{file}
+      \verb :home/iman/version-control/ws_thesis/reading_papers/SLAM-PP-important-thesis/A_SLAM-Integrated_Kinematic_Calibration_Method_for_Industrial_Manipulators_with_checkerboard.pdf:pdf
+      \endverb
+      \keyw{manipulator slam,skclam}
+    \endentry
+    \entry{Klingensmith2016}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a49e2cf6ca0589ec4a8dcefc93bc3c76}{%
+           family={Klingensmith},
+           familyi={K\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=693808bce4a8ea399c3502b3463af160}{%
+           family={Sirinivasa},
+           familyi={S\bibinitperiod},
+           given={Siddartha\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da701266dff9b3f01fdc8e0d18e5f021}{%
+           family={Kaess},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \strng{fullhash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \strng{bibnamehash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \strng{authorbibnamehash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \strng{authornamehash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \strng{authorfullhash}{3c8b89bf6de19ee18bfb3d3d1bdc950f}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A robot with a hand-mounted depth sensor scans a scene. When the robot's joint angles are not known with certainty, how can it best reconstruct the scene? In this work, we simultaneously estimate the joint angles of the robot and reconstruct a dense volumetric model of the scene. In this way, we perform simultaneous localization and mapping in the configuration space of the robot, rather than in the pose space of the camera. We show using simulations and robot experiments that our approach greatly reduces both 3-D reconstruction error and joint angle error over simply using the forward kinematics. Unlike other approaches, ours directly reasons about robot joint angles, and can use these to constrain the pose of the sensor. Because of this, it is more robust to missing or ambiguous depth data than approaches that are unconstrained by the robot's kinematics.}
+      \field{annotation}{The paper present a Simultaneous localization and mapping using a manipulator. Simultaneous localization and mapping involves obtaining a solution for pose estimation through map learning and vice versa simultaneously. The authors argue that encoders on each joints of a manipulator is not enough to estimate the end point of a manipulator due to gear trash, cable strechm non-rigid deformation and others. The ARM-SLAM uses TSDF as part of the scene reconstruction to help estimate the pose of the end effector. TSDF is a variant of Dense Fusion They ARM-SLAM assume eye-in-hand configuration. They conducted three experiments to validate their SLAM solution: -2D simulation where they compare pose error between forward kinematics, Dense Fusion algorithm and ARM-SLAM algorithm. The result shows significant error reduction for both of the two algorithms compared to the forward kinematics calculation. ARM-SLAM, however, has the lowest errors. -in their 3D simulation experiment, the authors compare results for forward kinematics calculation with kinect fusion and ARM-SLAM. They observed that ARM-SLAM is more robust when lost of data occurs. -real shelf scanning experiments. In this experiment, the authors could not conclusively see better pose estimation with compared to the forward kinematics calculation. However, they reiterate that during lost of data, the ARM-SLAM solution produce robust estimation. However, the paper does not deal with path planning}
+      \field{isbn}{9781467380256}
+      \field{issn}{23773766}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{2}
+      \field{title}{{Articulated Robot Motion for Simultaneous Localization and Mapping (ARM-SLAM)}}
+      \field{volume}{1}
+      \field{year}{2016}
+      \field{pages}{1156\bibrangedash 1163}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2016.2518242
+      \endverb
+      \verb{file}
+      \verb :home/iman/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Klingensmith, Sirinivasa, Kaess - 2016 - Articulated Robot Motion for Simultaneous Localization and Mapping (ARM-SLAM).pdf:pdf
+      \endverb
+      \keyw{Kinematics,Mapping,RGBD Perception,SLAM,Visual-Based navigation}
+    \endentry
+    \entry{Li2019c}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=31189b9f0007e044548ccd38df160c68}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jinghui},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d22b28a330332c7e6f7e0d67962a223b}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Akitoshi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86e1216eaadc3ffbe7012bcc4899afed}{%
+           family={Maeda},
+           familyi={M\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \strng{fullhash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \strng{bibnamehash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \strng{authorbibnamehash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \strng{authornamehash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \strng{authorfullhash}{b770c0b2a5f0c1fcb1d6c03618d5daa0}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The accuracy of robot manipulator, one of the long-standing problem, is a major issue in the industry community. The manipulator may produce kinematic errors during operation. Traditional methods require expensive equipment with complex steps to calibrate kinematic parameters. Another issue is motion planning of the manipulator, which requires a map of the workspace. However, the mapping is time-consuming. In order to employ an efficient way to accomplish kinematic calibration and offer convenience to plan the motions of the manipulator, we study a new method called SKCLAM (Simultaneous Kinematic Calibration, Localization, and Mapping), which can calibrate the kinematic parameters of an industrial manipulator and achieve 3D environmental mapping simultaneously by employing an RGB-D camera attached to the end effector. In this paper, the true kinematic parameters were changed randomly to test and evaluate the effectiveness of our approach in simulation.}
+      \field{booktitle}{International Conference on Control, Automation and Systems}
+      \field{isbn}{9788993215182}
+      \field{issn}{15987833}
+      \field{title}{{A SLAM-Integrated Kinematic Calibration Method for Industrial Manipulators with RGB-D Cameras}}
+      \field{volume}{2019-Octob}
+      \field{year}{2019}
+      \field{pages}{686\bibrangedash 689}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.23919/ICCAS47443.2019.8971559
+      \endverb
+      \verb{file}
+      \verb :home/iman/version-control/ws_thesis/reading_papers/SLAM-PP-important-thesis/A_SLAM-Integrated_Kinematic_Calibration_Method_for_Industrial_Manipulators_with_RGB-D_Cameras_SKCLAM.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/8971559/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/8971559/
+      \endverb
+      \keyw{Kinematic calibration,Manipulator,RGB-D camera,SLAM,manipulator,manipulator slam,skclam,slam}
+    \endentry
+    \entry{Luo2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=851b70522845b42da4d6771e060ac0eb}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ren\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a57169721b31b3bedc8a54394564ef96}{%
+           family={Kuo},
+           familyi={K\bibinitperiod},
+           given={Chia\bibnamedelima Wen},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \strng{fullhash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \strng{bibnamehash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \strng{authorbibnamehash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \strng{authornamehash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \strng{authorfullhash}{efd47812e0ea9e6b567ca5a273dbf00c}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, a service-oriented multiagent system (SoMAS) for the control and analysis of the cyber-physical system (CPS) in manufacturing automation utilizing a noncontact dynamic obstacle avoidance seven-DoF robot arm is presented. The interfaces of the services which the robot arm subsystem should provide to fully exploit its capability are identified. Specifically, the services of moving, object recognition, object fetching, and safety of human-robot interaction are considered as the fundamental functionalities that the robot arm should provide. The way to evaluate the quality of services (QoS) for the robot arm subsystem is also explained. To build such a robot arm subsystem, the system architecture is proposed. Also, implementation for the subsystem which includes: 3-D model-based object recognition, grasp database for object fetching, and online noncontact obstacle avoidance for the safety of human-robot interaction is provided. The experimental results demonstrate that the capability of 3-D model-based object recognition, object fetching, and dynamic collision avoidance are successfully implemented.}
+      \field{issn}{15582256}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{5}
+      \field{title}{{Intelligent seven-DoF robot with dynamic obstacle avoidance and 3-D object recognition for industrial cyber-physical systems in manufacturing automation}}
+      \field{volume}{104}
+      \field{year}{2016}
+      \field{pages}{1102\bibrangedash 1113}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/JPROC.2015.2508598
+      \endverb
+      \verb{file}
+      \verb :home/iman/version-control/ws_thesis/reading_papers/luo_kuo2016_proposal.pdf:pdf
+      \endverb
+      \keyw{Human-robot interaction,machine vision,manufacturing automation,multiagent systems,robot vision systems,software agents,software as a service}
+    \endentry
+    \entry{Miseikis2017}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dc108b8dc3ee233735342b8290ad7c55}{%
+           family={Miseikis},
+           familyi={M\bibinitperiod},
+           given={Justinas},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad079370dfb5e57853c7a90db267d630}{%
+           family={Glette},
+           familyi={G\bibinitperiod},
+           given={Kyrre},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eb2f783ff8f0541e12988c096e76b4e}{%
+           family={Elle},
+           familyi={E\bibinitperiod},
+           given={Ole\bibnamedelima Jakob},
+           giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9665564f559da689a94a52e06bd69404}{%
+           family={Torresen},
+           familyi={T\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{75fc04dcbb68ea8c93a8890a3f7e579a}
+      \strng{fullhash}{21f8cdcff608e9159328eab46ce7545d}
+      \strng{bibnamehash}{75fc04dcbb68ea8c93a8890a3f7e579a}
+      \strng{authorbibnamehash}{75fc04dcbb68ea8c93a8890a3f7e579a}
+      \strng{authornamehash}{75fc04dcbb68ea8c93a8890a3f7e579a}
+      \strng{authorfullhash}{21f8cdcff608e9159328eab46ce7545d}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{—With advancing technologies, robotic manipulators and visual environment sensors are becoming cheaper and more widespread. However, robot control can be still a limiting factor for better adaptation of these technologies. Robotic manipulators are performing very well in structured workspaces, but do not adapt well to unexpected changes, like people entering the workspace. We present a method combining 3D Camera based workspace mapping, and a predictive and reflexive robot manipulator trajectory estimation to allow more efficient and safer operation in dynamic workspaces. In experiments on a real UR5 robot our method has proven to provide shorter and smoother trajectories compared to a reactive trajectory planner in the same conditions. Furthermore, the robot has successfully avoided any contact by initialising the reflexive movement even when an obstacle got unexpectedly close to the robot. The main goal of our work is to make the operation more flexible in unstructured dynamic workspaces and not just avoid obstacles, but also adapt when performing collaborative tasks with humans in the near future.}
+      \field{annotation}{Mapping by Octomap The author use the background of shared human-robot workspace as their problem statement. Method: Point clouds from the cameras are pre-processed using Statisitcal Outlier Removal algorithm to reject outliers. They proceed by merging point cloud data from two 3D cameras (Kinect Sensor) using iterative closest point. Iterative closest point (ICP) is often used in mobile robot to combine two scans collected at different position together. They use forward kinematic to assist in replacing point clouds corresponding to the robots chassis with cylindrical shapes. The map of the environment are model using octomap and embedded each grid cell with a decaying occupancy value. The decaying cost value are used to represent danger zone, a mediary zone, and a non-danger zone in the map for a reflexive and predictive behaviors. Building their path planning on top of these map provde a responsive motion even if the robot workspace is populated by moving objects. setup: the authors uses 6DOF UR5 robot. The authors adopt a eye-to-hand approach. validation: they validate their method by simulating a predifined back and forth motion between a start configuration and a goal configuration. The first simulation act as the baseline or the benchmark of their path planning approach using only Rapidly-exploring Random Trees (RRT). The second and the third experiments introduce a moving object into the robot's workspace but a reactive path planning and the reflexive-predictive path planning approaches are used respectively. They concluded that although experiments 3 performs at the shortest time, the result was not significant. ICP use in this method is computationally expensive because it involves direct point clouds.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{9781509042401}
+      \field{journaltitle}{2016 IEEE Symposium Series on Computational Intelligence, SSCI 2016}
+      \field{title}{{Multi 3D camera mapping for predictive and reflexive robot manipulator trajectory estimation}}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1109/SSCI.2016.7850237
+      \endverb
+      \verb{eprint}
+      \verb 1610.03646
+      \endverb
+      \verb{file}
+      \verb :home/iman/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Miseikis et al. - 2017 - Multi 3D camera mapping for predictive and reflexive robot manipulator trajectory estimation.pdf:pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

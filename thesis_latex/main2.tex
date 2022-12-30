@@ -1,0 +1,80 @@
+%call setAlgo2 if I want to use Algorihtm2e package
+%\providecommand{\setAlgo2}{\newif \ifAlgo2 \Algo2true}
+%\setAlgo2
+
+\input{header2.tex}
+
+\author{Hafiz bin Iman}
+\title{A Probabilistic Path Planning Solution for Industrial Robot in Dynamic Environment using A Simultaneous Localization and Mapping Solution}
+
+%this will set this document as a whole thesis
+\renewcommand{\setflag}{\newif \ifwhole \wholetrue}
+
+%[ABSTRACT_TOC_START] 
+% this is an attempt to change the toc for the front matter
+% inside the document body
+
+\let\cftchapfontorig\cftchapfont
+\let\cftchappagefontorig\cftchappagefont
+\let\cftsecfontorig\cftsecfont
+\let\cftsecpagefontorig\cftsecpagefont
+
+% Avoid using \normalfont because somehow
+% it will mess-up the 
+\renewcommand{\cftchapfont}{\rmfamily}
+\renewcommand{\cftchappagefont}{\rmfamily}%
+%\renewcommand{\cftsecfont}{\normalfont}
+
+\addtocontents{toc}{\protect\setlength{\cftbeforechapskip}{0pt}}
+\frontmatter
+
+\import{title_page/}{title_page.tex}
+\import{abstract/}{abstract.tex}
+\import{abstract_arabic/}{abstract_arabic.tex}
+\import{approval_page/}{approval_page.tex}
+\import{declaration/}{declaration.tex}
+\import{copyright/}{copyright1.tex}
+%\import{copyright/}{copyright2.tex}
+%\import{copyright/}{copyright3.tex}
+\import{no_title_dedication_page/}{no_title_dedication_page.tex}
+\import{dedication/}{dedication.tex}
+
+%Change the name of the table of contents
+\renewcommand\contentsname{TABLE OF CONTENTS}
+%Prevent self referencing TABLE OF CONTENTS
+%since I am using tocbibind
+% use \usepackage[nottoc]{tocbibind}
+\tableofcontents
+
+\listoftables
+\listoffigures
+
+%making sure that the list of abbreviations and symbols are aligned like a table
+\renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]}
+\setglossarystyle{alttree}
+\printglossary[type=\acronymtype,title={LIST OF ABBREVIATIONS},toctitle={List of Abbreviations}]
+\printglossary[type=symbols,title={LIST OF SYMBOLS AND NOTATIONS},toctitle={List of Symbols and Notations}]
+\addtocontents{toc}{\protect\renewcommand{\cftchapfont}{\cftchapfontorig}}
+\addtocontents{toc}{\protect\renewcommand{\cftchappagefont}{\cftchappagefontorig}}
+%\addtocontents{toc}{\protect\renewcommand{\cftsecpagefont}{\cftsecpagefontorig}}
+\addtocontents{toc}{\protect\setlength{\cftbeforechapskip}{12pt}}
+%\addtocontents{toc}{\protect\renewcommand{\cftsecfont}{\cftsecfontorig}}
+
+
+\doublespacing
+\mainmatter
+\import{chapter1/}{chapter1.tex}
+\import{chapter2/}{chapter2.tex}
+\import{chapter3/}{chapter3.tex}
+%\import{chapter4/}{chapter4.tex}
+\import{chapter5/}{chapter5.tex}
+\import{chapter6/}{chapter6.tex}
+
+\singlespacing
+
+\setlength\bibitemsep{12pt}
+
+\addcontentsline{toc}{chapter}{REFERENCES}
+\printbibliography[title=REFERENCES]
+
+\end{document}

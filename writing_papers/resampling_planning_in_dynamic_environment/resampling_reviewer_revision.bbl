@@ -1,0 +1,1189 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Bekris2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=06adc0d309c70cea8e8c2620ed6e0c4a}{%
+           family={Bekris},
+           familyi={B\bibinitperiod},
+           given={Kostas\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53dd08518536edbe0ea582bab1515461}{%
+           family={Kavraki},
+           familyi={K\bibinitperiod},
+           given={Lydia\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c8ea267685644307ea3294534b133500}
+      \strng{fullhash}{c8ea267685644307ea3294534b133500}
+      \strng{bibnamehash}{c8ea267685644307ea3294534b133500}
+      \strng{authorbibnamehash}{c8ea267685644307ea3294534b133500}
+      \strng{authornamehash}{c8ea267685644307ea3294534b133500}
+      \strng{authorfullhash}{c8ea267685644307ea3294534b133500}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider motion planning problems for a vehicle with kinodynamic constraints, where there is partial knowledge about the environment and replanning is required. We present a new tree-based planner that explicitly deals with kinodynamic constraints and addresses the safety issues when planning under finite computation times, meaning that the vehicle avoids collisions in its evolving configuration space. In order to achieve good performance we incrementally update a tree data-structure by retaining information from previous steps and we bias the search of the planner with a greedy, yet probabilistically complete state space exploration strategy. Moreover, the number of collision checks required to guarantee safety is kept to a minimum. We compare our technique with alternative approaches as a standalone planner and show that it achieves favorable performance when planning with dynamics. We have applied the planner to solve a challenging replanning problem involving the mapping of an unknown workspace with a non-holonomic platform. © 2007 IEEE.}
+      \field{booktitle}{Proceedings - IEEE International Conference on Robotics and Automation}
+      \field{isbn}{1424406021}
+      \field{issn}{10504729}
+      \field{title}{{Greedy but safe replanning under kinodynamic constraints}}
+      \field{year}{2007}
+      \field{pages}{704\bibrangedash 710}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2007.363069
+      \endverb
+    \endentry
+    \entry{Denavit1955}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=282150a2c268b8c29d84e592c1c0fdb8}{%
+           family={Denavit},
+           familyi={D\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b79a5ca2813bfbbda5fb3ba48cc8e077}{%
+           family={Hartenberg},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fe795beda9fc2bea49f8e4604d357b25}
+      \strng{fullhash}{fe795beda9fc2bea49f8e4604d357b25}
+      \strng{bibnamehash}{fe795beda9fc2bea49f8e4604d357b25}
+      \strng{authorbibnamehash}{fe795beda9fc2bea49f8e4604d357b25}
+      \strng{authornamehash}{fe795beda9fc2bea49f8e4604d357b25}
+      \strng{authorfullhash}{fe795beda9fc2bea49f8e4604d357b25}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A symbolic notation devised by Reuleaux to describe mechanisms did not recognize the necessary number of variables needed for complete description. A reconsideration of the problem leads to a symbolic notation which permits the complete description of the kinematic properties of all lower-pair mechanisms by means of equations. The symbolic notation also yields a method for studying lower-pair mechanisms by means of matrix algebra; two examples of application to space mechanisms are given.}
+      \field{issn}{0021-8936}
+      \field{journaltitle}{Journal of Applied Mechanics}
+      \field{number}{2}
+      \field{title}{{A Kinematic Notation for Lower-Pair Mechanisms Based on Matrices}}
+      \field{volume}{22}
+      \field{year}{1955}
+      \field{pages}{215\bibrangedash 221}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1115/1.4011045
+      \endverb
+      \verb{urlraw}
+      \verb https://asmedigitalcollection.asme.org/appliedmechanics/article-abstract/22/2/215/1110292
+      \endverb
+      \verb{url}
+      \verb https://asmedigitalcollection.asme.org/appliedmechanics/article-abstract/22/2/215/1110292
+      \endverb
+    \endentry
+    \entry{Dharmawan2018a}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e49c0b74810f8f76fd3f474cfeddd696}{%
+           family={Dharmawan},
+           familyi={D\bibinitperiod},
+           given={Audelia\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7489b42623cd4b28569ab436b3d0afe2}{%
+           family={Foong},
+           familyi={F\bibinitperiod},
+           given={Shaohui},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f93d8a7b27512264215e8edba9f0a2e8}{%
+           family={Soh},
+           familyi={S\bibinitperiod},
+           given={Gim\bibnamedelima Song},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Society of Mechanical Engineers (ASME)}%
+      }
+      \strng{namehash}{3dda9020c9de04658b342298c99683f3}
+      \strng{fullhash}{3dda9020c9de04658b342298c99683f3}
+      \strng{bibnamehash}{3dda9020c9de04658b342298c99683f3}
+      \strng{authorbibnamehash}{3dda9020c9de04658b342298c99683f3}
+      \strng{authornamehash}{3dda9020c9de04658b342298c99683f3}
+      \strng{authorfullhash}{3dda9020c9de04658b342298c99683f3}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Real-time motion planning of robots in a dynamic environment requires a continuous evaluation of the determined trajectory so as to avoid moving obstacles. This is even more challenging when the robot also needs to perform a task optimally while avoiding the obstacles due to the limited time available for generating a new collision-free path. In this paper, we propose the sequential expanded Lagrangian homotopy (SELH) approach, which is capable of determining the globally optimal robot's motion sequentially while satisfying the task constraints. Through numerical simulations, we demonstrate the capabilities of the approach by planning an optimal motion of a redundant mobile manipulator performing a complex trajectory. Comparison against existing optimal motion planning approaches, such as genetic algorithm (GA) and neural network (NN), shows that SELH is able to perform the planning at a faster rate. The considerably short computational time opens up an opportunity to apply this method in real time; and since the robot's motion is planned sequentially, it can also be adjusted to accommodate for dynamically changing constraints such as moving obstacles.}
+      \field{issn}{19424310}
+      \field{journaltitle}{Journal of Mechanisms and Robotics}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{{Task-constrained optimal motion planning of redundant robots via sequential expanded Lagrangian homotopy}}
+      \field{volume}{10}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1115/1.4039395
+      \endverb
+      \verb{urlraw}
+      \verb https://asmedigitalcollection.asme.org/mechanismsrobotics/article/10/3/031010/377420/Task-Constrained-Optimal-Motion-Planning-of
+      \endverb
+      \verb{url}
+      \verb https://asmedigitalcollection.asme.org/mechanismsrobotics/article/10/3/031010/377420/Task-Constrained-Optimal-Motion-Planning-of
+      \endverb
+      \keyw{Kinematics,Path planning,Robots}
+    \endentry
+    \entry{Elbanhawi2014}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1eb4c6ffd4ea06005015f40e6598bd7d}{%
+           family={Elbanhawi},
+           familyi={E\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ced352c588eebe6101fb85773b6a4d5b}{%
+           family={Simic},
+           familyi={S\bibinitperiod},
+           given={Milan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \strng{fullhash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \strng{bibnamehash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \strng{authorbibnamehash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \strng{authornamehash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \strng{authorfullhash}{f490e4fc73253025659f9e8b8e27b0ff}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Motion planning is a fundamental research area in robotics. Sampling-based methods offer an efficient solution for what is otherwise a rather challenging dilemma of path planning. Consequently, these methods have been extended further away from basic robot planning into further difficult scenarios and diverse applications. A comprehensive survey of the growing body of work in sampling-based planning is given here. Simulations are executed to evaluate some of the proposed planners and highlight some of the implementation details that are often left unspecified. An emphasis is placed on contemporary research directions in this field. We address planners that tackle current issues in robotics. For instance, real-life kinodynamic planning, optimal planning, replanning in dynamic environments, and planning under uncertainty are discussed. The aim of this paper is to survey the state of the art in motion planning and to assess selected planners, examine implementation details and above all shed a light on the current challenges in motion planning and the promising approaches that will potentially overcome those problems. © 2014 IEEE.}
+      \field{booktitle}{IEEE Access}
+      \field{issn}{21693536}
+      \field{title}{{Sampling-based robot motion planning: A review}}
+      \field{volume}{2}
+      \field{year}{2014}
+      \field{pages}{56\bibrangedash 77}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2014.2302442
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/260062003_Sampling-Based_Robot_Motion_Planning_A_Review
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/260062003_Sampling-Based_Robot_Motion_Planning_A_Review
+      \endverb
+      \keyw{Autonomous robots,Motion,PRM,Path,Planning,RRT,Randomization,Sampling}
+    \endentry
+    \entry{Ferguson2006}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=35f3ca374463c429652940b9722efa08}{%
+           family={Ferguson},
+           familyi={F\bibinitperiod},
+           given={Dave},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db3d3fe18d31176b125a853bf84e029b}{%
+           family={Kalra},
+           familyi={K\bibinitperiod},
+           given={Nidhi},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fae108ef6fb7a7688220f8edc7e66254}{%
+           family={Stentz},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ba206be22812164ca3393f99139e43f5}
+      \strng{fullhash}{ba206be22812164ca3393f99139e43f5}
+      \strng{bibnamehash}{ba206be22812164ca3393f99139e43f5}
+      \strng{authorbibnamehash}{ba206be22812164ca3393f99139e43f5}
+      \strng{authornamehash}{ba206be22812164ca3393f99139e43f5}
+      \strng{authorfullhash}{ba206be22812164ca3393f99139e43f5}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a replanning algorithm for repairing Rapidly-exploring Random Trees when changes are made to the configuration space. Instead of abandoning the current RRT, our algorithm efficiently removes just the newly-invalid parts and maintains the rest. It then grows the resulting tree until a new solution is found. We use this algorithm to create a probabilistic analog to the widely-used D* family of deterministic algorithms, and demonstrate its effectiveness in a multirobot planning domain. © 2006 IEEE.}
+      \field{booktitle}{Proceedings - IEEE International Conference on Robotics and Automation}
+      \field{isbn}{0780395069}
+      \field{issn}{10504729}
+      \field{title}{{Replanning with RRTs}}
+      \field{volume}{2006}
+      \field{year}{2006}
+      \field{pages}{1243\bibrangedash 1248}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2006.1641879
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Ferguson, Kalra, Stentz - 2006 - Replanning with RRTs.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Ferguson2007}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=35f3ca374463c429652940b9722efa08}{%
+           family={Ferguson},
+           familyi={F\bibinitperiod},
+           given={Dave},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fae108ef6fb7a7688220f8edc7e66254}{%
+           family={Stentz},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \strng{fullhash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \strng{bibnamehash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \strng{authorbibnamehash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \strng{authornamehash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \strng{authorfullhash}{9e9cbd87b36cc8e06463034e8ea0eb90}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a sampling-based path planning and replanning algorithm that produces anytime solutions. Our algorithm tunes the quality of its result based on available search time by generating a series of solutions, each guaranteed to be better than the previous ones by a user-defined improvement bound. When updated information regarding the underlying search space is received, the algorithm efficiently repairs its previous solution. The result is an approach that provides low-cost solutions to high-dimensional search problems involving partially-known or dynamic environments. We discuss theoretical properties of the algorithm, provide experimental results on a simulated multirobot planning scenario, and present an implementation on a team of outdoor mobile robots. © 2007 IEEE.}
+      \field{booktitle}{Proceedings - IEEE International Conference on Robotics and Automation}
+      \field{isbn}{1424406021}
+      \field{issn}{10504729}
+      \field{title}{{Anytime, dynamic planning in high-dimensional search spaces}}
+      \field{year}{2007}
+      \field{pages}{1310\bibrangedash 1315}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2007.363166
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Ferguson, Stentz - 2007 - Anytime, dynamic planning in high-dimensional search spaces.pdf:pdf
+      \endverb
+      \keyw{dynamic environment,general planning,planning}
+    \endentry
+    \entry{Hagele2016}{incollection}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8cb8d00438891daee06979b28e5653e7}{%
+           family={H{ä}gele},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34a5092013ac7ed690625f215699309}{%
+           family={Nilsson},
+           familyi={N\bibinitperiod},
+           given={Klas},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf39e5d1228989e52433069447892927}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi Norberto},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f914bbe64bd82c123d0ef61b9e00bac}{%
+           family={Bischoff},
+           familyi={B\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{f286c7f08088c6a356b07b07d1a435a0}
+      \strng{fullhash}{ea0add2efdd317b0499da88d01300dbd}
+      \strng{bibnamehash}{f286c7f08088c6a356b07b07d1a435a0}
+      \strng{authorbibnamehash}{f286c7f08088c6a356b07b07d1a435a0}
+      \strng{authornamehash}{f286c7f08088c6a356b07b07d1a435a0}
+      \strng{authorfullhash}{ea0add2efdd317b0499da88d01300dbd}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Much of the technology that makes robots reliable, human friendly, and adaptable for numerous applications has emerged from manufacturers of industrial robots. With an estimated installation base in 2014 of about 1.5 million units, some 171000 new installations in that year and an annual turnover of the robotics industry estimated to be US$ 32 billion, industrial robots are by far the largest commercial application of robotics technology today. The foundations for robot motion planning and control were initially developed with industrial applications in mind. These applications deserve special attention in order to understand the origin of robotics science and to appreciate the many unsolved problems that still prevent the wider use of robots in today's agile manufacturing environments. In this chapter, we present a brief history and descriptions of typical industrial robotics applications and at the same time we address current critical state-of-the-art technological developments. We show how robots with different mechanisms fit different applications and how applications are further enabled by latest technologies, often adopted from technological fields outside manufacturing automation. We will first present a brief historical introduction to industrial robotics with a selection of contemporary application examples which at the same time refer to a critical key technology. Then, the basic principles that are used in industrial robotics and a review of programming methods will be outlined. We will also introduce the topic of system integration particularly from a data integration point of view. The chapter will be closed with an outlook based on a presentation of some unsolved problems that currently inhibit wider use of industrial robots.}
+      \field{booktitle}{Springer Handbook of Robotics}
+      \field{isbn}{9783319325521}
+      \field{issn}{25228706}
+      \field{month}{1}
+      \field{title}{{Industrial robotics}}
+      \field{year}{2016}
+      \field{pages}{1385\bibrangedash 1421}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1007/978-3-319-32552-1_54
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-32552-1_54
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-32552-1_54
+      \endverb
+      \keyw{Automate guide vehicle,Industrial robot,Parallel robot,Programmable logic controller,Robot system}
+    \endentry
+    \entry{Jaillet2004}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fa588db0baeae82dd148fd47ff728b4f}{%
+           family={Jaillet},
+           familyi={J\bibinitperiod},
+           given={L{é}onard},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8807a41405bb86a3527e9c34731f6ac}{%
+           family={Sim{é}on},
+           familyi={S\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7dec185af0cd91e37f1fc607ddb99389}
+      \strng{fullhash}{7dec185af0cd91e37f1fc607ddb99389}
+      \strng{bibnamehash}{7dec185af0cd91e37f1fc607ddb99389}
+      \strng{authorbibnamehash}{7dec185af0cd91e37f1fc607ddb99389}
+      \strng{authornamehash}{7dec185af0cd91e37f1fc607ddb99389}
+      \strng{authorfullhash}{7dec185af0cd91e37f1fc607ddb99389}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a path planner for robots operating in dynamically changing environments with both static and moving obstacles. The proposed planner is based on probabilistic path planning techniques and it combines techniques originally designed for solving multiple-query and single-query problems. The planner first starts with a preprocessing stage that constructs a roadmap of valid paths with respect to the static obstacles. It then uses lazy-evaluation mechanisms combined with a single-query technique as local planner in order to rapidly update the roadmap according to the dynamic changes. This allows to answer queries quickly when the moving obstacles have little impact on the free-space connectivity. When the solution can not be found in the updated roadmap, the planner initiates a reinforcement stage that possibly results into the creation of cycles representing alternative paths that were not already stored in the roadmap. Simulation results show that this combination of techniques yields to efficient global planner capable of solving with a real-time performance problems in geometrically complex environments with moving obstacles.}
+      \field{booktitle}{2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{isbn}{0780384636}
+      \field{title}{{A PRM-based motion planner for dynamically changing environments}}
+      \field{volume}{2}
+      \field{year}{2004}
+      \field{pages}{1606\bibrangedash 1611}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/iros.2004.1389625
+      \endverb
+    \endentry
+    \entry{Kavraki1998}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=53dd08518536edbe0ea582bab1515461}{%
+           family={Kavraki},
+           familyi={K\bibinitperiod},
+           given={Lydia\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c12c8f13e41e2e6104e7e31c28467737}{%
+           family={Kolountzakis},
+           familyi={K\bibinitperiod},
+           given={Mihail\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63594d01b42284fefb7f75039830c2b7}{%
+           family={Latombe},
+           familyi={L\bibinitperiod},
+           given={Jean\bibnamedelima Claude},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{263044bdf31fe4b4931d6c236dd3493f}
+      \strng{fullhash}{263044bdf31fe4b4931d6c236dd3493f}
+      \strng{bibnamehash}{263044bdf31fe4b4931d6c236dd3493f}
+      \strng{authorbibnamehash}{263044bdf31fe4b4931d6c236dd3493f}
+      \strng{authornamehash}{263044bdf31fe4b4931d6c236dd3493f}
+      \strng{authorfullhash}{263044bdf31fe4b4931d6c236dd3493f}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We provide an analysis of a recent path planning method which uses probabilistic roadmaps. This method has proven very successful in practice, but the theoretical understanding of its performance is still limited. Assuming that a path $\gamma$ exists between two configurations u and b of the robot, we study the dependence of the failure probability to connect a and b on: 1) the length of $\gamma$; 2) the distance function of $\gamma$ from the obstacles; 3) the number of nodes N of the probabilistic roadmap constructed. Importantly, our results do not depend strongly on local irregularities of the configuration space, as was the case with previous analysis. These results are illustrated with a simple but illuminating example. In this example, we provide estimates for N, the principal parameter of the method, in order to achieve failure probability within prescribed bounds. We also compare, through this example, the different approaches to the analysis of the planning method.}
+      \field{issn}{1042296X}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{1}
+      \field{title}{{Analysis of probabilistic roadmaps for path planning}}
+      \field{volume}{14}
+      \field{year}{1998}
+      \field{pages}{166\bibrangedash 171}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/70.660866
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kavraki, Kolountzakis, Latombe - 1998 - Analysis of probabilistic roadmaps for path planning.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/660866/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/660866/
+      \endverb
+      \keyw{Probabilistic roadmaps,Randomized algorithms,Robot path planning}
+    \endentry
+    \entry{Kavraki1996}{article}{}
+      \name{author}{4}{ul=2}{%
+        {{un=0,uniquepart=base,hash=53dd08518536edbe0ea582bab1515461}{%
+           family={Kavraki},
+           familyi={K\bibinitperiod},
+           given={Lydia\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83e24867590f2b24aad9ce971cbf0f7e}{%
+           family={{Š}vestka},
+           familyi={Š\bibinitperiod},
+           given={Petr},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63594d01b42284fefb7f75039830c2b7}{%
+           family={Latombe},
+           familyi={L\bibinitperiod},
+           given={Jean\bibnamedelima Claude},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28151e71579400c6c08b6e6da9d3a66b}{%
+           family={Overmars},
+           familyi={O\bibinitperiod},
+           given={Mark\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{15d965bced363cd1c3e79f44380d16b5}
+      \strng{fullhash}{19f66c8a04a2de42ceecdb84fe7abc6f}
+      \strng{bibnamehash}{15d965bced363cd1c3e79f44380d16b5}
+      \strng{authorbibnamehash}{15d965bced363cd1c3e79f44380d16b5}
+      \strng{authornamehash}{15d965bced363cd1c3e79f44380d16b5}
+      \strng{authorfullhash}{19f66c8a04a2de42ceecdb84fe7abc6f}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A new motion planning method for robots in static workspaces is presented. This method proceeds in two phases: a learning phase and a query phase. In the learning phase, a probabilistic roadmap is constructed and stored as a graph whose nodes correspond to collision-free configurations and whose edges correspond to feasible paths between these configurations. These paths are computed using a simple and fast local planner. In the query phase, any given start and goal configurations of the robot are connected to two nodes of the roadmap; the roadmap is then searched for a path joining these two nodes. The method is general and easy to implement. It can be applied to virtually any type of holonomic robot. It requires selecting certain parameters (e.g., the duration of the learning phase) whose values depend on the scene, that is the robot and its workspace. But these values turn out to be relatively easy to choose. Increased efficiency can also be achieved by tailoring some components of the method (e.g., the local planner) to the considered robots. In this paper the method is applied to planar articulated robots with many degrees of freedom. Experimental results show that path planning can be done in a fraction of a second on a contemporary workstation ( 150 MIPS), after learning for relatively short periods of time (a few dozen seconds). 1996 IEEE.}
+      \field{issn}{1042296X}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{4}
+      \field{title}{{Probabilistic roadmaps for path planning in high-dimensional configuration spaces}}
+      \field{volume}{12}
+      \field{year}{1996}
+      \field{pages}{566\bibrangedash 580}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/70.508439
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kavraki et al. - 1996 - Probabilistic roadmaps for path planning in high-dimensional configuration spaces.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Klasing2007}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f4dd3ecdfce0310b6ecbb5933ff90b85}{%
+           family={Klasing},
+           familyi={K\bibinitperiod},
+           given={Klaas},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c72a4c33d208d20329074a5db3e4889b}{%
+           family={Wollherr},
+           familyi={W\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf27b2683881661b4896b9ad19d58940}{%
+           family={Buss},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{51822f0a1a05752bd26900552d535613}
+      \strng{fullhash}{51822f0a1a05752bd26900552d535613}
+      \strng{bibnamehash}{51822f0a1a05752bd26900552d535613}
+      \strng{authorbibnamehash}{51822f0a1a05752bd26900552d535613}
+      \strng{authornamehash}{51822f0a1a05752bd26900552d535613}
+      \strng{authorfullhash}{51822f0a1a05752bd26900552d535613}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The advent of the smart grid promises to usher in an era that will bring intelligence, efficiency, and optimality to the power grid. Most of these changes will occur as an Internet-like communications network is superimposed on top of the current power grid using wireless mesh network technologies with the 802.15.4, 802.11, and WiMAX standards. Each of these will ex- pose the power grid to cybersecurity threats. In order to address this issue, this work proposes a distributed intrusion detection system for smart grids (SGDIDS) by developing and deploying an intelligent module, the analyzing module (AM), in multiple layers of the smart grid. Multiple AMs will be embedded at each level of the smart grid—the home area networks (HANs), neighborhood area networks (NANs), and wide area networks (WANs)—where they will use the support vector machine (SVM) and artificial immune system (AIS) to detect and classify malicious data and possible cyberattacks. AMs at each level are trained using data that is relevant to their level and will also be able to communicate in order to improve detection. Simulation results demonstrate that this is a promising methodology for supporting the optimal communication routing and improving system security through the identification of malicious network traffic.}
+      \field{journaltitle}{IEEE International Conference on Advanced Robotics}
+      \field{number}{February 2016}
+      \field{title}{{Cell-based probabilistic roadmaps (CPRM) for efficient path planning in large environments}}
+      \field{volume}{13}
+      \field{year}{2007}
+      \field{pages}{1075\bibrangedash 1080}
+      \range{pages}{6}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Klasing, Wollherr, Buss - 2007 - Cell-based probabilistic roadmaps (CPRM) for efficient path planning in large environments.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Kunz2010a}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2750e238d5f8fc792a35ea91c60ef5e7}{%
+           family={Kunz},
+           familyi={K\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b2d084f67e93e9ef88e9f42dd0fa74d}{%
+           family={Reiser},
+           familyi={R\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bea76e6f0bb1d4014aa9c82e6d26c63a}{%
+           family={Stilman},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58620efe20578d73bd6e280ddb43001a}{%
+           family={Verl},
+           familyi={V\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4f0999c6dd38de0eb6f6b85f5a2584b8}
+      \strng{fullhash}{b7e5610fd3dc7fdca9ad05f7cfd2b545}
+      \strng{bibnamehash}{4f0999c6dd38de0eb6f6b85f5a2584b8}
+      \strng{authorbibnamehash}{4f0999c6dd38de0eb6f6b85f5a2584b8}
+      \strng{authornamehash}{4f0999c6dd38de0eb6f6b85f5a2584b8}
+      \strng{authorfullhash}{b7e5610fd3dc7fdca9ad05f7cfd2b545}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a practical strategy for real-time path planning for articulated robot arms in changing environments by integrating PRM for Changing Environments with 3D sensor data. Our implementation on Care-O-Bot 3 identifies bottlenecks in the algorithm and introduces new methods that solve the overall task of detecting obstacles and planning a path around them in under 100 ms. A fast planner is necessary to enable the robot to react to quickly changing human environments. We have tested our implementation in real-world experiments where a human subject enters the manipulation area, is detected and safely avoided by the robot. This capability is critical for future applications in automation and service robotics where humans will work closely with robots to jointly perform tasks. ©2010 IEEE.}
+      \field{isbn}{9781424466757}
+      \field{journaltitle}{IEEE/RSJ 2010 International Conference on Intelligent Robots and Systems, IROS 2010 - Conference Proceedings}
+      \field{title}{{Real-time path planning for a robot arm in changing environments}}
+      \field{year}{2010}
+      \field{pages}{5906\bibrangedash 5911}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/IROS.2010.5653275
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kunz et al. - 2010 - Real-time path planning for a robot arm in changing environments(2).pdf:pdf
+      \endverb
+      \keyw{dynamic environment,manipulator}
+    \endentry
+    \entry{LaValle1998}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{fullhash}{10b09a560dbab6229987301f9a193d77}
+      \strng{bibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorbibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authornamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorfullhash}{10b09a560dbab6229987301f9a193d77}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Rapidly-Exploring Random Trees: A New Tool for Path Planning}}
+      \field{type}{techreport}
+      \field{year}{1998}
+      \field{pages}{98\bibrangedash 11}
+      \range{pages}{-86}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/LaValle - 1998 - Rapidly-Exploring Random Trees A New Tool for Path Planning.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cs.csustan.edu/$\sim$xliang/Courses/CS4710-21S/Papers/06 RRT.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cs.csustan.edu/$%5Csim$xliang/Courses/CS4710-21S/Papers/06%20RRT.pdf
+      \endverb
+    \endentry
+    \entry{Likhachev2005}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b003e939dc38c729a7019f5b8403fa44}{%
+           family={Likhachev},
+           familyi={L\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35f3ca374463c429652940b9722efa08}{%
+           family={Ferguson},
+           familyi={F\bibinitperiod},
+           given={Dave},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=685e1c249c9cf9b84bcec19b01d8fef0}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={Geoff},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fae108ef6fb7a7688220f8edc7e66254}{%
+           family={Stentz},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6d6276c79aabe1aee7905cadb4bc33b8}
+      \strng{fullhash}{a7a431db57066c4618b6f4dba19f4155}
+      \strng{bibnamehash}{6d6276c79aabe1aee7905cadb4bc33b8}
+      \strng{authorbibnamehash}{6d6276c79aabe1aee7905cadb4bc33b8}
+      \strng{authornamehash}{6d6276c79aabe1aee7905cadb4bc33b8}
+      \strng{authorfullhash}{a7a431db57066c4618b6f4dba19f4155}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a graph-based planning and replanning algorithm able to produce bounded suboptimal solutions in an anytime fashion. Our algorithm tunes the quality of its solution based on available search time, at every step reusing previous search efforts. When updated information regarding the underlying graph is received, the algorithm incrementally repairs its previous solution. The result is an approach that combines the benefits of anytime and incremental planners to provide efficient solutions to complex, dynamic search problems. We present theoretical analysis of the algorithm, experimental results on a simulated robot kinematic arm, and two current applications in dynamic path planning for outdoor mobile robots. Copyright © 2005,American Association for Artificial Intelligence.}
+      \field{booktitle}{ICAPS 2005 - Proceedings of the 15th International Conference on Automated Planning and Scheduling}
+      \field{isbn}{1577352203}
+      \field{title}{{Anytime dynamic a*: An anytime, replanning algorithm}}
+      \field{year}{2005}
+      \field{pages}{262\bibrangedash 271}
+      \range{pages}{10}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Likhachev et al. - 2005 - Anytime dynamic a An anytime, replanning algorithm.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb www.aaai.org
+      \endverb
+      \verb{url}
+      \verb www.aaai.org
+      \endverb
+      \keyw{American Association for Artificial Intelligence.,Copyright © 2005}
+    \endentry
+    \entry{Liu2016a}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=517540fad1412592f1322adf208a72e9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Keping},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fad12d56f6f29cf459ea1fc5ae8042f}{%
+           family={Sui},
+           familyi={S\bibinitperiod},
+           given={Jilei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fa3349cdea3f314d0db859aba68d032}{%
+           family={Yue},
+           familyi={Y\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce00fb28bc16a7f053f7e3b6d3e0b5f1}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Shuaishi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{3d1d16d44d4e96563d2569e92933c570}
+      \strng{fullhash}{642eff6d5cdc07df22e12b871247319b}
+      \strng{bibnamehash}{3d1d16d44d4e96563d2569e92933c570}
+      \strng{authorbibnamehash}{3d1d16d44d4e96563d2569e92933c570}
+      \strng{authornamehash}{3d1d16d44d4e96563d2569e92933c570}
+      \strng{authorfullhash}{642eff6d5cdc07df22e12b871247319b}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With a mobile manipulator as the research object, a path planning method of mobile manipulator based on the representation space is proposed in this paper. The state space model of the mobile manipulator is defined and constructed in this method. According to internal mechanism and external environment constraints, the achievable stretch of system state is described. On this basis, A-algorithm is adopted to carry out the path planning search, analyzing spatial variable trends on each dimension of the representation space, and setting up the function parameters for A∗algorithm so that the motion trajectory will be more reasonable. The effectiveness of the proposed method is verified by simulation experiments.}
+      \field{booktitle}{2016 IEEE International Conference on Mechatronics and Automation, IEEE ICMA 2016}
+      \field{isbn}{9781509023943}
+      \field{month}{9}
+      \field{title}{{Path planning method of mobile manipulator based on the representation space}}
+      \field{year}{2016}
+      \field{pages}{322\bibrangedash 326}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/ICMA.2016.7558582
+      \endverb
+    \endentry
+    \entry{Matthias2011}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=42e8500df5598d6a382d3426c8273acd}{%
+           family={Matthias},
+           familyi={M\bibinitperiod},
+           given={Bjoern},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba49a80865b44c6be2846074d80619ac}{%
+           family={Kock},
+           familyi={K\bibinitperiod},
+           given={Soenke},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0c9a9fe3a06a1a65e5a7632536d785c}{%
+           family={Jerregard},
+           familyi={J\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0d838a92228b21d5fda07aad6ab9815}{%
+           family={K{ä}llman},
+           familyi={K\bibinitperiod},
+           given={Mats},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bbe4ae7dc650a515debd64a126c4a3f}{%
+           family={Lundberg},
+           familyi={L\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1fd3f0294b3da4c6357178974abb517d}
+      \strng{fullhash}{329747c4ff928fcb51a3d2735662ed1a}
+      \strng{bibnamehash}{1fd3f0294b3da4c6357178974abb517d}
+      \strng{authorbibnamehash}{1fd3f0294b3da4c6357178974abb517d}
+      \strng{authornamehash}{1fd3f0294b3da4c6357178974abb517d}
+      \strng{authorfullhash}{329747c4ff928fcb51a3d2735662ed1a}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Industrial requirements for automation of small parts assembly operations are driving technology into the direction of scalable robotic automation, suitable for operation in shared environments with human workers and exhibiting highest flexibility and ease of use. One of the challenges is developing solutions for personnel safety under these conditions. This paper discusses both the presently viable approaches to risk assessment for collaborative robots and a more detailed future methodology that will be better able to resolve the relevant low-level injury risks. © 2011 IEEE.}
+      \field{booktitle}{Proceedings - 2011 IEEE International Symposium on Assembly and Manufacturing, ISAM 2011}
+      \field{isbn}{9781612843438}
+      \field{number}{230902}
+      \field{title}{{Safety of collaborative industrial robots: Certification possibilities for a collaborative assembly robot concept}}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1109/ISAM.2011.5942307
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Matthias et al. - 2011 - Safety of collaborative industrial robots Certification possibilities for a collaborative assembly robot concep.pdf:pdf
+      \endverb
+      \keyw{ISO 10218,human-robot collaboration,personnel safety,risk assessment,shared workspaces}
+    \endentry
+    \entry{Mohanan2018}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a570ec40e9b8e508cd2af0b5212f6b35}{%
+           family={Mohanan},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c329d15510979b3ddaf5917ab90f50c}{%
+           family={Salgoankar},
+           familyi={S\bibinitperiod},
+           given={Ambuja},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland}%
+      }
+      \strng{namehash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \strng{fullhash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \strng{bibnamehash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \strng{authorbibnamehash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \strng{authornamehash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \strng{authorfullhash}{5d2dbb99b2b6dcf9f22cfee5e78de1de}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Robot Motion Planning (RMP) has been a thrust area of research in computing due to its complexity, since RMP in dynamic environments for a point robot with bounded velocity is an NP-hard problem. This paper is a critical review of the major contributions to RMP in dynamic environments. Between 1985 and 2015 the focus has changed from the classical approach to a heuristic approach. For velocity based motion planning in dynamic environments, ICS — AVOID (Fraichard and Asama, 2004, also see Section 2.4.4) is the safest approach which means that this method have the capability of for an autonomous robotic system to avoid collision with the obstacles in the environment. Other important approaches include artificial potential field based, artificial intelligence based, probabilistic based RMP and applications in areas of Agent systems and computer geometry. Classification of the RMP literature on the basis of the techniques and their performance has been attempted.}
+      \field{booktitle}{Robotics and Autonomous Systems}
+      \field{issn}{09218890}
+      \field{month}{2}
+      \field{title}{{A survey of robotic motion planning in dynamic environments}}
+      \field{volume}{100}
+      \field{year}{2018}
+      \field{pages}{171\bibrangedash 185}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.robot.2017.10.011
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Mohanan, Salgoankar - 2018 - A survey of robotic motion planning in dynamic environments.pdf:pdf
+      \endverb
+      \keyw{Collision avoidance,Dynamic environments,Robot motion planning}
+    \endentry
+    \entry{Otte2015}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d3199805405eb5c111fa54dbabb686bf}{%
+           family={Otte},
+           familyi={O\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7fe896e8ed8d5f30af73e472ebedcec9}{%
+           family={Frazzoli},
+           familyi={F\bibinitperiod},
+           given={Emilio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Verlag}%
+      }
+      \strng{namehash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \strng{fullhash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \strng{bibnamehash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \strng{authorbibnamehash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \strng{authornamehash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \strng{authorfullhash}{22ff307facf7fb5b547ff3c09f023ed9}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Springer Tracts in Advanced Robotics}
+      \field{isbn}{9783319165943}
+      \field{issn}{1610742X}
+      \field{title}{{RRTX: Real-time motion planning/replanning for environments with unpredictable obstacles}}
+      \field{volume}{107}
+      \field{year}{2015}
+      \field{pages}{461\bibrangedash 478}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/978-3-319-16595-0_27
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-16595-0_27
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-16595-0_27
+      \endverb
+      \keyw{Asymptotically optimal,Dynamic environments,Graph consistency,Motion planning,Real-time,Replanning,Shortest-path}
+    \endentry
+    \entry{Pan2012}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=df1387a006d560bfd3dd3eb81dfd5e3d}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8b4293f7358b8d2c74099a3e9e25b84}{%
+           family={Chitta},
+           familyi={C\bibinitperiod},
+           given={Sachin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d350899843e74c7cb6f945d48def0dfa}{%
+           family={Manocha},
+           familyi={M\bibinitperiod},
+           given={Dinesh},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \strng{fullhash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \strng{bibnamehash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \strng{authorbibnamehash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \strng{authornamehash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \strng{authorfullhash}{a550549bfdec34a4e1aa1aa3ed3bcc88}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a new collision and proximity library that integrates several techniques for fast and accurate collision checking and proximity computation. Our library is based on hierarchical representations and designed to perform multiple proximity queries on different model representations. The set of queries includes discrete collision detection, continuous collision detection, separation distance computation and penetration depth estimation. The input models may correspond to triangulated rigid or deformable models and articulated models. Moreover, FCL can perform probabilistic collision checking between noisy point clouds that are captured using cameras or LIDAR sensors. The main benefit of FCL lies in the fact that it provides a unified interface that can be used by various applications. Furthermore, its flexible architecture makes it easier to implement new algorithms within this framework. The runtime performance of the library is comparable to state of the art collision and proximity algorithms. We demonstrate its performance on synthetic datasets as well as motion planning and grasping computations performed using a two-armed mobile manipulation robot. © 2012 IEEE.}
+      \field{booktitle}{Proceedings - IEEE International Conference on Robotics and Automation}
+      \field{isbn}{9781467314039}
+      \field{issn}{10504729}
+      \field{title}{{FCL: A general purpose library for collision and proximity queries}}
+      \field{year}{2012}
+      \field{pages}{3859\bibrangedash 3866}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICRA.2012.6225337
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Pan, Chitta, Manocha - 2012 - FCL A general purpose library for collision and proximity queries.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Pieper1968}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c7a99d75b22429bb820d4c56a3e0ce4}{%
+           family={Pieper},
+           familyi={P\bibinitperiod},
+           given={Donald\bibnamedelima Lee},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{fullhash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{bibnamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authorbibnamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authornamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authorfullhash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Kinematics of Manipulators Under Computer Control}}
+      \field{type}{phdthesis}
+      \field{year}{1968}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Pieper - 1968 - The Kinematics of Manipulators Under Computer Control.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Pomarlan2013a}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=aec15eac0e84917dabac0d187b72ec24}{%
+           family={Pomarlan},
+           familyi={P\bibinitperiod},
+           given={Mihai},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9e99e0968b4099ac43640850c1f7d8e}{%
+           family={Sucan},
+           familyi={S\bibinitperiod},
+           given={Ioan\bibnamedelima A},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \strng{fullhash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \strng{bibnamehash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \strng{authorbibnamehash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \strng{authornamehash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \strng{authorfullhash}{5447a8a53c1edfbe31f7ae214bbfd78c}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper introduces a method to efficiently compute global motion plans for robotic manipulators in dynamically changing environments. An offline computation step is used to construct a sparse roadmap to approximate the configuration space of the manipulator in an empty environment. When the robot is running, a representation of the environment to keep track of the robot's free workspace is maintained as sensor updates are received. The maintained representation of the free workspace is used in conjunction with the data computed offline to quickly compute good quality global motion plans. ©2013 IEEE.}
+      \field{booktitle}{CINTI 2013 - 14th IEEE International Symposium on Computational Intelligence and Informatics, Proceedings}
+      \field{isbn}{9781479901975}
+      \field{title}{{Motion planning for manipulators in dynamically changing environments using real-time mapping of free workspace}}
+      \field{year}{2013}
+      \field{pages}{483\bibrangedash 487}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/CINTI.2013.6705245
+      \endverb
+      \keyw{dynamic environment,dynamic environments,planning,prm,robot motion planning,sparse roadmaps}
+    \endentry
+    \entry{Su2011}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e29d1768975a0fd54c74ef950b2bf381}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Jianbo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a7f51ea731773f2df186284c86c083e}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Wenlong},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \strng{fullhash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \strng{bibnamehash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \strng{authorbibnamehash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \strng{authornamehash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \strng{authorfullhash}{1ab9ead6eb8d83b2ac0fb84728bbd2d5}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a general motion planning and coordination strategy for robot systems. The representation space (RS) of a robot system is constructed to describe the distributions of system attributes. The reachable area in the RS, denoting the attribute set that the system can be of, indicates the system's ability to accomplish tasks. Moreover, it also describes the influences of the internal and external constraints on the system's capability. Task realization is transformed to finding a trajectory in the RS for the system attributes to transit along under constraints. Meanwhile, the realizable conditions of a prescribed task by the robot system of specific configurations are discussed. If the task is realizable, the optimal strategy for task execution could further be figured out. Otherwise, it could be transformed to be realizable via task reassignment or system reconfigurations so that a connected path could be found for the transition of the system attributes from the starting point to the goal in the RS. The proposed scheme contributes to designing, planning, and coordination of the robotic tasks. Experiments on path planning of a robot manipulator and formation movement of a multirobot system, as well as coordination of a mobile manipulator system, are conducted to show the validity and generalization of the proposed method. © 2010 IEEE.}
+      \field{issn}{10834419}
+      \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{{Motion planning and coordination for robot systems based on representation space}}
+      \field{volume}{41}
+      \field{year}{2011}
+      \field{pages}{248\bibrangedash 259}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TSMCB.2010.2051025
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Su, Xie - 2011 - Motion planning and coordination for robot systems based on representation space.pdf:pdf
+      \endverb
+      \keyw{Attribute transition,dynamic environment,representation space (RS),robot system,task planning,task realizability}
+    \endentry
+    \entry{Vannoy2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=955702541982d6f6be73b03b83828f6c}{%
+           family={Vannoy},
+           familyi={V\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4e7881f783fdeeb4c661c08e11afb67}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ec06911186df84a3964b66453108577}
+      \strng{fullhash}{8ec06911186df84a3964b66453108577}
+      \strng{bibnamehash}{8ec06911186df84a3964b66453108577}
+      \strng{authorbibnamehash}{8ec06911186df84a3964b66453108577}
+      \strng{authornamehash}{8ec06911186df84a3964b66453108577}
+      \strng{authorfullhash}{8ec06911186df84a3964b66453108577}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper introduces a novel and general real-time adaptive motion planning (RAMP) approach suitable for planning trajectories of high-DOF or redundant robots, such as mobile manipulators, in dynamic environments with moving obstacles of unknown trajectories. The RAMP approach enables simultaneous path and trajectory planning and simultaneous planning and execution of motion in real time. It facilitates real-time optimization of trajectories under various optimization criteria, such as minimizing energy and time and maximizing manipulability. It also accommodates partially specified task goals of robots easily. The approach exploits redundancy in redundant robots (such as locomotion versus manipulation in a mobile manipulator) through loose coupling of robot configuration variables to best achieve obstacle avoidance and optimization objectives. The RAMP approach has been implemented and tested in simulation over a diverse set of task environments, including environments with multiple mobile manipulators. The results (and also the accompanying video) show that the RAMP planner, with its high efficiency and flexibility, not only handles a single mobile manipulator well in dynamic environments with various obstacles of unknown motions in addition to static obstacles, but can also readily and effectively plan motions for each mobile manipulator in an environment shared by multiple mobile manipulators and other moving obstacles. © 2008 IEEE.}
+      \field{issn}{15523098}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{5}
+      \field{title}{{Real-time adaptive motion planning (RAMP) of mobile manipulators in dynamic environments with unforeseen changes}}
+      \field{volume}{24}
+      \field{year}{2008}
+      \field{pages}{1199\bibrangedash 1212}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TRO.2008.2003277
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Vannoy, Xiao - 2008 - Real-time adaptive motion planning (RAMP) of mobile manipulators in dynamic environments with unforeseen changes.pdf:pdf
+      \endverb
+      \keyw{Adaptive,Dynamic obstacles of unknown motion,Loose coupling,Mobile manipulators,Partially specified goal,Real time,Redundant robots,Trajectory optimization}
+    \endentry
+    \entry{Wei2018}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f3ff39bfc896aa6767127a6fd847f46a}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f32f79d53aa7d4f91eda8a7bb4f3cf0a}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Bingyin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b5a9005a39d708f18885f62e54e3331}
+      \strng{fullhash}{1b5a9005a39d708f18885f62e54e3331}
+      \strng{bibnamehash}{1b5a9005a39d708f18885f62e54e3331}
+      \strng{authorbibnamehash}{1b5a9005a39d708f18885f62e54e3331}
+      \strng{authornamehash}{1b5a9005a39d708f18885f62e54e3331}
+      \strng{authorfullhash}{1b5a9005a39d708f18885f62e54e3331}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In a future intelligent factory, a robotic manipulator must work efficiently and safely in a Human–Robot collaborative and dynamic unstructured environment. Autonomous path planning is the most important issue which must be resolved first in the process of improving robotic manipulator intelligence. Among the path-planning methods, the Rapidly Exploring Random Tree (RRT) algorithm based on random sampling has been widely applied in dynamic path planning for a high-dimensional robotic manipulator, especially in a complex environment because of its probability completeness, perfect expansion, and fast exploring speed over other planning methods. However, the existing RRT algorithm has a limitation in path planning for a robotic manipulator in a dynamic unstructured environment. Therefore, an autonomous obstacle avoidance dynamic path-planning method for a robotic manipulator based on an improved RRT algorithm, called Smoothly RRT (S-RRT), is proposed. This method that targets a directional node extends and can increase the sampling speed and efficiency of RRT dramatically. A path optimization strategy based on the maximum curvature constraint is presented to generate a smooth and curved continuous executable path for a robotic manipulator. Finally, the correctness, effectiveness, and practicability of the proposed method are demonstrated and validated via a MATLAB static simulation and a Robot Operating System (ROS) dynamic simulation environment as well as a real autonomous obstacle avoidance experiment in a dynamic unstructured environment for a robotic manipulator. The proposed method not only provides great practical engineering significance for a robotic manipulator's obstacle avoidance in an intelligent factory, but also theoretical reference value for other type of robots' path planning.}
+      \field{issn}{14248220}
+      \field{journaltitle}{Sensors (Switzerland)}
+      \field{number}{2}
+      \field{title}{{A method on dynamic path planning for robotic manipulator autonomous obstacle avoidance based on an improved RRT algorithm}}
+      \field{volume}{18}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.3390/s18020571
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Wei, Ren - 2018 - A method on dynamic path planning for robotic manipulator autonomous obstacle avoidance based on an improved RRT algor.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb www.mdpi.com/journal/sensors
+      \endverb
+      \verb{url}
+      \verb www.mdpi.com/journal/sensors
+      \endverb
+      \keyw{Autonomous obstacle avoidance,Dynamic path planning,Dynamic unstructured environment,RRT algorithm,Robotic manipulator,dynamic environment,manipulator}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

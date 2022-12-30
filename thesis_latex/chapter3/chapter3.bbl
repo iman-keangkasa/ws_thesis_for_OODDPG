@@ -1,0 +1,359 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Driscoll1994}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f759b27c67de7daeeb21864b9e9333cd}{%
+           family={Driscoll},
+           familyi={D\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=26d10bd0e419e805b7888fa1eaa04b4c}{%
+           family={Healy},
+           familyi={H\bibinitperiod},
+           given={Dennis\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{3d1495c4e501d6ced47bc04b2625185e}
+      \strng{fullhash}{3d1495c4e501d6ced47bc04b2625185e}
+      \strng{bibnamehash}{3d1495c4e501d6ced47bc04b2625185e}
+      \strng{authorbibnamehash}{3d1495c4e501d6ced47bc04b2625185e}
+      \strng{authornamehash}{3d1495c4e501d6ced47bc04b2625185e}
+      \strng{authorfullhash}{3d1495c4e501d6ced47bc04b2625185e}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper considers the problem of efficient computation of the spherical harmonic expansion, or Fourier transform, of functions defined on the two dimensional sphere, S2. The resulting algorithms are applied to the efficient computation of convolutions of functions on the sphere. We begin by proving convolution theorems generalizing well known and useful results from the abelian case. These convolution theorems are then used to develop a sampling theorem on the sphere. which reduces the calculation of Fourier transforms and convolutions of band-limited functions to discrete computations. We show how to perform these efficiently, starting with an O(n(log n)2) time algorithm for computing the Legendre transform of a function defined on the interval [-1,1] sampled at n points there. Theoretical and experimental results on the effects of finite precision arithmetic are presented. The Legendre transform algorithm is then generalized to obtain an algorithm for the Fourier transform, requiring O(n(log n)2) time, and an algorithm for its inverse in O(n1.5) time, where n is the number of points on the sphere at which the function is sampled. This improves the naive O(n2) bound, which is the best previously known. These transforms give an O(n1.5) algorithm for convolving two functions on the sphere. © 1994 Academic Press, Inc. All rights reserved.}
+      \field{issn}{10902074}
+      \field{journaltitle}{Advances in Applied Mathematics}
+      \field{month}{6}
+      \field{number}{2}
+      \field{title}{{Computing fourier transforms and convolutions on the 2-sphere}}
+      \field{volume}{15}
+      \field{year}{1994}
+      \field{pages}{202\bibrangedash 250}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1006/aama.1994.1008
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Driscoll, Healy - 1994 - Computing fourier transforms and convolutions on the 2-sphere.pdf:pdf
+      \endverb
+      \keyw{equiangular_samples,fourier,fourier_transform,registration}
+    \endentry
+    \entry{Healy2003}{article}{}
+      \name{author}{4}{}{%
+        {{un=2,uniquepart=given,hash=6beecadc300c3a603136f080026019ac}{%
+           family={Healy},
+           familyi={H\bibinitperiod},
+           given={D.\bibnamedelimi M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=6029f669088bbc9cc9bf778a0f059010}{%
+           family={Rockmore},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=963d0117df76d8cd5095250a47baf755}{%
+           family={Kostelec},
+           familyi={K\bibinitperiod},
+           given={P.\bibnamedelimi J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25c13ecdbc9d5afec421c88e94579c07}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fb384a7269f68ef644505a0594813e42}
+      \strng{fullhash}{c3e7d88414a2a9090df3e95f70531f42}
+      \strng{bibnamehash}{fb384a7269f68ef644505a0594813e42}
+      \strng{authorbibnamehash}{fb384a7269f68ef644505a0594813e42}
+      \strng{authornamehash}{fb384a7269f68ef644505a0594813e42}
+      \strng{authorfullhash}{c3e7d88414a2a9090df3e95f70531f42}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Earlier work by Driscoll and Healy [18] has produced an efficient algorithm for computing the Fourier transform of band-limited functions on the 2-sphere. In this article we present a reformulation and variation of the original algorithm which results in a greatly improved inverse transform, and consequent improved convolution algorithm for such functions. All require at most O(N log2 N) operations where N is the number of sample points. We also address implementation considerations and give heuristics for allowing reliable and computationally efficient floating point implementations of slightly modified algorithms. These claims are supported by extensive numerical experiments from our implementation in C on DEC, HP, SGI and Linux Pentium platforms. These results indicate that variations of the algorithm are both reliable and efficient for a large range of useful problem sizes. Performance appears to be architecture-dependent. The article concludes with a brief discussion of a few potential applications.}
+      \field{issn}{10695869}
+      \field{journaltitle}{Journal of Fourier Analysis and Applications}
+      \field{number}{4}
+      \field{title}{{FFTs for the 2-Sphere-Improvements and Variations}}
+      \field{volume}{9}
+      \field{year}{2003}
+      \field{pages}{341\bibrangedash 385}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1007/s00041-003-0018-9
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Healy et al. - 2003 - FFTs for the 2-Sphere-Improvements and Variations.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s00041-003-0018-9
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s00041-003-0018-9
+      \endverb
+      \keyw{Fast legendre transform,Recurrence relations,Spherical fourier transform,Spherical harmonics,check_code,fourier,registration}
+    \endentry
+    \entry{Hornung2013}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f9bed8d5d2f1a7f46def7b01b507bdc9}{%
+           family={Hornung},
+           familyi={H\bibinitperiod},
+           given={Armin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=053b166824772e62f94b1409c9a3fd32}{%
+           family={Wurm},
+           familyi={W\bibinitperiod},
+           given={Kai\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38bbd60cd009b934787bb8cdf9f77a79}{%
+           family={Bennewitz},
+           familyi={B\bibinitperiod},
+           given={Maren},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d87e0c36213202151bff64fdd9346a3}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={Cyrill},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9215a3ab7fd0ac9a7afb808a5f4bb0c1}
+      \strng{fullhash}{34d18fce449a2cbcdbc97c48773c94f3}
+      \strng{bibnamehash}{9215a3ab7fd0ac9a7afb808a5f4bb0c1}
+      \strng{authorbibnamehash}{9215a3ab7fd0ac9a7afb808a5f4bb0c1}
+      \strng{authornamehash}{9215a3ab7fd0ac9a7afb808a5f4bb0c1}
+      \strng{authorfullhash}{34d18fce449a2cbcdbc97c48773c94f3}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Three-dimensional models provide a volumetric representation of space which is important for a variety of robotic applications including flying robots and robots that are equipped with manipulators. In this paper, we present an open-source framework to generate volumetric 3D environment models. Our mapping approach is based on octrees and uses probabilistic occupancy estimation. It explicitly represents not only occupied space, but also free and unknown areas. Furthermore, we propose an octree map compression method that keeps the 3D models compact. Our framework is available as an open-source C++ library and has already been successfully applied in several robotics projects. We present a series of experimental results carried out with real robots and on publicly available real-world datasets. The results demonstrate that our approach is able to update the representation efficiently and models the data consistently while keeping the memory requirement at a minimum. ? 2013 Springer Science+Business Media New York.}
+      \field{issn}{09295593}
+      \field{journaltitle}{Autonomous Robots}
+      \field{month}{4}
+      \field{number}{3}
+      \field{title}{{OctoMap: An efficient probabilistic 3D mapping framework based on octrees}}
+      \field{volume}{34}
+      \field{year}{2013}
+      \field{pages}{189\bibrangedash 206}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1007/s10514-012-9321-0
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Hornung et al. - 2013 - OctoMap An efficient probabilistic 3D mapping framework based on octrees.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10514-012-9321-0
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10514-012-9321-0
+      \endverb
+      \keyw{3D,Mapping,Navigation,Probabilistic}
+    \endentry
+    \entry{LaValle1998}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{fullhash}{10b09a560dbab6229987301f9a193d77}
+      \strng{bibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorbibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authornamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorfullhash}{10b09a560dbab6229987301f9a193d77}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Rapidly-Exploring Random Trees: A New Tool for Path Planning}}
+      \field{type}{techreport}
+      \field{year}{1998}
+      \field{pages}{98\bibrangedash 11}
+      \range{pages}{-86}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/LaValle - 1998 - Rapidly-Exploring Random Trees A New Tool for Path Planning.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cs.csustan.edu/$\sim$xliang/Courses/CS4710-21S/Papers/06 RRT.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cs.csustan.edu/$%5Csim$xliang/Courses/CS4710-21S/Papers/06%20RRT.pdf
+      \endverb
+    \endentry
+    \entry{Osteen2012}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0baadb71338370f9053f9d0937713429}{%
+           family={Osteen},
+           familyi={O\bibinitperiod},
+           given={Philip\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb51bc12b84d5b9eb0a9a609a90df63f}{%
+           family={Owens},
+           familyi={O\bibinitperiod},
+           given={Jason\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77caf306c8c2ff33759e74520a6fdfc7}{%
+           family={Kessens},
+           familyi={K\bibinitperiod},
+           given={Chad\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers Inc.}%
+      }
+      \strng{namehash}{26ba496992219c7349f6a137c7d1e883}
+      \strng{fullhash}{26ba496992219c7349f6a137c7d1e883}
+      \strng{bibnamehash}{26ba496992219c7349f6a137c7d1e883}
+      \strng{authorbibnamehash}{26ba496992219c7349f6a137c7d1e883}
+      \strng{authornamehash}{26ba496992219c7349f6a137c7d1e883}
+      \strng{authorfullhash}{26ba496992219c7349f6a137c7d1e883}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a technique to estimate the egomotion of an RGB-D sensor based on rotations of functions defined on the unit sphere. In contrast to traditional approaches, our technique is not based on image features and does not require correspondences to be generated between frames of data. Instead, consecutive functions are correlated using spherical harmonic analysis. An Extended Gaussian Image (EGI), created from the local normal estimates of a point cloud, defines each function. Correlations are efficiently computed using Fourier transformations, resulting in a 3 Degree of Freedom (3-DoF) rotation estimate. An Iterative Closest Point (ICP) process then refines the initial rotation estimate and adds a translational component, yielding a full 6-DoF egomotion estimate. The focus of this work is to investigate the merits of using spherical harmonic analysis for egomotion estimation by comparison with alternative 6-DoF methods. We compare the performance of the proposed technique with that of stand-alone ICP and image feature based methods. As with other egomotion techniques, estimation errors accumulate and degrade results, necessitating correction mechanisms for robust localization. For this report, however, we use the raw estimates; no filtering or smoothing processes are applied. In-house and external benchmark data sets are analyzed for both runtime and accuracy. Results show that the algorithm is competitive in terms of both accuracy and runtime, and future work will aim to combine the various techniques into a more robust egomotion estimation framework. © 2012 IEEE.}
+      \field{booktitle}{Proceedings - IEEE International Conference on Robotics and Automation}
+      \field{isbn}{9781467314039}
+      \field{issn}{10504729}
+      \field{title}{{Online egomotion estimation of RGB-D sensors using spherical harmonics}}
+      \field{year}{2012}
+      \field{pages}{1679\bibrangedash 1684}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICRA.2012.6225098
+      \endverb
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Osteen, Owens, Kessens - 2012 - Online egomotion estimation of RGB-D sensors using spherical harmonics.pdf:pdf
+      \endverb
+      \keyw{fourier,odometry,registration,rgbd,slam}
+    \endentry
+    \entry{Pieper1968}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c7a99d75b22429bb820d4c56a3e0ce4}{%
+           family={Pieper},
+           familyi={P\bibinitperiod},
+           given={Donald\bibnamedelima Lee},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{fullhash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{bibnamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authorbibnamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authornamehash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \strng{authorfullhash}{5c7a99d75b22429bb820d4c56a3e0ce4}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Kinematics of Manipulators Under Computer Control}}
+      \field{type}{phdthesis}
+      \field{year}{1968}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Pieper - 1968 - The Kinematics of Manipulators Under Computer Control.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Pires2007}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=658b72fb6e1a5b8af1f8f6d8a07bb1d5}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={J.norberto},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \strng{fullhash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \strng{bibnamehash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \strng{authorbibnamehash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \strng{authornamehash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \strng{authorfullhash}{658b72fb6e1a5b8af1f8f6d8a07bb1d5}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Industrial Robots Programming focuses on designing and building robotic manufacturing cells, and explores the capabilities of today's industrial equipment as well as the latest computer and software technologies. Special attention is given to the input devices and systems that create efficient human-machine interfaces, and how they help non-technical personnel perform necessary programming, control, and supervision tasks. Drawing upon years of practical experience and using numerous examples and illustrative applications, J. Norberto Pires covers robotics programming as it applies to: The current industrial robotic equipment including manipulators, control systems, and programming environments. Software interfaces that can be used to develop distributed industrial manufacturing cells and techniques which can be used to build interfaces between robots and computers. Real-world applications with examples designed and implemented recently in the lab.This book is supported by a website http://robotics.dem.uc.pt/indrobprog that includes software code for the examples presented, various software applications developed by the author and videos of all examples presented and discussed. For more information about Industrial Robotics, please find the author's Industrial Robotics collection at the iTunesU University of Coimbra channel at the following link: http://itunes.apple.com/itunes-u/id413183592 From the Back Cover Industrial Robots Programming focuses on designing and building robotic manufacturing cells, and explores the capabilities of today's industrial equipment as well as the latest computer and software technologies. Special attention is given to the input devices and systems that create efficient human-machine interfaces, and how they help non-technical personnel perform necessary programming, control, and supervision tasks. Drawing upon years of practical experience and using numerous examples and illustrative applications, J. Norberto Pires covers robotics programming as it applies to: The current industrial robotic equipment, including manipulators, control systems, and programming environments.Software interfaces that can be used to develop distributed industrial manufacturing cells and techniques which can be used to build interfaces between robots and computers.Real-world applications with examples designed and implemented recently in the lab.This book is supported by a website, http://robotics.dem.uc.pt/indrobprog , that includes software code for the examples presented, various software applications developed by the author, and videos of all examples presented and discussed.}
+      \field{isbn}{9780387233253}
+      \field{title}{{INDUSTRIAL ROBOTS PROGRAMMING : INDUSTRIAL ROBOTS PROGRAMMING}}
+      \field{type}{phdthesis}
+      \field{year}{2007}
+      \field{pages}{198\bibrangedash 197}
+      \range{pages}{0}
+      \verb{file}
+      \verb :home/asl/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Pires - 2007 - INDUSTRIAL ROBOTS PROGRAMMING INDUSTRIAL ROBOTS PROGRAMMING.pdf:pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

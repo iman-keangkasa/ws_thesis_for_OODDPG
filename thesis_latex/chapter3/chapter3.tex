@@ -1,0 +1,380 @@
+\input{../header2.tex}
+
+\chapter{Mathematical Backgrounds}\label{chap:mathematical_background}
+
+%\section{Introduction}\label{sec:chapter1_introduction}
+\noindent
+The role of this chapter is to provide the primer
+for the mathematical foundation of this thesis. 
+
+A six-axis robot with six revolute joints has been developed
+as the hardware platform to validate the Planner-SLAM
+solution proposed in this thesis. The robot has been
+named Richard Mini (code as \glsxtrshort{rimini}). This chapter presents
+the features and mathematical model of this robot.
+
+The chapter revolves around the geometric 
+representation of the kinematic model 
+of \rimini~ and the mathematical 
+framework for the planner used in this research
+and the components of the SLAM solution. 
+
+%[task] follow how important_IK_Jacobian_Methods.pdf explains the kinematics
+\section{The Kinematics of Richard Mini}\label{sec:kinematics_rimini}
+\subsection{The Mechanical Descriptions}\label{sec:mechanical_description}
+
+\import{\thesisDir/chapter3/figures/}{r_mini_pieper.tex} %fig:r_mini_pieper
+%[task] explain rotation aspect of the kinematics 
+ 
+Richard Mini (\rimini) has one fixed link, 
+six moving links, six revolute joints, and 
+six frames attached to the links. The links are named numerical:
+link1, link2, \ldots, link6 shown in figure \ref{fig:rimini_links}.
+The same is true for the joints: joint1,
+joint2, $\ldots$, joint6. All joints are described by the frames
+attached to the links. In figure \ref{fig:rimini_joints}, the frames' orientations
+are illustrated. 
+These joints represent the state of 
+the manipulator which parameterized the control space $\{\gls{controlspace} \in \gls{ControlSpace}\}$. $ \gls{ControlSpace} $ for \rimini~ 
+is a 6-dimensional control space.
+
+This thesis
+will use the superscript notation to refer the control space set and its elements and the 
+subscript as the equivalent notation in the configuration space.
+For example, $C^{ee}$, refers to the control space at the end-effector
+where the controlling pipelines for \rimini~ would take in
+$c^{ee} = (\theta_{1},\ldots,\theta_{6}) \in C^{6}$, 
+and the equivalent pose is in the configuration space, $C_{ee}$.
+\rimini~ follows the condition advised by \textcite{Pieper1968}
+:three last joints are collated and have a shared rotation axis point as
+prescribed in figure \ref{fig:r_mini_pieper}.
+
+The figure \ref{fig:rimini_joints} shows the $\gls{zAxis}$ of 
+the frames aligns with the rotation of the actuators on the robot. 
+
+\import{\thesisDir/chapter3/figures/}{rimini_joints.tex} %fig:rimini_joints
+\import{\thesisDir/chapter3/figures/}{rimini_links.tex} %fig:rimini_links
+
+These three joints represent the wrist. 
+\rimini~ also uses $\gls{zyzAngle}$ Euler convention to present rotation state
+of the end effector. This convention conforms
+to the Wigner-D matrix parameterization where this 
+research will use to estimate the orientation of 
+the end-effector. However, the forward and inverse 
+kinematic computation uses the quaternion.
+
+\subsection{Forward Kinematics of \rimini~}\label{sec:fk_rimini}
+The kinematics of \rimini~ follows the Denavit-Hartenberg (DH) convention. 
+In this convention, the homogenous transformation of one frame to the next frame
+in the kinematic chain of the robot does not entails any rotation about the $\gls{yAxis}$.
+In so doing, the homogenous transformation between two frames are simplified. By disregarding
+the rotation about the $\mathsf{y-axis}$, matrix-to-matrix multiplication between two frames required 
+for homogenous transformation is computationally relax. To help satisfy this constraint 
+about the $\mathsf{y-axis}$, two condition should be followed:
+
+\begin{itemize}
+  \item The $\gls{xAxis}$ belonging to $frame_i$ should be perpendicular to the 
+    $\mathsf{z_{i-1}-axis}$
+    belonging to the $frame_{i-1}$.
+  \item The $\mathsf{x_i-axis}$ intersects the $\mathsf{x_{i-1}-axis}$
+\end{itemize}
+
+Here, the subscript $\mathsf{i}$ represent the frame number which extend to the link and joint number. 
+Based on these constraints, the DH parameters are summarized in table \ref{tab:rimini_dh_table},
+where $\gls{ai}$ is the offset of the $frame_i$'s $\gls{zAxis}$ along the $\gls{xAxis}$, $\alpha_i$
+is the rotation of $frame_i$ about the $\mathsf{x_i-axis}$, $\gls{di}$ is the offset of the
+$frame_i$'s $\gls{xAxis}$ along the $\mathsf{z_i-axis}$, and $\theta_i$ is the $joint_i$ angle of rotation. 
+DH-convention states that each joint values are defined by the angle between two $\mathsf{x-axes}$. As an
+example joint1 is represented by the angle between frames attached to link1
+and the base frame. Similarly joint2 is represented by the angle between $\mathsf{x_1}$
+and $\mathsf{x_2}$ axes.
+
+
+  \import{\thesisDir/chapter3/equations/}{rimini_dh_table.tex}
+
+Each row in table \ref{tab:rimini_dh_table} describes the homogenous transformation, 
+$\gls{homogenousTransformation}$ from the 
+$frame_{i-1}$ to $frame_i$. The transformation is repesented by four matrix operation:
+
+  \import{\thesisDir/chapter3/equations/}{homogenous_transformation.tex}
+
+where $\gls{homogenousRotation}$, and $\gls{homogenousTranslation}$ are the representation of rotation and translation in special
+Euclidean group $\vb*{SE(3)}$. Here $A\in\vb*{SE(3)}$. 
+The homogenous transformation
+is represented by the homogenouns transformation matrix defined as: 
+
+\import{\thesisDir/chapter3/equations/}{homogenous_matrix.tex}
+
+where $\vb*{R} \in \vb*{SO(3)}$ and $\vb*{t} \in \mathbb{R}^3$.
+$\vb*{SO(3)}$ is the special orthogonal group that represent
+orientation of the frames in the 3D space.
+
+With each row of the DH-parameter table \ref{tab:rimini_dh_table} represented
+by a homogenous transformation matrix $A$, \rimini~ configuration
+space is mapped by the forward kinematic function $f_{FK}:\gls{ConfigurationSpace} \to \mathbb{R}^3$:
+
+  \import{\thesisDir/chapter3/equations/}{fk_mapping.tex}
+
+\subsection{Inverse Kinematics of \rimini}\label{sec:ik_rimini}
+
+The inverse kinematics solution for \rimini~ follows the analytical
+approach derived by \textcite{Pires2007}, since both the IRB1600 and \rimini
+has the Pieper condition addressed in section \ref{sec:mechanical_description}.
+However, given that the analytical approach
+introduce multiple solution, accordingly, 
+subjected the motion planning to singularities, this report adopts a 
+numerical method approach which is 
+used during the simulation and experimentation. 
+
+Newton-Raphson method to find the inverse kinematic solution of 
+\rimini, $\gls{estimatecontrolee}$ which is the estimate of $\gls{controlee}$. The generalization of the method uses the current value of the 
+robot's encoder, $c^{current}$, and the termination value, $\epsilon=0.005$,
+to end the iteration. Algorithm \ref{algo:newton_raphson} delineate the 
+the method.
+
+\import{\thisPaperDir/algorithms/}{newton_raphson.tex}
+\import{\thisPaperDir/algorithms/}{RRT.tex}
+
+\section{\rimini's Path Planner}\label{sec:planning_rimini}
+This research uses RRT implementation provided by OMPL library
+packaged in the MoveIt software. The algorithm for the purpose 
+of this research is shown in \textit{algorithm \ref{algo:RRT}}
+where $k$ represent the, number of node in the 
+tree generated by the RRT, $\gls{collisionMap}$, represent the collision map
+which is part of the planning scene where all
+RRT sampling takes place and $\gls{treeNode}$ is the tree 
+that points to a non-colliding space. In this RRT implementation, 
+the map are loaded or queried in line \ref{ln:initialize_tree} 
+each time the \textit{generateRRT()} is invoked.
+Line~\ref{ln:random_generator} generates a random state bias towards
+the $C_{goal}$.
+Line~\ref{ln:knn} invokes the k-nearest neighbor to find a selection 
+of nodes that is closes to the state configuration, $\gls{configurationRandom}$.
+Line~\ref{ln:direction} is the important part of the sampling 
+in the RRT where it represent the controlling input of the
+robot motion. Since, the robot are control in the joint-configuration
+space, the angular joint limit address the shape
+of the workspace. However, given the angular velocity, 
+these limits are translated into 
+the configuration space via the kinematic Jacobian which requires
+the information on the $\gls{deltaTranslation}$, a tree node searching constraint. 
+The limits implicitly ensures 
+that the RRT, by executing line~\ref{ln:direction} within the context 
+of the robots Jacobian, does not pass through the singularities of 
+the robot. Hence, the configuration space of the manipulator 
+also includes, $\gls{ControlLimit}$, containing configuration
+that abides the joint-control space ranges and angular velocity
+limits.
+
+The configuration space where 
+the RRT-sampling is concerned is modified in this thesis where, 
+the rotation representation and its sampling is in
+$R \in \gls{Hamiltonian}$, such that the parameterization of
+the Hamiltonian-space is the quaternions 4-vector,
+$\gls{quaternion} \in \mathbb{R}^4$. Therefore, the representation of the robot poses
+and also the non-colliding poses, $(\vb*{q},\vb*{t})$ 
+are explained in \textit{equation \ref{eq:configuration_vector}}.
+
+\import{\thisPaperDir/equations/}{configuration_vector.tex}
+
+The RRT sampling involves query into a map, that stores collision objects.
+This is the planning scene, denoted as collision map, where the RRT sampling occurs.
+The query are
+called when both initial pose and a goal pose are sent to the RRT planner input. 
+The output of the pipeline is a set of non-colliding space where from there another
+pipeline, transform the configuration space into a control space. The control space is 
+definedin the following section.
+  % matrix t/q of the C_pose = (t,q)
+%write the algorithm here
+%read section 2 of Lavelle1998
+\subsection{The Cycle Space}
+The cycle space is the subset of the planner solution where the RRT algorithm is invoke
+twice. 
+During the generation of the cycle space,  the RRT
+output the a trajectory from the
+initial pose, $c_{initial}$ to the goal pose, $c_{goal}$, 
+into a controlling pipeline. The trajectory
+are then map from the configuration space into the joint-configuration space via
+the Newton-Raphson inverse kinematic solver 
+(algorithm \ref{algo:newton_raphson}). To complete 
+the set of the cycle space consist of trajectories, $\gls{trajectory}$, the entries in the initial pose and the goal pose
+are swapped, while invoking query into the collision map,
+\import{\thisPaperDir/equations/}{trajectory.tex}
+
+which forms a cyclical motion between the initial pose and the goal
+pose. Here, 
+$\gls{Ccycle} = \overbrace{ C_{initial \rightarrow goal}}^\text{algorithm \ref{algo:cycle_space} line \ref{ln:cs_RRT1}} 
+              + \overbrace{C_{goal \rightarrow initial}}^\text{algorithm \ref{algo:cycle_space} line \ref{ln:cs_RRT2}}$.
+Algorithm~\ref{algo:cycle_space} block explains how the $C_{cycle}$ space is constructed.
+
+\import{\thisPaperDir/algorithms/}{cycle_space.tex}
+
+
+
+The control space are represented by the trajectory in the joint-control
+space $C^{control} \subset C^{cycle}$. In \textit{equation \ref{eq:trajectory}} the
+joint-configuration space are equivalent with the configuration space in 
+\textit{equation \ref{eq:configuration_vector}}. 
+The control space
+is the direct controlling parameters for the movement of 
+\rimini~ where it
+only handles the control space (or joint-state space).
+The sampling of the RRT to generate the tree data structure, $\mathcal{T}$,
+are done within the $\vb{SO(3)} \times \mathbb{R}^3$ topology. The free
+configuration space, or the non-colliding pose, are represented by, 
+$\gls{ConfigurationFree} = \gls{ConfigurationWorkspace} / \gls{ConfigurationObstacle}$. 
+According to 
+\textcite{LaValle1998}, the $C_{obstacle}$ also covers 
+the physical contraint of the non-holonomic movement of the robot. 
+However, in the case of an articulated robot arm in this research
+, the configuration 
+limitation are the range of the joints and the angular velocity limit. 
+Since, all of these
+measurements are in the n-hyperspace, to map them into the
+$\vb*{SO(3)} \times \mathbb{R}^3$, we use the kinematic Jacobian.
+
+\section{The Spherical Harmonics}\label{sec:spherical_harmonics}
+In this thesis, spherical harmonics are used to discern the 
+estimate of the orientation of \rimini's end effector via the 
+raw data coming from the RGB-D sensor. The spherical analysis derives from 
+the fourier transformation of non-periodic function. Here, 
+we will represent the pointclouds coming from the RGB-D sensor 
+as an unknown functions \parencite{Osteen2012}. With spherical harmonics, the state of the 
+end effector are computed based on two overlapping functions $\gls{fPointcloud}$
+and $\gls{gPointcloud}$ both representing the pointclouds. These functions
+are projected into a unit-hypersphere $\gls{2Sphere} =\{x \in \mathbb{R}^3\: | {\Vert x \Vert}_2 = 1\}$.
+where the projection of $\tilde{g}$ and $\tilde{f}$ based on the
+same parameterization in \textcite{Healy2003}. Convolution of the two function 
+are represented by inner product, acting on the Hilbert space, $L^2(S^2)$:
+
+\import{\thesisDir/chapter3/equations/}{hilbert_product.tex}
+
+The implementation of the equations \ref{eq:spherical_coefficient} 
+\ref{eq:fourier_coefficient} and \ref{fourier_transform} are coupled
+with the datastructures of in equations \ref{eq:octomap_relax} \ref{eq:octomap_red} 
+\ref{eq:octomap_green} and \ref{eq:octomap_blue}
+to form a correlation between the two overlapping functions $\tilde{g} \in L^2{S^2}$ and 
+$\tilde{f} \in L^2(S^2)$: 
+
+\import{\thesisDir/chapter3/equations/}{fourier_correlation.tex}
+
+%\section{The Probability Model of \rimini}\label{probability_rimini}
+
+%The essence of the duality configuration on each solution of 
+%the first three joints in \rimini is a probabilistic in nature. At
+%a specific pose, described by both the the translation and orientation 
+%of the pose encodes eight different configuration, the forms a probability
+%distribution, 
+
+
+
+%\subsection{The Cost Function of Kinematics}\label{sec:cost_function}
+\section{The Use of Kinematics Jacobian and the Singularities of the Manipulator to Relax the Cost Function}\label{sec:singularity_4_cost_function}
+%[task] add mapping equations from configuration space to euclidean space
+%[task] add a picture that shows a near zero jacobian's determinant
+%[task] add symbols
+The kinematic Jacobian is defined as,
+\import{\thesisDir/chapter3/equations/}{jacobian.tex}
+
+where given the right-hand side of the equation,
+angular velocity in any of the joints changes abruptly when the determinant of $J$ 
+approaches zero.
+This abrupt changes is not just because
+of the zero-determinant of the Jacobian, $\gls{Jacobian}$, but also
+a consequence of the duality in the solution explained in section \ref{sec:ik_rimini}.
+At a point where the determinant of the Jacobian 
+of the fundamental kinematics equations approaches to zero, 
+the angular velocity of any of the joint state approaches to infinity.
+This behavior is represented by the mapping of the configuration space 
+to the end effector's state. %add SO(3) symbol here
+
+%[task]equation here p = T^*omega
+%[task]equation here mu = J^{-1}*omega
+The fundamental kinematics equation demonstrate a peculiar characteristic.
+The equation \ref{eq:jacobian} explains, regardless of the infinity velocity when approaching 
+singularity, the task space does not reflect 
+any abrupt or catastrophic movement. This behavior when discern in context
+of kinematic equation \ref{eq:jacobian}, shows that the robot configuration 
+changes abruptly when travesing into a subset of the workspace
+that coincide with 
+zero-determinant Jacobian.
+%[task]picture the euclidean group movement vs the configuration space 
+%[task]notation map function
+Should a closed-form solution to the subset of the function that represent the 
+singularity in the workspace is needed, readers can venture into
+invoking the fundamental theory of determinants that give
+constraints and conditions to satisfy non-invertible Jacobian. However, caution ensues as
+this efforts may not be trivial if solved analytically. 
+However, since the sampling space for the RRT includes the 
+kinematic constraint and also the velocity constraint of the
+robot arm, the solution from the RRT, and therefore, the trajectory of the
+robot will never cross the singularity region. This
+implies that, the determinant of the Jacobians, when RRT sampling 
+considers the kinematic and velocity contraint of the robot, will
+never approach zero. 
+\section{SLAM for \rimini}\label{sec:slam_graph}
+
+\rimini~'s end effector is an RGB-D camera: the Intel Realsense
+435D. The camera livefeeds point clouds, imagery, and a calibrated
+pointcloud imagery where each point are encoded with RGB-value; a depth 
+image. The depth images are bound by noise. Hence, the mathematical
+model of the map are based on Bayesian probability model:
+
+ \import{\thesisDir/chapter3/equations/}{octomap.tex}
+
+where $P(n)$ are the prior probability distribution, 
+$P(n|z_{1:t-1})$ are the previous estimate of the map and $z_t$ 
+is the measurement posterior distribution, and $n$, a node in
+a segmented space; the map model
+encoding of a octree datastructure.
+This maps impute the probability value into the segmented space, 
+representing occupied and free space. To relax computation, the 
+continuous values are conditioned to encode binary values by 
+transforming the domain of the random variables $n$ into a logarithmic
+scale using logit model. 
+The numerator in equation \ref{eq:octomap} are normalizing 
+parameter which can be disregarded without having to 
+change the mean, mode, and the median of the maps distribution
+\parencite{Hornung2013}. 
+Hence, together with the relax logit function, equation \ref{eq:octomap}
+is reduced to:
+
+
+\import{\thesisDir/chapter3/equations/}{octomap_relax.tex}
+
+Equation \ref{eq:octomap_relax} are constructed based on the pointcloud
+datastructure. The manipulator 
+workspace over the octomap model are divided into two values; zero for free
+space, and one for occupied space. Since, Realsense also produce RGB 
+imageries, the map also valid for the occurance of the color
+blue, red, and, green: 
+
+\import{\thesisDir/chapter3/equations/}{octomap_rgb.tex}
+
+
+With logistic encoding, the datastructure of the map is compact, relaxing
+computational expenses and thus eliminate bottleneck 
+on the rich streaming from the RGB-D sensor. 
+This map model, also known as octomap encodes the posterior of the
+SLAM solution in equation \ref{eq:slam_eq}. Given
+the stability of binary values in static environment mapping, a 
+dynamic objects introduced in the workspace are not represented by
+the octomap datastructure.
+
+The SLAM part of this thesis implements the RTAB-Map library
+and its framework to encode the map model and also the
+spherical harmonics implementation suggested in the earlier section as
+the localization engine for the instead the implementation that comes
+with the libary. The SLAM model starts with the cost function of the map a posteriori: 
+
+\import{\thesisDir/chapter3/equations/}{slam_model.tex}
+
+\section{Summary}
+This chapter introduced the mathematical background that will be adopted and implemented
+into the following chapters. The geometry of \rimini~ configuration space, and its 
+implicit representation, the control space, are explained. Further, this chapter
+introduce the SLAM solution to estimate the task space of the robot. 
+%[task]explain we will use Numerical methods to get the Jacobian and test it's determinant
+%[task]
+%[task]citation for numerical method 
+\input{../end.tex}
